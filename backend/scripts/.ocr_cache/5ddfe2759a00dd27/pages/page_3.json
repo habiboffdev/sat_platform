@@ -1,0 +1,29 @@
+{
+  "page_num": 3,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 1: Reading and Writing**\n\n**Directions**\n\nThe dates that archaeologists assign to most of the colossal sculptures of human heads produced by the Olmec civilization of Mesoamerica are necessarily _____. The majority of the sculptures have been moved from their original context, making precise dating impossible.\n\n**2. Mark for Review**\n\nWhich choice completes the text with the most logical and precise word or phrase?\n\nA. unconversial\n\nB. irrelevant\n\nC. applicable\n\nD. approximate\n\n--- \n\nLet me know if you need any further assistance!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "The dates that archaeologists assign to most of the colossal sculptures of human heads produced by the Olmec civilization of Mesoamerica are necessarily _____. The majority of the sculptures have been moved from their original context, making precise dating impossible.",
+      "question_text": "Which choice completes the text with the most logical and precise word or phrase?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. unconversial",
+        "B. irrelevant",
+        "C. applicable",
+        "D. approximate"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "The context indicates that precise dating is impossible due to sculptures being moved, so 'approximate' is the most logical completion.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:31:09.109793"
+}

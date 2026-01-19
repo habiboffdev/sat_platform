@@ -1,0 +1,29 @@
+{
+  "page_num": 93,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text:\n\n---\n\n**14**  \nA book-of-the-month club charges $16 for the first book purchased during the month and an additional $11 for each book after the first. Which equation describes this situation, where \\( y \\) is the total cost, in dollars, for books purchased during a month, \\( x \\) is the number of books purchased during the month, and \\( x > 0 \\)?\n\nA) \\( y = x + 16 \\)  \nB) \\( y = 11x + 16 \\)  \nC) \\( y = 11(x - 1) + 16 \\)  \nD) \\( y = (x - 1) + 16 \\)\n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "A book-of-the-month club charges $16 for the first book purchased during the month and an additional $11 for each book after the first. Which equation describes this situation, where y is the total cost, in dollars, for books purchased during a month, x is the number of books purchased during the month, and x > 0?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. y = x + 16",
+        "B. y = 11x + 16",
+        "C. y = 11(x - 1) + 16",
+        "D. y = (x - 1) + 16"
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The first book costs $16, and each additional book costs $11. For x books, there are (x - 1) additional books, so total cost is 16 + 11(x - 1).",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:40:09.095603"
+}

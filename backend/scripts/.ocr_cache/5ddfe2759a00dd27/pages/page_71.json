@@ -1,0 +1,29 @@
+{
+  "page_num": 71,
+  "ocr_markdown": "```markdown\n14. Mark for Review\n\nIf $\\frac{x - 17}{18} = \\frac{x - 17}{6}$, what is the value of $x + 17$?\n\nA) 0  \nB) 3  \nC) 17  \nD) 34  \n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "If $\frac{x - 17}{18} = \frac{x - 17}{6}$, what is the value of $x + 17$?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 0",
+        "B) 3",
+        "C) 17",
+        "D) 34"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Solve the equation $\frac{x - 17}{18} = \frac{x - 17}{6}$ for x, then compute x + 17.",
+      "domain": "Algebra",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:26:15.925152"
+}

@@ -1,0 +1,29 @@
+{
+  "page_num": 69,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n---\n\n**Section 2, Module 1: Math**  \n**Directions**  \n\n**12**  \nFor the polynomial function $f$, the graph of $y = f(x)$ in the xy-plane passes through the points $(-3, 0)$, $(1, 0)$, and $(4, 0)$. Which of the following must be a factor of $f(x)$?\n\nA) $x + 1$  \nB) $x + 4$  \nC) $x - 1$  \nD) $x - 3$  \n\n---\n\nFeel free to ask if you need more assistance!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "For the polynomial function $f$, the graph of $y = f(x)$ in the xy-plane passes through the points $(-3, 0)$, $(1, 0)$, and $(4, 0)$. Which of the following must be a factor of $f(x)$?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) $x + 1$",
+        "B) $x + 4$",
+        "C) $x - 1$",
+        "D) $x - 3$"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The polynomial has roots at x = -3, 1, and 4, so factors are (x + 3), (x - 1), and (x - 4). Among the options, only (x - 1) matches.",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T22:26:06.765148"
+}

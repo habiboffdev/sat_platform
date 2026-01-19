@@ -1,0 +1,29 @@
+{
+  "page_num": 27,
+  "ocr_markdown": "```markdown\n# Section 1, Module 1: Reading and Writing\n\n**Directions**\n\nWhile researching a topic, a student has taken the following notes:\n\n- Grimanesa Amoros is a Peruvian American artist well known for her LED light sculptures.\n- Uros Island (2011) is from her Uros series of works.\n  - It is made of smooth multicolored LED domes.\n- Golden Connection (2013) is from her Huanchaco series of works.\n  - It is made of entangled blue and white LED tubes.\n\n---\n\n### Question 25\n\nThe student wants to emphasize a difference between Uros Island and Golden Connection. Which choice most effectively uses relevant information from the notes to accomplish this goal?\n\nA. Grimanesa Amoros often employs LED lights in her work, but the smooth LED domes of Uros Island stand in contrast to the tangled LED tubes of Golden Connection.\n\nB. Uros Island and Golden Connection are two LED light sculptures by well-known artist Grimanesa Amoros.\n\nC. In 2011, Grimanesa Amoros debuted Uros Island, a part of her Uros series.\n\nD. Many of Grimanesa Amoros's sculptures, like Uros Island and Golden Connection, incorporate LED lights in the form of domes or tubes.\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The student wants to emphasize a difference between Uros Island and Golden Connection. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Grimanesa Amoros often employs LED lights in her work, but the smooth LED domes of Uros Island stand in contrast to the tangled LED tubes of Golden Connection.",
+        "B. Uros Island and Golden Connection are two LED light sculptures by well-known artist Grimanesa Amoros.",
+        "C. In 2011, Grimanesa Amoros debuted Uros Island, a part of her Uros series.",
+        "D. Many of Grimanesa Amoros's sculptures, like Uros Island and Golden Connection, incorporate LED lights in the form of domes or tubes."
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "Option A directly contrasts the specific materials and forms (smooth multicolored LED domes vs. entangled blue and white LED tubes) as described in the notes, effectively highlighting the difference.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:44:59.584920"
+}

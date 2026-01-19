@@ -1,0 +1,29 @@
+{
+  "page_num": 52,
+  "ocr_markdown": "```markdown\n**Section 1, Module 2: Reading and Writing**  \n**Directions**\n\nIn a 2005 study by Mellado et al., the researchers' aim was to analyze the diet composition of cattle in Coahuila, Mexico. _____ they aimed to analyze the ratio of three different plant subtypes within these animals\u2019 diet: graminoids, forbs, and browse.\n\n**23**  \n**Mark for Review**\n\nWhich choice completes the text with the most logical transition?  \nA. Instead,  \nB. All the same,  \nC. Therefore,  \nD. Specifically,  \n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "In a 2005 study by Mellado et al., the researchers' aim was to analyze the diet composition of cattle in Coahuila, Mexico.",
+      "question_text": "Which choice completes the text with the most logical transition?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Instead,",
+        "B. All the same,",
+        "C. Therefore,",
+        "D. Specifically,"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "'Specifically' provides a logical transition by indicating the researchers are narrowing their focus to a particular aspect of the diet composition.",
+      "domain": "Expression of Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:01:12.918231"
+}

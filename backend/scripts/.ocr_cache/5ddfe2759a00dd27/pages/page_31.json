@@ -1,0 +1,29 @@
+{
+  "page_num": 31,
+  "ocr_markdown": "## Section 1, Module 2: Reading and Writing\n\n**Directions**  \nIn the architectural process called modular construction, a building is manufactured in modules under controlled conditions and then assembled at its intended location. _____ of this approach cite the production of less material waste and a faster return on investment.\n\n**2. Mark for Review**  \nWhich choice completes the text with the most logical and precise word or phrase?\n\nA. Components  \nB. Safeguards  \nC. Proponents  \nD. Epitomes  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "In the architectural process called modular construction, a building is manufactured in modules under controlled conditions and then assembled at its intended location.",
+      "question_text": "Which choice completes the text with the most logical and precise word or phrase?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Components",
+        "B. Safeguards",
+        "C. Proponents",
+        "D. Epitomes"
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The word 'proponents' fits logically as it refers to advocates who would cite benefits like reduced waste and faster ROI.",
+      "domain": "Craft and Structure",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:47:17.216812"
+}

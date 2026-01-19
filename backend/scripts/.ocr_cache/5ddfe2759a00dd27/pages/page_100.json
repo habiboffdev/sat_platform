@@ -1,0 +1,29 @@
+{
+  "page_num": 100,
+  "ocr_markdown": "# SAT Question Extraction\n\n**Question 21**  \nA circle in the xy-plane has its center at \\((2, 9)\\). Line \\(t\\) is tangent to this circle at the point \\((a, -4)\\), where \\(a\\) is a constant. The slope of line \\(t\\) is \\(\\frac{6}{5}\\). What is the value of \\(a\\)?\n\n**Options**:  \nA) \\(-\\frac{68}{5}\\)  \nB) \\(-\\frac{53}{6}\\)  \nC) \\(\\frac{77}{6}\\)  \nD) \\(\\frac{88}{5}\\)  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "A circle in the xy-plane has its center at (2, 9). Line t is tangent to this circle at the point (a, -4), where a is a constant. The slope of line t is 6/5. What is the value of a?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) -68/5",
+        "B) -53/6",
+        "C) 77/6",
+        "D) 88/5"
+      ],
+      "correct_answer": [
+        "NEED_ANSWER"
+      ],
+      "explanation": "The radius to the point of tangency is perpendicular to the tangent line. Use the slope of the radius and the given slope to find a.",
+      "domain": "Geometry and Trigonometry",
+      "difficulty": "Hard"
+    }
+  ],
+  "processed_at": "2025-12-24T22:17:00.554699"
+}

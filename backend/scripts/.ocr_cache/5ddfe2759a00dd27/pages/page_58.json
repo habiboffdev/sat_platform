@@ -1,0 +1,29 @@
+{
+  "page_num": 58,
+  "ocr_markdown": "```markdown\n2. Mark for Review\n\nCarrie has $c$ dollars and Marjani has $m$ dollars. Carrie has 4 times as many dollars as Marjani, and together they have a total of $40.00. Which system of equations represents this situation?\n\nA. \n$$\nc = 4m \\\\\nc + m = 40\n$$\n\nB. \n$$\nm = 4c \\\\\nc + m = 40\n$$\n\nC. \n$$\nc = 40m \\\\\nc + m = 4\n$$\n\nD. \n$$\nm = 40c \\\\\nc + m = 4\n$$\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "Carrie has $c$ dollars and Marjani has $m$ dollars. Carrie has 4 times as many dollars as Marjani, and together they have a total of $40.00. Which system of equations represents this situation?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. c = 4m\nc + m = 40",
+        "B. m = 4c\nc + m = 40",
+        "C. c = 40m\nc + m = 4",
+        "D. m = 40c\nc + m = 4"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "Carrie has 4 times Marjani's dollars, so c = 4m. Together they have $40, so c + m = 40.",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T22:24:20.868254"
+}

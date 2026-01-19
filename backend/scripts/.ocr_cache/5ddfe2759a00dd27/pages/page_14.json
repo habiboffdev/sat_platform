@@ -1,0 +1,29 @@
+{
+  "page_num": 14,
+  "ocr_markdown": "# Section 1, Module 1: Reading and Writing\n\n**Directions**\n\nThe Wonderful Wizard of Oz is a 1900 novel by L. Frank Baum. In the novel, Dorothy lives in Kansas with her aunt and uncle, but she later finds herself in a land called Oz. The narrator indicates that her aunt and uncle\u2019s house in Kansas is remote and solitary, writing that ______________.\n\n---\n\n**Question 12: Mark for Review**\n\nWhich quotation from *The Wonderful Wizard of Oz* most effectively illustrates the claim?\n\n**A**. In Oz, \u201c[Dorothy and her companions] passed through the rest of the forest in safety, and when they came out from its gloom saw before them a steep hill, covered from top to bottom with great pieces of rock.\u201d\n\n**B**. In Oz, \u201cDorothy fell asleep only once, and then she dreamed she was in Kansas, where Aunt Em was telling her how glad she was to have her little girl at home again.\u201d\n\n**C**. In Kansas, \u201cDorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer\u2019s wife.\u201d\n\n**D**. In Kansas, \u201cWhen Dorothy stood in the doorway and looked around, she could see nothing but the great gray prairie on every side: Not a tree nor a house broke the broad sweep of flat country.\u201d",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "The Wonderful Wizard of Oz is a 1900 novel by L. Frank Baum. In the novel, Dorothy lives in Kansas with her aunt and uncle, but she later finds herself in a land called Oz. The narrator indicates that her aunt and uncle\u2019s house in Kansas is remote and solitary, writing that ______________.",
+      "question_text": "Which quotation from *The Wonderful Wizard of Oz* most effectively illustrates the claim?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. In Oz, \u201c[Dorothy and her companions] passed through the rest of the forest in safety, and when they came out from its gloom saw before them a steep hill, covered from top to bottom with great pieces of rock.\u201d",
+        "B. In Oz, \u201cDorothy fell asleep only once, and then she dreamed she was in Kansas, where Aunt Em was telling her how glad she was to have her little girl at home again.\u201d",
+        "C. In Kansas, \u201cDorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer\u2019s wife.\u201d",
+        "D. In Kansas, \u201cWhen Dorothy stood in the doorway and looked around, she could see nothing but the great gray prairie on every side: Not a tree nor a house broke the broad sweep of flat country.\u201d"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "Option D directly describes the remote and solitary nature of the Kansas house by emphasizing the absence of trees or houses, illustrating the claim effectively.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:38:23.804227"
+}

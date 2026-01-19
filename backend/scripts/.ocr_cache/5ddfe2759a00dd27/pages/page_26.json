@@ -1,0 +1,29 @@
+{
+  "page_num": 26,
+  "ocr_markdown": "Here\u2019s the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 1: Reading and Writing**\n\n**Directions**\n\nWhile researching a topic, a student has taken the following notes:\n- A supercontinent is a single landmass made up of most or all of Earth\u2019s continents.\n- Over time, continents merge together to form supercontinents, which then break apart.\n- This process is believed to take hundreds of millions of years and is known as the supercontinent cycle.\n- Vaalbara was a supercontinent that formed about 3.6 billion years ago.\n- Euramerica was a supercontinent that formed about 300 million years ago.\n\n**24**  \n*Mark for Review*  \nThe student wants to emphasize the order in which the supercontinents were formed. Which choice most effectively uses relevant information from the notes to accomplish this goal?\n\nA. Vaalbara and Euramerica were both supercontinents, single landmasses made up of most or all of Earth\u2019s continents.  \nB. The supercontinent Euramerica formed long after the supercontinent Vaalbara.  \nC. Forming and breaking apart over hundreds of millions of years, supercontinents are made up of most or all of Earth\u2019s continents.  \nD. Vaalbara formed about 3.6 billion years ago but eventually broke apart.  \n\n---\n\nLet me know if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The student wants to emphasize the order in which the supercontinents were formed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Vaalbara and Euramerica were both supercontinents, single landmasses made up of most or all of Earth\u2019s continents.",
+        "B. The supercontinent Euramerica formed long after the supercontinent Vaalbara.",
+        "C. Forming and breaking apart over hundreds of millions of years, supercontinents are made up of most or all of Earth\u2019s continents.",
+        "D. Vaalbara formed about 3.6 billion years ago but eventually broke apart."
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "Choice B directly compares the formation times of Vaalbara (3.6 billion years ago) and Euramerica (300 million years ago) to emphasize the chronological order.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:44:26.411487"
+}

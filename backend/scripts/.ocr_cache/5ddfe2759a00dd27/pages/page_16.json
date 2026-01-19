@@ -1,0 +1,29 @@
+{
+  "page_num": 16,
+  "ocr_markdown": "# Section 1, Module 1: Reading and Writing\n\n**Directions**  \nA group of primate conservationists recently began a long-term study of the effects of different conservation strategies on the northern muriqui (Brachyteles hypoxanthus). The species population is currently estimated to be around 1,000. It is challenging to accurately count these primates, however, which makes it difficult to tell whether the population is increasing, decreasing, or staying stable. The study may thus _____\n\n## Question 14\n\nWhich choice most logically completes the text?\n\n**A** cause other conservationists to adopt a new methodology for counting populations.  \n**B** risk making inaccurate conclusions about the effectiveness of different conservation strategies.  \n**C** benefit from including species beyond the northern muriqui.  \n**D** fail to consider less-well-known conservation approaches for the northern muriqui.  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "A group of primate conservationists recently began a long-term study of the effects of different conservation strategies on the northern muriqui (Brachyteles hypoxanthus). The species population is currently estimated to be around 1,000. It is challenging to accurately count these primates, however, which makes it difficult to tell whether the population is increasing, decreasing, or staying stable. The study may thus _____",
+      "question_text": "Which choice most logically completes the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. cause other conservationists to adopt a new methodology for counting populations.",
+        "B. risk making inaccurate conclusions about the effectiveness of different conservation strategies.",
+        "C. benefit from including species beyond the northern muriqui.",
+        "D. fail to consider less-well-known conservation approaches for the northern muriqui."
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "The text highlights the difficulty in accurately counting the population, which directly relates to the risk of drawing incorrect conclusions about conservation strategies.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:39:35.280125"
+}

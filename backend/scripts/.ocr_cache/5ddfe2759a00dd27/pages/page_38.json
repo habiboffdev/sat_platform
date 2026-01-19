@@ -1,0 +1,29 @@
+{
+  "page_num": 38,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nThe following text is adapted from William Shakespeare\u2019s 1597 play *The Tragedy of King Richard III*. Richard is reflecting on the recent arrest of his brother Clarence, on suspicion of treason against King Edward IV. Derby, Hastings, Buckingham, Rivers, Dorset, and Grey are also members of the English nobility.\n\n**RICHARD**: I do the wrong, and first begin to brawl!  \nThe secret mischiefs that I set [flowing]  \nI lay unto the grievous charge of others.  \nClarence, whom I indeed have cast in darkness,  \nI do beweep to many simple [gullible people],  \nNamely, to Derby, Hastings, Buckingham;  \nAnd tell them \u2019tis the Queen and her allies  \nThat stir the King against the Duke my brother.  \nNow they believe it, and withal whet me  \nTo be revenged on Rivers, Dorset, Grey.\n\n---\n\n**9. Mark for Review**\n\nWhich choice best describes what happens in the text?\n\nA. Richard attributes Clarence\u2019s troubles to both his own secret plotting and the influence that the queen and her allies Derby, Hastings, and Buckingham have planted in the king\u2019s mind.\n\nB. Richard describes having wept as he informed Derby, Hastings, and the queen and her allies convinced the king to act against Clarence, and says that the earnestness of his grief caused them to accept his version of events.\n\nC. Richard acknowledges that his mischievous nature has spurred him to commit misdeeds in the past, including instigating enmity between the king and Clarence, but he reports that he has hitherto not lost the trust of the queen and her allies.\n\nD. Richard indicates that he has pretended to be aggrieved about Clarence\u2019s situation and has proclaimed it to be the fault of the queen and her allies, but in reality, he has caused the hostility the king feels toward Clarence.\n\n--- \n\nFeel free to ask if you need further assistance!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Here is the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nThe following text is adapted from William Shakespeare\u2019s 1597 play *The Tragedy of King Richard III*. Richard is reflecting on the recent arrest of his brother Clarence, on suspicion of treason against King Edward IV. Derby, Hastings, Buckingham, Rivers, Dorset, and Grey are also members of the English nobility.\n\n**RICHARD**: I do the wrong, and first begin to brawl!  \nThe secret mischiefs that I set [flowing]  \nI lay unto the grievous charge of others.  \nClarence, whom I indeed have cast in darkness,  \nI do beweep to many simple [gullible people],  \nNamely, to Derby, Hastings, Buckingham;  \nAnd tell them \u2019tis the Queen and her allies  \nThat stir the King against the Duke my brother.  \nNow they believe it, and withal whet me  \nTo be revenged on Rivers, Dorset, Grey.",
+      "question_text": "Which choice best describes what happens in the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Richard attributes Clarence\u2019s troubles to both his own secret plotting and the influence that the queen and her allies Derby, Hastings, and Buckingham have planted in the king\u2019s mind.",
+        "B. Richard describes having wept as he informed Derby, Hastings, and the queen and her allies convinced the king to act against Clarence, and says that the earnestness of his grief caused them to accept his version of events.",
+        "C. Richard acknowledges that his mischievous nature has spurred him to commit misdeeds in the past, including instigating enmity between the king and Clarence, but he reports that he has hitherto not lost the trust of the queen and her allies.",
+        "D. Richard indicates that he has pretended to be aggrieved about Clarence\u2019s situation and has proclaimed it to be the fault of the queen and her allies, but in reality, he has caused the hostility the king feels toward Clarence."
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "Richard admits to causing Clarence's troubles and falsely blaming the queen and her allies, while pretending to be upset.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:53:02.612058"
+}

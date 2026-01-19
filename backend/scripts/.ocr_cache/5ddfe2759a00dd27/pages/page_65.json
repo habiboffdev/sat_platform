@@ -1,0 +1,34 @@
+{
+  "page_num": 65,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**8**\n\nA bank account was opened with an initial deposit. Over the next several months, regular deposits were made into this account, and there were no withdrawals made during this time. The graph of the function \\( f \\) shown, where \\( y = f(x) \\), estimates the account balance, in dollars, in this bank account \\( x \\) months since the initial deposit. To the nearest whole dollar, what is the amount of the initial deposit estimated by the graph?\n\n**Answer Preview:**\n\n---\n\nIf you need further assistance, feel free to ask!",
+  "is_question": true,
+  "graphs": [
+    {
+      "label": "coordinate plane showing bank account balance over time",
+      "bbox": [
+        153,
+        430,
+        723,
+        1000
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "A bank account was opened with an initial deposit. Over the next several months, regular deposits were made into this account, and there were no withdrawals made during this time. The graph of the function f shown, where y = f(x), estimates the account balance, in dollars, in this bank account x months since the initial deposit. To the nearest whole dollar, what is the amount of the initial deposit estimated by the graph?",
+      "question_type": "student_produced_response",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "page_65_graph_1.jpg",
+      "options": [],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The initial deposit corresponds to the y-intercept of the graph at x=0 months.",
+      "domain": "Problem Solving and Data Analysis",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:25:32.990278"
+}

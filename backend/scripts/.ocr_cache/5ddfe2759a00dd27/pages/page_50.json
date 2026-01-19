@@ -1,0 +1,29 @@
+{
+  "page_num": 50,
+  "ocr_markdown": "### SAT Reading and Writing\n\n**Section 1, Module 2: Reading and Writing**\n\n---\n\n**For her film I Am Somebody (1970), a documentary about a successful months-long strike held by Black female hospital workers in Charleston, South Carolina, director Madeline Anderson chose a narrator who had participated in the ___ by allowing the narrative to be shaped by one of their own, amplified the agency and power the workers possessed.**\n\n---\n\n**21. Mark for Review**\n\n**Which choice completes the text so that it conforms to the conventions of Standard English?**\n\n- A) protest a decision that,\n- B) protest. A decision that\n- C) protest; a decision that,\n- D) protest, a decision that,",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "For her film I Am Somebody (1970), a documentary about a successful months-long strike held by Black female hospital workers in Charleston, South Carolina, director Madeline Anderson chose a narrator who had participated in the ___ by allowing the narrative to be shaped by one of their own, amplified the agency and power the workers possessed.",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) protest a decision that,",
+        "B) protest. A decision that",
+        "C) protest; a decision that,",
+        "D) protest, a decision that,"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The question tests punctuation and sentence structure conventions in Standard English, requiring the correct grammatical choice to complete the sentence.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:00:09.316559"
+}

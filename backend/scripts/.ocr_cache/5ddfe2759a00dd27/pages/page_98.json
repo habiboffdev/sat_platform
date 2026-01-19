@@ -1,0 +1,22 @@
+{
+  "page_num": 98,
+  "ocr_markdown": "# Section 2, Module 2: Math\n\n## Student-produced response directions\n\n- If you find more than one correct answer, enter only one answer.\n- You can enter up to 5 characters for a positive answer and up to 6 characters (including the negative sign) for a negative answer.\n- If your answer is a fraction that doesn\u2019t fit in the provided space, enter the decimal equivalent.\n- If your answer is a decimal that doesn\u2019t fit in the provided space, enter it by truncating or rounding at the fourth digit.\n- If your answer is a mixed number (such as \\( \\frac{3}{2} \\)), enter it as an improper fraction (7/2) or its decimal equivalent (3.5).\n- Don\u2019t enter symbols such as a percent sign, comma, or dollar sign.\n\n### Examples\n\n<table>\n  <tr>\n    <th>Answer</th>\n    <th>Acceptable ways to enter answer</th>\n    <th>Unacceptable: will NOT receive credit</th>\n  </tr>\n  <tr>\n    <td>3.5</td>\n    <td>3.5<br>3.50<br>7/2</td>\n    <td>31/2<br>3 1/2</td>\n  </tr>\n  <tr>\n    <td>\\( \\frac{2}{3} \\)</td>\n    <td>2/3<br>.666<br>.667<br>0.666<br>0.667</td>\n    <td>0.66<br>.66<br>0.67<br>.67</td>\n  </tr>\n  <tr>\n    <td>\\( -\\frac{1}{3} \\)</td>\n    <td>-1/3<br>-0.333<br>-0.33</td>\n    <td>-0.66<br>-0.67</td>\n  </tr>\n</table>\n\n---\n\n## Question 19\n\nA line intersects two parallel lines, forming four acute angles and four obtuse angles. The measure of one of the acute angles is \\( (7\\pi - 410)^\\circ \\). The sum of the measures of one of the acute angles and three of the obtuse angles is \\( (-14x + w) \\). What is the value of \\( w \\)?\n\n### Answer Preview\n\nShow Keypad",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "A line intersects two parallel lines, forming four acute angles and four obtuse angles. The measure of one of the acute angles is (7\u03c0 - 410)\u00b0. The sum of the measures of one of the acute angles and three of the obtuse angles is (-14x + w). What is the value of w?",
+      "question_type": "student_produced_response",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [],
+      "correct_answer": "[NEED_ANSWER]",
+      "explanation": "This is a geometry problem involving angles formed by a transversal intersecting parallel lines. The acute and obtuse angles are supplementary, and specific angle measures are given in terms of \u03c0 and variables.",
+      "domain": "Geometry and Trigonometry",
+      "difficulty": "Hard"
+    }
+  ],
+  "processed_at": "2025-12-24T21:43:39.251148"
+}

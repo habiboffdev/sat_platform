@@ -1,0 +1,29 @@
+{
+  "page_num": 40,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nIn what is now southern Florida, the Calusa people (circa 1000\u20131600 CE) supported their relatively large population\u2019s dietary needs with hydrological engineering rather than terrestrial farming methods. They constructed watercourts (gated coastal enclosures) out of shells and sediments to trap a variety of fish as waters rose and fell with tides and seasonal sea-level shifts; watercourt pools then held the fish for later consumption. Archaeologist Theresa Schober has posited an additional purpose of these enclosures, suggesting that they were intended to foster conch. She ties this hypothesis to the high value the sea snails would have had for the Calusa, both nutritionally and as a building material (conch shells are highly durable).\n\n---\n\n**11 Mark for Review**\n\nWhich finding, if true, would most directly weaken Schober\u2019s hypothesis?\n\nA) Samples of animal remains collected at Calusa sites reflect a greater diversity of marine species, particularly among sea snails, within the perimeter of watercourts than in locations known to have been devoted to the preparation and consumption of food.\n\nB) Historical population-size estimates suggest that the sea snails and fish most common in the Calusa diet were plentiful in open coastal waters when the watercourts were constructed but decreased in abundance in the years immediately after construction.\n\nC) Radar surveys of Calusa sites reveal watercourt dimensions suitable for sustaining fish of many local species but not conducive for maintaining the shallow environments with ample seagrasses that allow sea snails to thrive.\n\nD) Sediment layers excavated from Calusa watercourt sites contain heterogeneous mixtures of scales from multiple species of fish and fragments of shells from various types of sea snails, but conch shells do not constitute the majority of the mixture in most of those layers.\n\n--- \n\nLet me know if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "In what is now southern Florida, the Calusa people (circa 1000\u20131600 CE) supported their relatively large population\u2019s dietary needs with hydrological engineering rather than terrestrial farming methods. They constructed watercourts (gated coastal enclosures) out of shells and sediments to trap a variety of fish as waters rose and fell with tides and seasonal sea-level shifts; watercourt pools then held the fish for later consumption. Archaeologist Theresa Schober has posited an additional purpose of these enclosures, suggesting that they were intended to foster conch. She ties this hypothesis to the high value the sea snails would have had for the Calusa, both nutritionally and as a building material (conch shells are highly durable).",
+      "question_text": "Which finding, if true, would most directly weaken Schober\u2019s hypothesis?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) Samples of animal remains collected at Calusa sites reflect a greater diversity of marine species, particularly among sea snails, within the perimeter of watercourts than in locations known to have been devoted to the preparation and consumption of food.",
+        "B) Historical population-size estimates suggest that the sea snails and fish most common in the Calusa diet were plentiful in open coastal waters when the watercourts were constructed but decreased in abundance in the years immediately after construction.",
+        "C) Radar surveys of Calusa sites reveal watercourt dimensions suitable for sustaining fish of many local species but not conducive for maintaining the shallow environments with ample seagrasses that allow sea snails to thrive.",
+        "D) Sediment layers excavated from Calusa watercourt sites contain heterogeneous mixtures of scales from multiple species of fish and fragments of shells from various types of sea snails, but conch shells do not constitute the majority of the mixture in most of those layers."
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "Option C directly contradicts Schober's hypothesis by showing the watercourts were not suitable for fostering conch, as they lacked the shallow, seagrass-rich environments necessary for sea snails to thrive.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:54:42.662824"
+}

@@ -1,0 +1,29 @@
+{
+  "page_num": 59,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**3**  \nAnton is selling toys from his toy collection. When he started selling the toys, there were 2,800 toys in the collection. At the end of each week for 3 weeks after Anton started selling the toys, the number of toys in the collection had decreased by \\(\\frac{1}{2}\\) of the toys in the collection at the end of the previous week. Which equation gives the number of toys, \\(c\\), in the collection \\(w\\) weeks after Anton started selling the toys, where \\(0 \\leq w \\leq 3\\)?\n\nA) \\(c = w^{\\frac{1}{2}}\\)  \nB) \\(c = 2,800w\\)  \nC) \\(c = 1,400\\left(\\frac{1}{2}\\right)^{w}\\)  \nD) \\(c = 2,800\\left(\\frac{1}{2}\\right)^{w}\\)  \n\n---\n\nThe extracted text includes the question, options A-D, and displays the necessary mathematical notation.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "Anton is selling toys from his toy collection. When he started selling the toys, there were 2,800 toys in the collection. At the end of each week for 3 weeks after Anton started selling the toys, the number of toys in the collection had decreased by 1/2 of the toys in the collection at the end of the previous week. Which equation gives the number of toys, c, in the collection w weeks after Anton started selling the toys, where 0 \u2264 w \u2264 3?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. c = w^(1/2)",
+        "B. c = 2,800w",
+        "C. c = 1,400(1/2)^w",
+        "D. c = 2,800(1/2)^w"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "The number of toys decreases by half each week, starting from 2,800, so the equation is exponential decay with initial amount 2,800 and decay factor 1/2.",
+      "domain": "Algebra",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:05:05.406562"
+}

@@ -1,0 +1,24 @@
+{
+  "page_num": 70,
+  "ocr_markdown": "```markdown\n## Section 2, Module 1: Math\n### Directions\n\n### Student-produced response directions\n- If you find more than one correct answer, enter only one answer.\n- You can enter up to 5 characters for a positive answer and up to 6 characters (including the negative sign) for a negative answer.\n- If your answer is a fraction that doesn\u2019t fit in the provided space, enter the decimal equivalent.\n- If your answer is a decimal that doesn\u2019t fit in the provided space, enter it by truncating or rounding at the fourth digit.\n- If your answer is a mixed number (such as \\(3 \\frac{1}{2}\\)), enter it as an improper fraction \\(\\frac{7}{2}\\) or its decimal equivalent (3.5).\n- Don\u2019t enter symbols such as a percent sign, comma, or dollar sign.\n\n### Examples\n\n| Answer   | Acceptable ways to enter answer | Unacceptable: will NOT receive credit |\n|----------|----------------------------------|---------------------------------------|\n| 3.5     | 3.5                              | 31/2                                  |\n|          | 3.50                             | 3 1/2                                 |\n|          | 7/2                              |                                       |\n| 2/3     | .6666                            | .66                                   |\n|          | .6667                            | .66                                   |\n|          | .666                             | .67                                   |\n|          | .667                             | .67                                   |\n| -1/3    | -.333                            | -.33                                  |\n|          | -0.333                           | -0.33                                 |\n\n### Question 13\nA circle has a circumference of \\(89\\pi\\) centimeters. What is the diameter, in centimeters, of the circle?\n\n#### Answer Preview:\n```\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "A circle has a circumference of \\(89\\pi\\) centimeters. What is the diameter, in centimeters, of the circle?",
+      "question_type": "student_produced_response",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The circumference formula is C = \u03c0d, so d = C/\u03c0 = 89\u03c0/\u03c0 = 89 centimeters.",
+      "domain": "Geometry and Trigonometry",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:25:49.277130"
+}

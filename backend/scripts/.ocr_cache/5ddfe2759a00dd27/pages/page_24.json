@@ -1,0 +1,29 @@
+{
+  "page_num": 24,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n### Section 1, Module 1: Reading and Writing \n**Directions**  \n\nThe lack of accessible written sources is a common challenge faced by biographers of pre-nineteenth-century subjects. _____ when writing his biography of Alexander Hamilton (1755\u20131804), historian Ron Chernow had at his disposal Harold Syrett\u2019s 26-volume, 19,000-document *Papers of Alexander Hamilton*.\n\n22. Which choice completes the text with the most logical transition?  \nA. To take one well-known example,  \nB. In accordance with this premise,  \nC. It thus came as no surprise that,  \nD. On the other end of the spectrum,  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "The lack of accessible written sources is a common challenge faced by biographers of pre-nineteenth-century subjects. _____ when writing his biography of Alexander Hamilton (1755\u20131804), historian Ron Chernow had at his disposal Harold Syrett\u2019s 26-volume, 19,000-document *Papers of Alexander Hamilton*.",
+      "question_text": "Which choice completes the text with the most logical transition?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. To take one well-known example,",
+        "B. In accordance with this premise,",
+        "C. It thus came as no surprise that,",
+        "D. On the other end of the spectrum,"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The question requires identifying the transition that contrasts the general challenge with Hamilton's specific case.",
+      "domain": "Craft and Structure",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:13:03.803107"
+}

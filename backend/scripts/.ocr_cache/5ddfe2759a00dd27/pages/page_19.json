@@ -1,0 +1,29 @@
+{
+  "page_num": 19,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n```\nSection 1, Module 1: Reading and Writing\n\nDirections\n\nIn premodern Europe, one could sail from the east coast of England to the Netherlands or France faster than one could travel by land to England\u2019s capital, London. In that era, historian Michael Pye argues in his 2015 book *The Edge of the World: A Cultural History of the North Sea and the Transformation of Europe*, the North Sea did more to link the various peoples, cultures, and economies on _____ shores than to divide them.\n\n17. Mark for Review  \nWhich choice completes the text so that it conforms to the conventions of Standard English?\n\nA. it\u2019s  \nB. its  \nC. their  \nD. they\u2019re  \n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "In premodern Europe, one could sail from the east coast of England to the Netherlands or France faster than one could travel by land to England\u2019s capital, London. In that era, historian Michael Pye argues in his 2015 book *The Edge of the World: A Cultural History of the North Sea and the Transformation of Europe*, the North Sea did more to link the various peoples, cultures, and economies on _____ shores than to divide them.",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. it\u2019s",
+        "B. its",
+        "C. their",
+        "D. they\u2019re"
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "The possessive pronoun 'its' is required to refer to the North Sea's shores, not the contraction 'it's' (it is) or plural pronouns.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:40:42.793697"
+}

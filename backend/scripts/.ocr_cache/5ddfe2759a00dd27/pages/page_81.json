@@ -1,0 +1,29 @@
+{
+  "page_num": 81,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n---\n\n**2**  \nMicah deposited a total of $6,600 into two retirement accounts last year by depositing $x dollars once each month into one account and $y dollars twice each month into the other account. Which equation represents this situation?\n\nA) $6,600 = 12x + 12y  \nB) $6,600 = 12x + 24y  \nC) $6,600 = 24x + 12y  \nD) $6,600 = 24x + 24y  \n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "Micah deposited a total of $6,600 into two retirement accounts last year by depositing $x dollars once each month into one account and $y dollars twice each month into the other account. Which equation represents this situation?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) $6,600 = 12x + 12y",
+        "B) $6,600 = 12x + 24y",
+        "C) $6,600 = 24x + 12y",
+        "D) $6,600 = 24x + 24y"
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "The account with $x deposited once monthly contributes 12x annually. The account with $y deposited twice monthly (24 times annually) contributes 24y annually. Total is 12x + 24y = 6,600.",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:33:51.852478"
+}

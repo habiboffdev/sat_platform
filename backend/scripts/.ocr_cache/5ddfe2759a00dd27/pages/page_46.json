@@ -1,0 +1,29 @@
+{
+  "page_num": 46,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nBranching in Jurisprudential Schools is one of the hundreds of thousands of manuscripts that have survived from roughly the sixteenth century to the present _____ being passed down through private libraries in the city of Timbuktu, Mali. Many of these manuscripts can be found at the Al-Wangari Manuscript Library.\n\n**17 Mark for Review**\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\n\nA) day by  \nB) day; by  \nC) day. By  \nD) day by,  \n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Branching in Jurisprudential Schools is one of the hundreds of thousands of manuscripts that have survived from roughly the sixteenth century to the present _____ being passed down through private libraries in the city of Timbuktu, Mali. Many of these manuscripts can be found at the Al-Wangari Manuscript Library.",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) day by",
+        "B) day; by",
+        "C) day. By",
+        "D) day by,"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The question tests punctuation and sentence structure conventions in Standard English.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:57:58.634023"
+}

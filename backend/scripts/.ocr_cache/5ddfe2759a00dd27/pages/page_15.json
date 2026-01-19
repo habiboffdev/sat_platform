@@ -1,0 +1,27 @@
+{
+  "page_num": 15,
+  "ocr_markdown": "# Section 1, Module 1: Reading and Writing \n\n**Directions**\n\nCarcinization, or the evolution of a crablike body form, has taken place in crustaceans many times over the last 250 million years. Decarcinization has occurred several times as well, even though it involves the loss of traits such as sideways walking that seem to have helped carcinized groups persist in a variety of ecosystems. In a 2021 paper, Joanna Wolfe and team note that many decarcinized groups are extinct and have very few living relatives\u2014signs that decarcinization might be an \u201cevolutionary dead-end.\u201d But the team also discusses frog crabs, a living decarcinized group with traits suited to dwelling in sediment; fossils show that the group had decarcinized members as far back as the Early Cretaceous. This example suggests that _____\n\n## Question 13\nWhich choice most logically completes the text?\n\nA) the evolutionary benefits of a crablike body form are less certain than many studies of carcinization had previously implied.\n\nB) despite having many living relatives, some decarcinized groups did not benefit from decarcinization.\n\nC) sideways walking may have been less important to the survival of frog crabs than a protected abdomen and other traits associated with carcinization.\n\nD) a crablike body form may not be optimal in all cases, with ecological conditions sometimes favoring the persistence of decarcinization.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Carcinization, or the evolution of a crablike body form, has taken place in crustaceans many times over the last 250 million years. Decarcinization has occurred several times as well, even though it involves the loss of traits such as sideways walking that seem to have helped carcinized groups persist in a variety of ecosystems. In a 2021 paper, Joanna Wolfe and team note that many decarcinized groups are extinct and have very few living relatives\u2014signs that decarcinization might be an \u201cevolutionary dead-end.\u201d But the team also discusses frog crabs, a living decarcinized group with traits suited to dwelling in sediment; fossils show that the group had decarcinized members as far back as the Early Cretaceous. This example suggests that _____",
+      "question_text": "Which choice most logically completes the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) the evolutionary benefits of a crablike body form are less certain than many studies of carcinization had previously implied.",
+        "B) despite having many living relatives, some decarcinized groups did not benefit from decarcinization.",
+        "C) sideways walking may have been less important to the survival of frog crabs than a protected abdomen and other traits associated with carcinization.",
+        "D) a crablike body form may not be optimal in all cases, with ecological conditions sometimes favoring the persistence of decarcinization."
+      ],
+      "correct_answer": "[NEED_ANSWER]",
+      "explanation": "The passage discusses decarcinization as potentially an evolutionary dead-end but presents frog crabs as a counterexample, suggesting that under certain ecological conditions, decarcinization can persist successfully.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:39:07.536161"
+}

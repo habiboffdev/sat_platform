@@ -1,0 +1,29 @@
+{
+  "page_num": 74,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**Section 2, Module 1: Math**  \nDirections\n\n**17**  \nCircles A and B are graphed in the xy-plane. Circle A is represented by the equation  \n$$(x + 8)^2 + (y - 8)^2 = 64$$  \nand intersects the x-axis at the point \\((r, s)\\). Circle B has its center at \\((r, s)\\) and has a radius of the same length as circle A. Which equation represents circle B?\n\nA) \\(x^2 + (y + 8)^2 = 64\\)  \nB) \\(x^2 + (y - 8)^2 = 64\\)  \nC) \\((x + 8)^2 + y^2 = 64\\)  \nD) \\((x - 8)^2 + y^2 = 64\\)  \n\n---\n\nThis format captures all the relevant information from the page.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "Circles A and B are graphed in the xy-plane. Circle A is represented by the equation $$(x + 8)^2 + (y - 8)^2 = 64$$ and intersects the x-axis at the point $(r, s)$. Circle B has its center at $(r, s)$ and has a radius of the same length as circle A. Which equation represents circle B?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) $x^2 + (y + 8)^2 = 64$",
+        "B) $x^2 + (y - 8)^2 = 64$",
+        "C) $(x + 8)^2 + y^2 = 64$",
+        "D) $(x - 8)^2 + y^2 = 64$"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Find intersection point of circle A with x-axis (y=0), determine center (r,s), then write equation for circle B with same radius 8.",
+      "domain": "Geometry and Trigonometry",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:16:01.515355"
+}

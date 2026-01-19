@@ -1,0 +1,29 @@
+{
+  "page_num": 54,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nWhile researching a topic, a student has taken the following notes:\n\n- Kale is a vegetable that contains ascorbic acid, an essential nutrient for humans.\n- Apricots are fruits that contain ascorbic acid.\n- There is 120 milligrams (mg) of ascorbic acid per every 100 grams (g) of kale.\n- There is 10 mg of ascorbic acid per every 100 g of apricot.\n- Humans cannot make ascorbic acid in their bodies, so they must get it from foods, including fruits and vegetables.\n- Ascorbic acid is also known as vitamin C.\n\n**25**  \nThe student wants to refute a claim that apricots are a better source of vitamin C than kale is. Which choice most effectively uses relevant information from the notes to accomplish this goal?\n\n**A.** Kale contains vitamin C (also known as ascorbic acid); in fact, there is 120 mg of vitamin C in every 100 g of kale.  \n**B.** Kale contains ascorbic acid (also known as vitamin C), and apricots do too.  \n**C.** Humans cannot make ascorbic acid in their bodies, but they can get it from kale and apricots.  \n**D.** With 120 mg of vitamin C per every 100 g, kale is actually a better source of vitamin C than apricots, which contain only 10 mg per every 100 g.\n\n--- \n\nFeel free to ask if you need any more assistance!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The student wants to refute a claim that apricots are a better source of vitamin C than kale is. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Kale contains vitamin C (also known as ascorbic acid); in fact, there is 120 mg of vitamin C in every 100 g of kale.",
+        "B. Kale contains ascorbic acid (also known as vitamin C), and apricots do too.",
+        "C. Humans cannot make ascorbic acid in their bodies, but they can get it from kale and apricots.",
+        "D. With 120 mg of vitamin C per every 100 g, kale is actually a better source of vitamin C than apricots, which contain only 10 mg per every 100 g."
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "Option D directly compares the vitamin C content (120 mg/100g for kale vs. 10 mg/100g for apricots), using the quantitative data from the notes to refute the claim that apricots are better.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:02:27.769992"
+}

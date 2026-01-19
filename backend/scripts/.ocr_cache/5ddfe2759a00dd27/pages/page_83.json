@@ -1,0 +1,29 @@
+{
+  "page_num": 83,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**4**  \n*Mark for Review*\n\nThe ratio 6 to 3 is equivalent to the ratio 24 to \\(3k\\), where \\(k\\) is a constant. What is the value of \\(k\\)?\n\nA) 0.75  \nB) 4  \nC) 12  \nD) 72  \n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The ratio 6 to 3 is equivalent to the ratio 24 to 3k, where k is a constant. What is the value of k?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 0.75",
+        "B) 4",
+        "C) 12",
+        "D) 72"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Set up proportion 6/3 = 24/(3k) and solve for k",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:34:43.876037"
+}

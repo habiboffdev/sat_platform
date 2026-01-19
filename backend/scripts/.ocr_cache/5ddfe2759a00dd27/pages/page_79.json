@@ -1,0 +1,29 @@
+{
+  "page_num": 79,
+  "ocr_markdown": "Sure! Here is the extracted text from the SAT page:\n\n---\n\n**22. Mark for Review**\n\nIn a set of three consecutive integers, where the integers are ordered from least to greatest, the first integer is represented by $x$. The sum of 4 and the second integer is less than the product of 17 and the third integer. Which inequality represents this situation?\n\nA) \\( 4 + (x + 1) > 17(x + 2) \\)\n\nB) \\( 4 + (x + 1) < 17(x + 2) \\)\n\nC) \\( 4 + (x + 2) > 17(x + 3) \\)\n\nD) \\( 4 + (x + 2) < 17(x + 3) \\)\n\n---\n\nFeel free to ask if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "In a set of three consecutive integers, where the integers are ordered from least to greatest, the first integer is represented by $x$. The sum of 4 and the second integer is less than the product of 17 and the third integer. Which inequality represents this situation?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 4 + (x + 1) > 17(x + 2)",
+        "B) 4 + (x + 1) < 17(x + 2)",
+        "C) 4 + (x + 2) > 17(x + 3)",
+        "D) 4 + (x + 2) < 17(x + 3)"
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "The second integer is x+1, the third is x+2. Sum of 4 and second integer is 4 + (x+1). Product of 17 and third integer is 17(x+2). The inequality is 4 + (x+1) < 17(x+2).",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T22:26:55.052975"
+}

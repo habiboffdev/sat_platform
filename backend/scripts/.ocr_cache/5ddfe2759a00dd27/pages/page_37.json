@@ -1,0 +1,29 @@
+{
+  "page_num": 37,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions:**\n\nMauricio Drelichman and Hans-Joachim Voth\u2019s research into the debt defaults of Philip II (who ruled an empire including Spain and much of Belgium from 1556 to 1598) relates to other work on European early modern state finance, including Hoffman and Norberg\u2019s research on the relationship between state finance and political development. But Drelichman and Voth\u2019s unique contribution to the field is their reconstruction of the earliest extant set of annual fiscal records for any sovereign state, demonstrating in turn that Philip\u2019s defaults were caused by short-term cash shortages, not long-term unsustainable debts.\n\n---\n\n**8. Which choice best states the main idea of the text?**\n\nA. Analysis of the earliest available records of a sovereign state\u2019s finances can be found not in the work of Hoffman and Norberg but in that of Drelichman and Voth.\n\nB. Drelichman and Voth advanced the field of research on European early modern state finance by assembling a novel collection of evidence that gave them insight into Philip II\u2019s debt defaults.\n\nC. The research by Drelichman and Voth suggests that the logistics of ruling both Spain and much of Belgium led to short-term problems with cash that forced Philip II to default on his debts.\n\nD. Drelichman and Voth\u2019s research on Philip II\u2019s debt defaults builds on earlier work by Hoffman and Norberg, adding nuance to the earlier work\u2019s findings.\n\n--- \n\nFeel free to ask if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Mauricio Drelichman and Hans-Joachim Voth\u2019s research into the debt defaults of Philip II (who ruled an empire including Spain and much of Belgium from 1556 to 1598) relates to other work on European early modern state finance, including Hoffman and Norberg\u2019s research on the relationship between state finance and political development. But Drelichman and Voth\u2019s unique contribution to the field is their reconstruction of the earliest extant set of annual fiscal records for any sovereign state, demonstrating in turn that Philip\u2019s defaults were caused by short-term cash shortages, not long-term unsustainable debts.",
+      "question_text": "Which choice best states the main idea of the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Analysis of the earliest available records of a sovereign state\u2019s finances can be found not in the work of Hoffman and Norberg but in that of Drelichman and Voth.",
+        "B. Drelichman and Voth advanced the field of research on European early modern state finance by assembling a novel collection of evidence that gave them insight into Philip II\u2019s debt defaults.",
+        "C. The research by Drelichman and Voth suggests that the logistics of ruling both Spain and much of Belgium led to short-term problems with cash that forced Philip II to default on his debts.",
+        "D. Drelichman and Voth\u2019s research on Philip II\u2019s debt defaults builds on earlier work by Hoffman and Norberg, adding nuance to the earlier work\u2019s findings."
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "The text highlights Drelichman and Voth's unique contribution through reconstructing the earliest fiscal records, providing new insight into the causes of Philip II's defaults.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:51:56.563030"
+}

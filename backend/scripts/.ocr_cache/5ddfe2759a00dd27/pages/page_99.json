@@ -1,0 +1,29 @@
+{
+  "page_num": 99,
+  "ocr_markdown": "# SAT Question Extract\n\n## Question 20\n\nThe table summarizes the distribution of age and assigned group for 90 participants in a study.\n\n<table>\n<tr>\n    <th></th>\n    <th>0\u20139 years</th>\n    <th>10\u201319 years</th>\n    <th>20+ years</th>\n    <th>Total</th>\n</tr>\n<tr>\n    <td>Group A</td>\n    <td>15</td>\n    <td>11</td>\n    <td>4</td>\n    <td>30</td>\n</tr>\n<tr>\n    <td>Group B</td>\n    <td>4</td>\n    <td>5</td>\n    <td>21</td>\n    <td>30</td>\n</tr>\n<tr>\n    <td>Group C</td>\n    <td>11</td>\n    <td>14</td>\n    <td>5</td>\n    <td>30</td>\n</tr>\n<tr>\n    <td>Total</td>\n    <td>30</td>\n    <td>30</td>\n    <td>30</td>\n    <td>90</td>\n</tr>\n</table>\n\nOne of these participants will be selected at random. What is the probability of selecting a participant from group A, given that the participant is at least 10 years of age?\n\n## Options\nA) \\( \\frac{1}{6} \\)  \nB) \\( \\frac{1}{4} \\)  \nC) \\( \\frac{11}{30} \\)  \nD) \\( \\frac{1}{2} \\)  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "One of these participants will be selected at random. What is the probability of selecting a participant from group A, given that the participant is at least 10 years of age?",
+      "question_type": "multiple_choice",
+      "chart_title": "The table summarizes the distribution of age and assigned group for 90 participants in a study.",
+      "chart_data": "<table><tr><th></th><th>0\u20139 years</th><th>10\u201319 years</th><th>20+ years</th><th>Total</th></tr><tr><td>Group A</td><td>15</td><td>11</td><td>4</td><td>30</td></tr><tr><td>Group B</td><td>4</td><td>5</td><td>21</td><td>30</td></tr><tr><td>Group C</td><td>11</td><td>14</td><td>5</td><td>30</td></tr><tr><td>Total</td><td>30</td><td>30</td><td>30</td><td>90</td></tr></table>",
+      "question_image_url": "",
+      "options": [
+        "A) \\( \\frac{1}{6} \\)",
+        "B) \\( \\frac{1}{4} \\)",
+        "C) \\( \\frac{11}{30} \\)",
+        "D) \\( \\frac{1}{2} \\)"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Probability of group A given at least 10 years old = (Group A participants aged 10+)/(Total participants aged 10+) = (11+4)/(30+30) = 15/60 = 1/4",
+      "domain": "Problem Solving and Data Analysis",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:44:40.405585"
+}

@@ -1,0 +1,24 @@
+{
+  "page_num": 64,
+  "ocr_markdown": "```markdown\n7. Mark for Review\n\n$$\n2x = 9 + 7y \\\\\n-2x = -3 + 7y\n$$\n\nThe solution to the given system of equations is \\((x, y)\\). What is the value of \\(4x\\)?\n\nAnswer Preview:\n```\n",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The solution to the given system of equations is (x, y). What is the value of 4x?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [],
+      "correct_answer": [
+        "NEED_ANSWER"
+      ],
+      "explanation": "Solve the system of equations: 2x = 9 + 7y and -2x = -3 + 7y. Adding the equations eliminates x, leading to y = 3, then substituting back gives x = 15, so 4x = 60.",
+      "domain": "Algebra",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:06:40.492650"
+}

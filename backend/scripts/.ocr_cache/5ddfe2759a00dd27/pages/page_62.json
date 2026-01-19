@@ -1,0 +1,29 @@
+{
+  "page_num": 62,
+  "ocr_markdown": "```markdown\n6. Mark for Review\n\nThe function $$ f(x) = -30x + 310 $$ gives the predicted height above the ground $$ f(x) $$, in feet, of a model airplane $$ x $$ minutes after it begins to descend. What is the predicted height above the ground, in feet, of the model airplane 2 minutes after it begins to descend?\n\nA) 60  \nB) 250  \nC) 280  \nD) 370  \n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The function f(x) = -30x + 310 gives the predicted height above the ground f(x), in feet, of a model airplane x minutes after it begins to descend. What is the predicted height above the ground, in feet, of the model airplane 2 minutes after it begins to descend?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 60",
+        "B) 250",
+        "C) 280",
+        "D) 370"
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "Substitute x=2 into f(x): f(2) = -30(2) + 310 = -60 + 310 = 250 feet.",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:06:05.314473"
+}

@@ -1,0 +1,29 @@
+{
+  "page_num": 2,
+  "ocr_markdown": "```markdown\n**Section 1, Module 1: Reading and Writing**\n\n**Directions**\n\nTraditionally, certain features of mosque architecture are nearly _____, such as the mihrab (or niche), which almost all mosques include. But mosques can also be built to reflect a multitude of different architectural styles, as in the case of the Great Mosque of Central Java, which includes elements from the Javanese and Greek revival styles.\n\n1. Which choice completes the text with the most logical and precise word or phrase?\n   - A) universal\n   - B) elaborate\n   - C) illusory\n   - D) idealized\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Traditionally, certain features of mosque architecture are nearly _____, such as the mihrab (or niche), which almost all mosques include. But mosques can also be built to reflect a multitude of different architectural styles, as in the case of the Great Mosque of Central Java, which includes elements from the Javanese and Greek revival styles.",
+      "question_text": "Which choice completes the text with the most logical and precise word or phrase?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) universal",
+        "B) elaborate",
+        "C) illusory",
+        "D) idealized"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "The context indicates that the mihrab is a feature found in almost all mosques, making 'universal' the most logical choice to complete the text.",
+      "domain": "Craft and Structure",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:30:39.494726"
+}

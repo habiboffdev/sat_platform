@@ -1,0 +1,20 @@
+[
+  {
+    "passage_text": "",
+    "question_text": "Which choice best describes data from the table that support the researchers' conclusion?",
+    "question_type": "multiple_choice",
+    "question_image_url": "page_41_graph_1.jpg",
+    "options": [
+      "A. Whereas the total number of open flowers per growth unit peaked on day 15, the proportion of male flowers experienced a peak earlier in the flowering season, on day 10.",
+      "B. Despite the sharp reduction in the total number of open flowers per growth unit from day 15 to 20, there was no decline in the estimated reproductive success rate of male flowers in that interval.",
+      "C. Sex allocations were largely evenly distributed on days 10 and 15 but were female biased on days 5 and 20.",
+      "D. Although sex allocations became overwhelmingly female biased by day 20, male flowers' estimated reproductive success rate did not vary from day 5 to 20."
+    ],
+    "correct_answer": [
+      "[NEED_ANSWER]"
+    ],
+    "explanation": "Cannot determine correct answer without seeing the table data and researchers' conclusion referenced in the question.",
+    "domain": "Information and Ideas",
+    "difficulty": "Medium"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "page_num": 78,
+  "ocr_markdown": "```markdown\n21\n\n$$ f(x) = 20(2)^x + 6(2)^x $$\n\nThe function $ f $ is defined by the given equation. Which of the following equivalent forms of $ f $ displays, as a coefficient or a base, the y-coordinate of the y-intercept of the graph of $ y = f(x) $ in the xy-plane?\n\nA) $$ f(x) = 80(2)^{x - 2} + 24(2)^{x - 2} $$\n\nB) $$ f(x) = 2(10(2)^{x} + 3(2)^{x}) $$\n\nC) $$ f(x) = 20(4)^{\\frac{2}{7}} + 6(4)^{\\frac{2}{7}} $$\n\nD) $$ f(x) = 26(2)^{x} $$\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The function $ f $ is defined by the given equation. Which of the following equivalent forms of $ f $ displays, as a coefficient or a base, the y-coordinate of the y-intercept of the graph of $ y = f(x) $ in the xy-plane?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) $$ f(x) = 80(2)^{x - 2} + 24(2)^{x - 2} $$",
+        "B) $$ f(x) = 2(10(2)^{x} + 3(2)^{x}) $$",
+        "C) $$ f(x) = 20(4)^{\\frac{2}{7}} + 6(4)^{\\frac{2}{7}} $$",
+        "D) $$ f(x) = 26(2)^{x} $$"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "The y-intercept occurs when x=0. Original f(0)=20(2)^0+6(2)^0=20+6=26. Option D directly shows coefficient 26, which is the y-intercept.",
+      "domain": "Advanced Math",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:16:36.095238"
+}

@@ -1,0 +1,29 @@
+{
+  "page_num": 89,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n---\n\n**10**\n\nRectangles ABCD and EFGH are similar. The length of each side of EFGH is 6 times the length of the corresponding side of ABCD. The area of ABCD is 90 square units. What is the area, in square units, of EFGH?\n\nA) 15  \nB) 36  \nC) 540  \nD) 3,240  \n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "Rectangles ABCD and EFGH are similar. The length of each side of EFGH is 6 times the length of the corresponding side of ABCD. The area of ABCD is 90 square units. What is the area, in square units, of EFGH?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 15",
+        "B) 36",
+        "C) 540",
+        "D) 3,240"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "For similar figures, area scales by the square of the linear scale factor. Scale factor is 6, so area scales by 6\u00b2 = 36. 90 \u00d7 36 = 3,240.",
+      "domain": "Geometry and Trigonometry",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:37:48.395913"
+}

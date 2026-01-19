@@ -1,0 +1,39 @@
+{
+  "page_num": 76,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n---\n\n**19**  \n\nThe scatterplot shows the relationship between two variables, $x$ and $y$. A line of best fit for the data is also shown.\n\nFor how many of the 9 data points is the actual $y$-value greater than the $y$-value predicted by the line of best fit?\n\nA) 8  \nB) 7  \nC) 5  \nD) 2  \n\n[https://t.me/D7SAT](https://t.me/D7SAT)  \n\n--- \n\nLet me know if you need any further assistance!",
+  "is_question": true,
+  "graphs": [
+    {
+      "label": "scatterplot with line of best fit",
+      "bbox": [
+        258,
+        399,
+        854,
+        999
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "For how many of the 9 data points is the actual y-value greater than the y-value predicted by the line of best fit?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "page_76_graph_1.jpg",
+      "options": [
+        "A) 8",
+        "B) 7",
+        "C) 5",
+        "D) 2"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Count data points above the line of best fit in scatterplot.",
+      "domain": "Problem Solving and Data Analysis",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:28:15.081361"
+}

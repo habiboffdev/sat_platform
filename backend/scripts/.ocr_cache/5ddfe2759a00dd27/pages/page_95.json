@@ -1,0 +1,34 @@
+{
+  "page_num": 95,
+  "ocr_markdown": "## Student-produced response directions\n\n- If you find more than one correct answer, enter only one answer.\n- You can enter up to 5 characters for a positive answer and up to 6 characters (including the negative sign) for a negative answer.\n- If your answer is a fraction that doesn\u2019t fit in the provided space, enter the decimal equivalent.\n- If your answer is a decimal that doesn\u2019t fit in the provided space, enter it by truncating or rounding at the fourth digit.\n- If your answer is a mixed number (such as $3 \\frac{1}{2}$), enter it as an improper fraction ($\\frac{7}{2}$) or its decimal equivalent (3.5).\n- Don\u2019t enter symbols such as a percent sign, comma, or dollar sign.\n\n### Examples\n\n| Answer | Acceptable ways to enter answer | Unacceptable: will NOT receive credit |\n|--------|---------------------------------|--------------------------------------|\n| 3.5    | 3.5, 3.50, 7/2                  | 31/2, 3 1/2                         |\n| $ \\frac{2}{3} $ | 0.6666, 0.6667, 0.666, 0.667 | 0.66, 0.67, 0.67, .67             |\n| $ -\\frac{1}{3} $ | -1/3, -0.333, -0.3333    | -.33, -0.33                        |\n\n---\n\n## Question 16\n\nThe equation of the graph shown is $y = ax + b$, where $a$ and $b$ are constants. What is the value of $a - b$?\n\n---\n\n### Answer Preview:\n\n[Show Keypad]",
+  "is_question": true,
+  "graphs": [
+    {
+      "label": "coordinate plane with exponential graph",
+      "bbox": [
+        57,
+        764,
+        297,
+        1000
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The equation of the graph shown is $y = ax + b$, where $a$ and $b$ are constants. What is the value of $a - b$?",
+      "question_type": "student_produced_response",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "page_95_graph_1.jpg",
+      "options": [],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Find slope a and y-intercept b from the graph, then compute a - b.",
+      "domain": "Advanced Math",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:06:43.468320"
+}

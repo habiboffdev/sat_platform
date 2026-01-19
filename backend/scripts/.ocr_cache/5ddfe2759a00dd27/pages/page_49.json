@@ -1,0 +1,29 @@
+{
+  "page_num": 49,
+  "ocr_markdown": "### Section 1, Module 2: Reading and Writing\n\n**Directions**  \nAs part of his I GOT UP series, Japanese conceptual artist On Kawara spent over a decade\u2014 with near daily consistency\u2014mailing postcards to friends declaring what time he got up each day, resulting in pieces such as *I Got Up at 7:19 A.M., Jun 6 1977*. Such meticulous documentation of mundane artworks that \u201cresonate with existential, psychological and scientific implications about the time-space continuum,\u201d according to the *New York Times*, became Kawara\u2019s life\u2019s work.\n\n---\n\n**20 Mark for Review**  \nWhich choice completes the text so that it conforms to the conventions of Standard English?\n\nA. information, has generated  \nB. information generates  \nC. information, generating  \nD. information generated  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "As part of his I GOT UP series, Japanese conceptual artist On Kawara spent over a decade\u2014 with near daily consistency\u2014mailing postcards to friends declaring what time he got up each day, resulting in pieces such as *I Got Up at 7:19 A.M., Jun 6 1977*. Such meticulous documentation of mundane artworks that \u201cresonate with existential, psychological and scientific implications about the time-space continuum,\u201d according to the *New York Times*, became Kawara\u2019s life\u2019s work.",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. information, has generated",
+        "B. information generates",
+        "C. information, generating",
+        "D. information generated"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "This question tests grammatical structure and proper punctuation in sentence completion.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:59:33.683448"
+}

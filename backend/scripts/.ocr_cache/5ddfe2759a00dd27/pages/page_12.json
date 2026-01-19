@@ -1,0 +1,29 @@
+{
+  "page_num": 12,
+  "ocr_markdown": "## Section 1, Module 1: Reading and Writing\n\n### Directions\n\n---\n\n### Cumulative Counts of Fish in Three Taiwanese Tide Pools, 1999\u20132018\n\n| Species                      | Station 1 | Station 2 | Station 3 |\n|------------------------------|-----------|-----------|-----------|\n| barred flagtail               | 249       | 64        | 16        |\n| streaky rockskipper          | 125       | 139       | 610       |\n| blackspotted rockskipper     | 83        | 74        | 31        |\n| Cocos frillgoby              | 50        | 64        | 90        |\n\nLin-Tai Ho and colleagues tracked fish populations in three tide pool\u2013monitoring stations in Taiwan from 1999 to 2018. Although a total of only 31 blackspotted rockskippers were observed at station 3, that was not the lowest count at any station: _____\n\n### Question 10: Mark for Review\n\nWhich choice most effectively uses data from the table to complete the assertion?\n\nA) there were 16 streaky rockskippers observed at station 1.  \nB) there were 610 streaky rockskippers observed at station 3.  \nC) there were 16 barred flagtails observed at station 3.  \nD) there were 50 Cocos frillgobies observed at station 1.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Lin-Tai Ho and colleagues tracked fish populations in three tide pool\u2013monitoring stations in Taiwan from 1999 to 2018.",
+      "question_text": "Which choice most effectively uses data from the table to complete the assertion?",
+      "question_type": "multiple_choice",
+      "chart_title": "Cumulative Counts of Fish in Three Taiwanese Tide Pools, 1999\u20132018",
+      "chart_data": "<table><tr><th>Species</th><th>Station 1</th><th>Station 2</th><th>Station 3</th></tr><tr><td>barred flagtail</td><td>249</td><td>64</td><td>16</td></tr><tr><td>streaky rockskipper</td><td>125</td><td>139</td><td>610</td></tr><tr><td>blackspotted rockskipper</td><td>83</td><td>74</td><td>31</td></tr><tr><td>Cocos frillgoby</td><td>50</td><td>64</td><td>90</td></tr></table>",
+      "question_image_url": "",
+      "options": [
+        "A) there were 16 streaky rockskippers observed at station 1.",
+        "B) there were 610 streaky rockskippers observed at station 3.",
+        "C) there were 16 barred flagtails observed at station 3.",
+        "D) there were 50 Cocos frillgobies observed at station 1."
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The assertion states that 31 blackspotted rockskippers at station 3 was not the lowest count, implying a lower count exists. Option C correctly identifies 16 barred flagtails at station 3 as a lower number, using table data effectively.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:37:06.392141"
+}

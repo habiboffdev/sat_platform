@@ -1,0 +1,29 @@
+{
+  "page_num": 48,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nFollowing the formation of the European Union (EU) that same year, the organizers of the 1992 Tour de France wanted the bike race to reflect the cross-national flow of people and trade that the EU had made possible. The resulting course was 2,500 miles long\u2014seven separate borders of neighboring countries, modeled a vision of the EU\u2019s unifying aims.\n\n**19.** Mark for Review  \nWhich choice completes the text so that it conforms to the conventions of Standard English?  \nA) and, crossed  \nB) and had crossed  \nC) crossed  \nD) and, crossing  \n\n--- \n\nFeel free to ask if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Following the formation of the European Union (EU) that same year, the organizers of the 1992 Tour de France wanted the bike race to reflect the cross-national flow of people and trade that the EU had made possible. The resulting course was 2,500 miles long\u2014seven separate borders of neighboring countries, modeled a vision of the EU\u2019s unifying aims.",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) and, crossed",
+        "B) and had crossed",
+        "C) crossed",
+        "D) and, crossing"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Question tests grammar and sentence completion for Standard English conventions.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:58:56.170840"
+}

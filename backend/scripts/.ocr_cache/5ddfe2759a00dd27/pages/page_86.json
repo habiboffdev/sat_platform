@@ -1,0 +1,39 @@
+{
+  "page_num": 86,
+  "ocr_markdown": "```markdown\n7\nMark for Review\n\nThe graphs of \\( y = -3x + 7 \\) and \\( y = x - 5 \\) are shown. Point P (not shown) has coordinates \\( (3, -5) \\) and lies in the shaded region. The coordinates of P satisfy which of the following inequalities?\n\nI. \\( y < -3x + 7 \\)  \nII. \\( y > x - 5 \\)  \n\nA. I only  \nB. II only  \nC. I and II  \nD. Neither I nor II  \n```\n",
+  "is_question": true,
+  "graphs": [
+    {
+      "label": "coordinate plane with shaded region and two lines",
+      "bbox": [
+        130,
+        270,
+        490,
+        680
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The graphs of y = -3x + 7 and y = x - 5 are shown. Point P (not shown) has coordinates (3, -5) and lies in the shaded region. The coordinates of P satisfy which of the following inequalities?\nI. y < -3x + 7\nII. y > x - 5",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "page_86_graph_1.jpg",
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and II",
+        "D. Neither I nor II"
+      ],
+      "correct_answer": [
+        "NEED_ANSWER"
+      ],
+      "explanation": "Point P (3,-5) lies in the shaded region bounded by the lines y=-3x+7 and y=x-5. Determine which inequalities describe the region containing P.",
+      "domain": "Algebra",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:27:23.408065"
+}

@@ -1,0 +1,22 @@
+{
+  "page_num": 68,
+  "ocr_markdown": "# Section 2, Module 1: Math\n\n## Directions\n\n### Student-produced response directions\n\n- If you find more than one correct answer, enter only one answer.\n- You can enter up to 5 characters for a positive answer and up to 6 characters (including the negative sign) for a negative answer.\n- If your answer is a fraction that doesn\u2019t fit in the provided space, enter the decimal equivalent.\n- If your answer is a decimal that doesn\u2019t fit in the provided space, enter it by truncating or rounding at the fourth digit.\n- If your answer is a mixed number (such as \\( \\frac{3}{2} \\)), enter it as an improper fraction (7/2) or its decimal equivalent (3.5).\n- Don\u2019t enter symbols such as a percent sign, comma, or dollar sign.\n\n### Examples\n\n| Answer | Acceptable ways to enter answer | Unacceptable: will NOT receive credit |\n|--------|--------------------------------|--------------------------------------|\n| 3.5    | 3.5                            | 31/2                                 |\n|        | 3.50                           | 3 1/2                                |\n|        | 7/2                            |                                      |\n| 2/3    | 0.6666                         | 0.66                                 |\n|        | 0.66667                        | 0.66                                 |\n|        | 0.6666                         | 0.67                                 |\n|        | 0.667                          | 0.67                                 |\n| -1/3   | -1/3                           | -0.33                                |\n|        | -0.333                         | -0.33                                |\n\n### Question 11\n\nAn entomologist placed an initial population of 40 *Tenebrio molitor*, a type of beetle, into a habitat and monitored the population over time. When the number of *Tenebrio molitor* in the habitat reached 170% of the initial population, the entomologist moved 75% of the *Tenebrio molitor* to a second habitat. How many *Tenebrio molitor* did the entomologist move to the second habitat at this time?\n\n**Answer Preview:**\n\n[Show Keypad]",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "An entomologist placed an initial population of 40 Tenebrio molitor, a type of beetle, into a habitat and monitored the population over time. When the number of Tenebrio molitor in the habitat reached 170% of the initial population, the entomologist moved 75% of the Tenebrio molitor to a second habitat. How many Tenebrio molitor did the entomologist move to the second habitat at this time?",
+      "question_type": "student_produced_response",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [],
+      "correct_answer": "[NEED_ANSWER]",
+      "explanation": "Calculate 170% of initial population (40), then 75% of that result.",
+      "domain": "Problem Solving and Data Analysis",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:24:42.416260"
+}

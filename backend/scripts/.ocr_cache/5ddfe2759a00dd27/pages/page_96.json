@@ -1,0 +1,29 @@
+{
+  "page_num": 96,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n---\n\n**17** Mark for Review\n\n$$ y = 7x^2 - bx - 6 $$\n\nWhich of the following equations is equivalent to the given equation, where $b$ is a positive constant?\n\nA) $$ y = 7\\left(x - \\frac{b}{14}\\right)^2 - 6 - \\frac{b^2}{28} $$\n\nB) $$ y = 7\\left(x - \\frac{b}{14}\\right)^2 - 6 $$\n\nC) $$ y = 7\\left(x + \\frac{b}{14}\\right)^2 - 6 - \\frac{b^2}{28} $$\n\nD) $$ y = 7\\left(x + \\frac{b}{14}\\right)^2 - 6 $$\n\n---\n\nFeel free to let me know if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "y = 7x^2 - bx - 6\nWhich of the following equations is equivalent to the given equation, where b is a positive constant?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) y = 7(x - b/14)^2 - 6 - b^2/28",
+        "B) y = 7(x - b/14)^2 - 6",
+        "C) y = 7(x + b/14)^2 - 6 - b^2/28",
+        "D) y = 7(x + b/14)^2 - 6"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "The equation is a quadratic in standard form. Completing the square for y = 7x^2 - bx - 6 gives y = 7(x - b/14)^2 - (b^2/28) - 6, which matches option A.",
+      "domain": "Algebra",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:42:27.157880"
+}

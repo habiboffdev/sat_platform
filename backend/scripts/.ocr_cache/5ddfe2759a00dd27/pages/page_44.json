@@ -1,0 +1,29 @@
+{
+  "page_num": 44,
+  "ocr_markdown": "## Section 1, Module 2: Reading and Writing\n\n### Directions\nNeuroscientist Artin Arshamian and his team sought to determine what affects a person's perception of an odor as pleasant: is it culture, personal taste, or aspects of human anatomy? The team assessed odor preferences in ten groups of people with different modes of living (urban, agricultural, and hunter-gatherer) including the Maniq people from a small community in Thailand and the Seri people from a small community in Mexico. The team observed that across cultures, people generally rated odors about the same: ethyl butyrate, which smells like peaches, was typically rated more pleasant than diethyl disulfide, which smells like garlic. The team's study thus undermined the idea that ______\n\n---\n\n### Question 15\nWhich choice most logically completes the text?\n\n#### A\na person who perceives certain odors as pleasant will likely perceive the odors as roughly equal in pleasantness.\n\n#### B\nculture significantly influences whether a person perceives an odor as pleasant or unpleasant.\n\n#### C\npersonal taste has little influence on whether odors are perceived as pleasant or unpleasant.\n\n#### D\npeople agree in their perception of odors as pleasant or unpleasant regardless of where they live.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Neuroscientist Artin Arshamian and his team sought to determine what affects a person's perception of an odor as pleasant: is it culture, personal taste, or aspects of human anatomy? The team assessed odor preferences in ten groups of people with different modes of living (urban, agricultural, and hunter-gatherer) including the Maniq people from a small community in Thailand and the Seri people from a small community in Mexico. The team observed that across cultures, people generally rated odors about the same: ethyl butyrate, which smells like peaches, was typically rated more pleasant than diethyl disulfide, which smells like garlic. The team's study thus undermined the idea that ______",
+      "question_text": "Which choice most logically completes the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. a person who perceives certain odors as pleasant will likely perceive the odors as roughly equal in pleasantness.",
+        "B. culture significantly influences whether a person perceives an odor as pleasant or unpleasant.",
+        "C. personal taste has little influence on whether odors are perceived as pleasant or unpleasant.",
+        "D. people agree in their perception of odors as pleasant or unpleasant regardless of where they live."
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The passage describes a study showing that odor preferences are similar across cultures, undermining the idea that culture significantly influences perception.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:56:48.408499"
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "question_text": "<p>Amaranth grain was domesticated in Mexico. Its physical structure is no longer identical to the structure of the wild plant it is descended from. Summer squash also ________blank its wild ancestor. That ancestor plant had a hard rind and bitter flesh. Indigenous people in eastern North America carefully bred the crop until it had a soft rind and mild-tasting flesh.</p> <p>Which choice completes the text with the most logical and precise word or phrase?</p>",
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "reacts to"
+      },
+      {
+        "id": "B",
+        "text": "varies from"
+      },
+      {
+        "id": "C",
+        "text": "helps with"
+      },
+      {
+        "id": "D",
+        "text": "argues with"
+      }
+    ],
+    "correct_answer": [
+      "B"
+    ],
+    "explanation": "The context suggests that summer squash has changed from its wild ancestor, making 'varies from' the most logical and precise choice.",
+    "domain": "craft_and_structure",
+    "difficulty": "easy"
+  },
+  {
+    "question_text": "<p>The adult io moth appears black, orange, and yellow with large eyespots as a result of pigmented scales that cover its wings and body. Although scales are widely known as the source of a moth\u2019s color and pattern, the ________blank of these scales goes beyond visual display: they also detach when moths are caught in a spiderweb.</p>",
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "attractiveness"
+      },
+      {
+        "id": "B",
+        "text": "utility"
+      },
+      {
+        "id": "C",
+        "text": "tendency"
+      },
+      {
+        "id": "D",
+        "text": "frailty"
+      }
+    ],
+    "correct_answer": [
+      "B"
+    ],
+    "explanation": "The sentence suggests that the scales have a purpose beyond just visual display, which implies utility.",
+    "domain": "craft_and_structure",
+    "difficulty": "medium"
+  },
+  {
+    "question_text": "<p>Despite a growing view among young people and others in South Africa that celebrated anti-apartheid leader Nelson Mandela should have taken greater strides as president to effect more substantive structural changes in the country\u2019s stratified society, years after his death in 2013 Mandela continues to be ________blank by many worldwide.</p>",
+    "question_type": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "lauded"
+      },
+      {
+        "id": "B",
+        "text": "reinterpreted"
+      },
+      {
+        "id": "C",
+        "text": "evaluated"
+      },
+      {
+        "id": "D",
+        "text": "criticized"
+      }
+    ],
+    "correct_answer": [
+      "A"
+    ],
+    "explanation": "The sentence suggests that Mandela is still highly regarded by many worldwide despite some criticism.",
+    "domain": "craft_and_structure",
+    "difficulty": "medium"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "page_num": 36,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\n**Text 1** is T.L. Hulme's 1912 poem \"Above the Dock.\" Text 2 is from Amy Lowell's 1912 poem \"The Crescent Moon.\"\n\n**Text 1**\n\nAbove the quiet dock in mid night,  \nTangled in the tall mast's corded height,  \nHangs the moon. What seemed so far away  \nIs but a child's balloon, forgotten after play.\n\n**Text 2**\n\nSlipping softly through the sky  \nLittle horned, happy moon,  \nCan you hear me up so high?  \nWill you come down soon?\n\n---\n\n**7. Mark for Review**\n\nWhich choice best describes a notable difference in how the speaker of Text 1 and the speaker of Text 2 portray the moon?\n\nA. While both speakers characterize the moon as an entrapped figure, only the speaker of Text 2 describes the moon as being content with this fate.\n\nB. While both speakers present the moon as a tangible object, only the speaker of Text 1 addresses the moon\u2019s beauty.\n\nC. While the speaker of Text 1 presents the moon as an object of play, the speaker of Text 2 presents the moon as an object of serious study.\n\nD. While the speaker of Text 1 presents the moon as seeming to be very close, the speaker of Text 2 emphasizes the moon\u2019s distance from the speaker.\n\n--- \n\nLet me know if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Text 1 is T.L. Hulme's 1912 poem \"Above the Dock.\" Text 2 is from Amy Lowell's 1912 poem \"The Crescent Moon.\"\n\nText 1\nAbove the quiet dock in mid night,\nTangled in the tall mast's corded height,\nHangs the moon. What seemed so far away\nIs but a child's balloon, forgotten after play.\n\nText 2\nSlipping softly through the sky\nLittle horned, happy moon,\nCan you hear me up so high?\nWill you come down soon?",
+      "question_text": "Which choice best describes a notable difference in how the speaker of Text 1 and the speaker of Text 2 portray the moon?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. While both speakers characterize the moon as an entrapped figure, only the speaker of Text 2 describes the moon as being content with this fate.",
+        "B. While both speakers present the moon as a tangible object, only the speaker of Text 1 addresses the moon\u2019s beauty.",
+        "C. While the speaker of Text 1 presents the moon as an object of play, the speaker of Text 2 presents the moon as an object of serious study.",
+        "D. While the speaker of Text 1 presents the moon as seeming to be very close, the speaker of Text 2 emphasizes the moon\u2019s distance from the speaker."
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "Text 1 describes the moon as appearing close ('What seemed so far away / Is but a child's balloon'), while Text 2 emphasizes distance ('Can you hear me up so high? / Will you come down soon?').",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:13:47.253999"
+}

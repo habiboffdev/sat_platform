@@ -1,0 +1,17 @@
+[
+  {
+    "passage_text": "",
+    "question_text": "The equation of the graph shown is $y = ax + b$, where $a$ and $b$ are constants. What is the value of $a - b$?",
+    "question_type": "student_produced_response",
+    "chart_title": "",
+    "chart_data": "",
+    "question_image_url": "page_95_graph_1.jpg",
+    "options": [],
+    "correct_answer": [
+      "[NEED_ANSWER]"
+    ],
+    "explanation": "Find slope a and y-intercept b from the graph, then compute a - b.",
+    "domain": "Advanced Math",
+    "difficulty": "Medium"
+  }
+]

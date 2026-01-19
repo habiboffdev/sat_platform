@@ -1,0 +1,24 @@
+{
+  "page_num": 72,
+  "ocr_markdown": "# Section 2, Module 1: Math\n\n## Directions\n\n**Student-produced response directions**\n\n- If you find more than one correct answer, enter only one answer.\n- You can enter up to 5 characters for a positive answer and up to 6 characters (including the negative sign) for a negative answer.\n- If your answer is a fraction that doesn't fit in the provided space, enter the decimal equivalent.\n- If your answer is a decimal that doesn't fit in the provided space, enter it by truncating or rounding at the fourth digit.\n- If your answer is a mixed number (such as \\( \\frac{3}{2} \\)), enter it as an improper fraction (7/2) or its decimal equivalent (3.5).\n- Don't enter symbols such as a percent sign, comma, or dollar sign.\n\n### Examples\n\n| Answer | Acceptable ways to enter answer | Unacceptable: will NOT receive credit |\n|--------|----------------------------------|--------------------------------------|\n| 3.5    | 3.5 <br> 3.50 <br> 7/2           | 31/2 <br> 3 1/2                      |\n| \\( \\frac{2}{3} \\) | 2/3 <br> 0.666 <br> 0.667 <br> 0.666 <br> 0.67 | 0.66 <br> 0.67 <br> 0.667           |\n| \\( -\\frac{1}{3} \\) | -1/3 <br> -0.333 <br> -0.33  |                                      |\n\n## Question 15\n\nFor what value of \\( a \\) is \\( \\sqrt{r^{42}} \\) equivalent to \\( r^a \\), where \\( r > 1 \\)?\n\n**Answer Preview:**\n\n[Input box]",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "For what value of \\( a \\) is \\( \\sqrt{r^{42}} \\) equivalent to \\( r^a \\), where \\( r > 1 \\)?",
+      "question_type": "student_produced_response",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Simplify the square root of r^42 to find the exponent a.",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:26:50.209203"
+}

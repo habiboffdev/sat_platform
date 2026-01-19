@@ -1,0 +1,27 @@
+{
+  "page_num": 8,
+  "ocr_markdown": "# Section 1, Module 1: Reading and Writing\n\n**Directions**\n\nAdelaide is one of many cities that have installed pontoons or other hardening structures to protect their shorelines against coastal hazards. To assess how birds respond to shoreline hardening and other landscape alterations, Diann Prosser et al. used a tool known as the Index of Waterbird Community Integrity to survey bird communities consisting of sixty-four species, including the tundra swan and the great blue heron, in the Chesapeake Bay on the US East Coast. The researchers concluded that shoreline hardening more negatively affects birds than does land development for uses such as housing.\n\n---\n\n### 6. Mark for Review\n\nWhich choice best describes the overall structure of the text?\n\n**A.** It introduces a certain technique, mentions the hypothesis of a study into an ecological consequence of that technique, and presents evidence in support of that study\u2019s hypothesis.\n\n**B.** It provides an example of a location that has adopted a particular approach, explains the methodology of a study into an ecological effect of that approach, and describes a finding of that study.\n\n**C.** It makes a claim about the use of a specific strategy, describes field observations of a consequence of that strategy in a particular ecosystem, and makes a supposition based on those observations.\n\n**D.** It presents a solution to a commonly occurring problem, summarizes the procedures used by a group of researchers studying the environmental impact of that solution, and notes the significance of the researchers\u2019 findings.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Adelaide is one of many cities that have installed pontoons or other hardening structures to protect their shorelines against coastal hazards. To assess how birds respond to shoreline hardening and other landscape alterations, Diann Prosser et al. used a tool known as the Index of Waterbird Community Integrity to survey bird communities consisting of sixty-four species, including the tundra swan and the great blue heron, in the Chesapeake Bay on the US East Coast. The researchers concluded that shoreline hardening more negatively affects birds than does land development for uses such as housing.",
+      "question_text": "Which choice best describes the overall structure of the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. It introduces a certain technique, mentions the hypothesis of a study into an ecological consequence of that technique, and presents evidence in support of that study\u2019s hypothesis.",
+        "B. It provides an example of a location that has adopted a particular approach, explains the methodology of a study into an ecological effect of that approach, and describes a finding of that study.",
+        "C. It makes a claim about the use of a specific strategy, describes field observations of a consequence of that strategy in a particular ecosystem, and makes a supposition based on those observations.",
+        "D. It presents a solution to a commonly occurring problem, summarizes the procedures used by a group of researchers studying the environmental impact of that solution, and notes the significance of the researchers\u2019 findings."
+      ],
+      "correct_answer": "[NEED_ANSWER]",
+      "explanation": "Question asks about the structural analysis of the passage, which describes a location example, study methodology, and findings.",
+      "domain": "Craft and Structure",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:33:59.313075"
+}

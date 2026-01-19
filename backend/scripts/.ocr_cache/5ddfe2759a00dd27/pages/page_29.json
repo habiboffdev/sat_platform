@@ -1,0 +1,29 @@
+{
+  "page_num": 29,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 1: Reading and Writing**\n\n**Directions**\n\nWhile researching a topic, a student has taken the following notes:\n- The A.M. Turing Award is a prestigious award given by the Association for Computing Machinery (ACM).\n- The ACM gives the award for \u201cmajor contributions of lasting importance to computing.\u201d\n- It is named after groundbreaking British mathematician Alan Turing.\n- Raj Reddy won the award in 1994 for pioneering the development of large-scale artificial intelligence systems.\n\n---\n\n**27 Mark for Review**\n\nThe student wants to explain whom the award is named for. Which choice most effectively uses relevant information from the notes to accomplish this goal?\n\nA. In 1994, Raj Reddy won the A.M. Turing Award for pioneering the development of large-scale artificial intelligence systems.\n\nB. The A.M. Turing Award is given for \u201cmajor contributions of lasting importance to computing.\u201d\n\nC. The A.M. Turing Award is named for groundbreaking British mathematician Alan Turing.\n\nD. It was in 1994 that Raj Reddy won the A.M. Turing Award.\n\n--- \n\n",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "While researching a topic, a student has taken the following notes:\n- The A.M. Turing Award is a prestigious award given by the Association for Computing Machinery (ACM).\n- The ACM gives the award for \u201cmajor contributions of lasting importance to computing.\u201d\n- It is named after groundbreaking British mathematician Alan Turing.\n- Raj Reddy won the award in 1994 for pioneering the development of large-scale artificial intelligence systems.",
+      "question_text": "The student wants to explain whom the award is named for. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. In 1994, Raj Reddy won the A.M. Turing Award for pioneering the development of large-scale artificial intelligence systems.",
+        "B. The A.M. Turing Award is given for \u201cmajor contributions of lasting importance to computing.\u201d",
+        "C. The A.M. Turing Award is named for groundbreaking British mathematician Alan Turing.",
+        "D. It was in 1994 that Raj Reddy won the A.M. Turing Award."
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "Choice C directly states whom the award is named for, using the relevant note about Alan Turing.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:46:29.390806"
+}

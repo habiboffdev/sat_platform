@@ -1,0 +1,29 @@
+{
+  "page_num": 20,
+  "ocr_markdown": "# Section 1, Module 1: Reading and Writing\n\n### Directions\n\nCreating personas\u2014brief profiles of imaginary characters that represent key segments of a customer base\u2014can help user experience (UX) designers think like and empathize with those using their products. Fictional yet realistic, _____\n\n### Question 18\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\n\nA) these personas include specific details (demographics, browsing habits, etc.) that UX designers draw from actual users.\n\nB) specific details that UX designers draw from actual users (demographics, browsing habits, etc.) are included in these personas.\n\nC) UX designers include specific details (demographics, browsing habits, etc.) drawn from actual users in these personas.\n\nD) actual users are the source of the specific details (demographics, browsing habits, etc.) that UX designers include in these personas.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Creating personas\u2014brief profiles of imaginary characters that represent key segments of a customer base\u2014can help user experience (UX) designers think like and empathize with those using their products. Fictional yet realistic, _____",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) these personas include specific details (demographics, browsing habits, etc.) that UX designers draw from actual users.",
+        "B) specific details that UX designers draw from actual users (demographics, browsing habits, etc.) are included in these personas.",
+        "C) UX designers include specific details (demographics, browsing habits, etc.) drawn from actual users in these personas.",
+        "D) actual users are the source of the specific details (demographics, browsing habits, etc.) that UX designers include in these personas."
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Question tests grammatical completion of a sentence with appropriate subject-verb agreement and logical flow.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T22:12:28.050987"
+}

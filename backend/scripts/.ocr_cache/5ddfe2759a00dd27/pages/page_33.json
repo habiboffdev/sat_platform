@@ -1,0 +1,29 @@
+{
+  "page_num": 33,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\nDirections: \n\nSome ethicists challenge the concept of personal character, claiming that if it were meaningful, situational factors could not, as they clearly can, induce behavior contrary to that character. As Rachana Kamtekar observes, this argument is difficult to reconcile with our lay conception of character: we expect a person of helpful character to be frequently helpful, not _____.\n\n**4. Mark for Review**\n\nWhich choice completes the text with the most logical and precise word or phrase?\n\nA) self-servingly  \nB) sporadically  \nC) grudgingly  \nD) unfailingly  \n\n--- \n\nIf you need anything else, feel free to ask!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Some ethicists challenge the concept of personal character, claiming that if it were meaningful, situational factors could not, as they clearly can, induce behavior contrary to that character. As Rachana Kamtekar observes, this argument is difficult to reconcile with our lay conception of character: we expect a person of helpful character to be frequently helpful, not _____.",
+      "question_text": "Which choice completes the text with the most logical and precise word or phrase?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) self-servingly",
+        "B) sporadically",
+        "C) grudgingly",
+        "D) unfailingly"
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "The text contrasts 'frequently helpful' with a word meaning the opposite, and 'sporadically' fits best as it means occasionally or infrequently.",
+      "domain": "Craft and Structure",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:48:37.904567"
+}

@@ -1,0 +1,29 @@
+{
+  "page_num": 47,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nThe terms included in Barry Lopez and Debra Gwartney\u2019s *Home Ground: A Guide to the American* _____ such as \u201ckarst,\u201d which refers to limestone terrain riddled with caves or sinkholes\u2014illustrate the rich vocabulary used to describe the landforms of North America.\n\n---\n\n**18 Mark for Review**\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\n\nA. Landscape,  \nB. Landscape:  \nC. Landscape\u2014  \nD. Landscape  \n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "The terms included in Barry Lopez and Debra Gwartney\u2019s *Home Ground: A Guide to the American* _____ such as \"karst,\" which refers to limestone terrain riddled with caves or sinkholes\u2014illustrate the rich vocabulary used to describe the landforms of North America.",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Landscape,",
+        "B. Landscape:",
+        "C. Landscape\u2014",
+        "D. Landscape"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The question tests punctuation and grammar conventions in Standard English, specifically how to properly complete the phrase.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:58:30.399069"
+}

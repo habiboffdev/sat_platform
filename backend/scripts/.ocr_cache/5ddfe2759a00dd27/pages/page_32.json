@@ -1,0 +1,29 @@
+{
+  "page_num": 32,
+  "ocr_markdown": "# Section 1, Module 2: Reading and Writing\n\n**Directions**\n\nRun by researchers in Europe, the Survey of Health, Ageing, and Retirement in Europe (SHARE) is an examination of aging that has attempted to track approximately 120,000 people for several years. Long-running studies like this need a lot of participants not merely for statistical robustness but also because of ______: over such a length of time, a substantial number of participants will withdraw or fall out of contact with the researchers.\n\n### 3. Mark for Review\nWhich choice completes the text with the most logical and precise word or phrase?\n\nA) attrition  \nB) circumspection  \nC) impartiality  \nD) replicability  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Run by researchers in Europe, the Survey of Health, Ageing, and Retirement in Europe (SHARE) is an examination of aging that has attempted to track approximately 120,000 people for several years. Long-running studies like this need a lot of participants not merely for statistical robustness but also because of ______: over such a length of time, a substantial number of participants will withdraw or fall out of contact with the researchers.",
+      "question_text": "Which choice completes the text with the most logical and precise word or phrase?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) attrition",
+        "B) circumspection",
+        "C) impartiality",
+        "D) replicability"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "Attrition refers to the gradual reduction in participants over time, which matches the context of people withdrawing or losing contact.",
+      "domain": "Craft and Structure",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:47:49.980648"
+}

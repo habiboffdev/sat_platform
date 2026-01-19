@@ -1,0 +1,29 @@
+{
+  "page_num": 45,
+  "ocr_markdown": "```markdown\n# Section 1, Module 2: Reading and Writing\n**Directions**\n\nMany studies have found a positive association between levels of dissolved organic carbon and mercury in bodies of fresh water undisturbed by human activity. But St\u00e9phane Gu\u00e9dron, Delphine Tisserand, and colleagues did not find this correlation in an examination of freshwater bodies impacted by wastewater, leading some scientists to hypothesize that the association could be particular to undisturbed waters. However, Ida Tjerngren and colleagues carried out a study on freshwater bodies disturbed by urban development that showed similar results to the studies on undisturbed waters, suggesting that _____\n\n### 16\nWhich choice most logically completes the text?\n\nA. levels of dissolved organic carbon and mercury are both much higher in bodies of fresh water impacted by wastewater than they are in bodies of fresh water disturbed by urban development.\n\nB. Gu\u00e9dron, Tisserand, and colleagues\u2019 study used different methods to measure the concentration of mercury in fresh water than Tjerngren and colleagues\u2019 study did.\n\nC. the effects of wastewater on the association between levels of dissolved organic carbon and mercury should not be taken as indicative of the effects of every type of human disturbance.\n\nD. disturbances linked to wastewater affect significantly more bodies of fresh water than disturbances linked to urban development do.\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Many studies have found a positive association between levels of dissolved organic carbon and mercury in bodies of fresh water undisturbed by human activity. But St\u00e9phane Gu\u00e9dron, Delphine Tisserand, and colleagues did not find this correlation in an examination of freshwater bodies impacted by wastewater, leading some scientists to hypothesize that the association could be particular to undisturbed waters. However, Ida Tjerngren and colleagues carried out a study on freshwater bodies disturbed by urban development that showed similar results to the studies on undisturbed waters, suggesting that _____",
+      "question_text": "Which choice most logically completes the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. levels of dissolved organic carbon and mercury are both much higher in bodies of fresh water impacted by wastewater than they are in bodies of fresh water disturbed by urban development.",
+        "B. Gu\u00e9dron, Tisserand, and colleagues\u2019 study used different methods to measure the concentration of mercury in fresh water than Tjerngren and colleagues\u2019 study did.",
+        "C. the effects of wastewater on the association between levels of dissolved organic carbon and mercury should not be taken as indicative of the effects of every type of human disturbance.",
+        "D. disturbances linked to wastewater affect significantly more bodies of fresh water than disturbances linked to urban development do."
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The text contrasts the wastewater study (no correlation) with the urban development study (correlation found), indicating that different human disturbances have different effects.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:57:29.470994"
+}

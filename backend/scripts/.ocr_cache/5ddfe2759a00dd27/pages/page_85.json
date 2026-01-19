@@ -1,0 +1,29 @@
+{
+  "page_num": 85,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text:\n\n---\n\n**6**  \n**Mark for Review**  \n\nThe given equation relates the resistance $R$, in ohms, of a wire to its length $\\ell$, in meters, and its cross-sectional area $A$, in square meters. Which equation correctly expresses the length, in meters, of the wire in terms of its resistance, in ohms, and its cross-sectional area, in square meters?\n\nA) $$ \\ell = \\frac{R - A}{0.43} $$  \n\nB) $$ \\ell = \\frac{R + A}{0.43} $$  \n\nC) $$ \\ell = \\frac{0.43 R}{A} $$  \n\nD) $$ \\ell = \\frac{AR}{0.43} $$  \n\n--- \n\nLet me know if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The given equation relates the resistance $R$, in ohms, of a wire to its length $\\ell$, in meters, and its cross-sectional area $A$, in square meters. Which equation correctly expresses the length, in meters, of the wire in terms of its resistance, in ohms, and its cross-sectional area, in square meters?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) $\\ell = \\frac{R - A}{0.43}$",
+        "B) $\\ell = \\frac{R + A}{0.43}$",
+        "C) $\\ell = \\frac{0.43 R}{A}$",
+        "D) $\\ell = \\frac{AR}{0.43}$"
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The correct equation for length in terms of resistance and cross-sectional area is derived from the standard formula R = \u03c1\u2113/A, where \u03c1 is resistivity. Solving for \u2113 gives \u2113 = RA/\u03c1. Comparing with options, C matches \u2113 = (0.43R)/A, assuming \u03c1=0.43.",
+      "domain": "Algebra",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:35:54.037502"
+}

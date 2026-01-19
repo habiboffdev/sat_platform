@@ -1,0 +1,29 @@
+{
+  "page_num": 57,
+  "ocr_markdown": "Sure! Here is the extracted text:\n\n---\n\n**1**  Mark for Review  \nThe length of each side of triangle A is 270 millimeters. The length of each side of triangle B is double the length of each side of triangle A. What is the length, in millimeters, of each side of triangle B?\n\nA) 270  \nB) 272  \nC) 540  \nD) 1,080  \n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The length of each side of triangle A is 270 millimeters. The length of each side of triangle B is double the length of each side of triangle A. What is the length, in millimeters, of each side of triangle B?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 270",
+        "B) 272",
+        "C) 540",
+        "D) 1,080"
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "Each side of triangle B is double that of triangle A, so 270 * 2 = 540 millimeters.",
+      "domain": "Geometry and Trigonometry",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:04:19.694112"
+}

@@ -1,0 +1,29 @@
+{
+  "page_num": 51,
+  "ocr_markdown": "Sure! Here is the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**  \n**Directions**\n\nAt a time when many women writers used male pseudonyms to gain greater freedom of self-expression by evading gender conventions, Katherine Bradley and Edith Cooper adapted the practice by publishing poetry, prose, and drama for four decades under the shared name Michael Field. The duo was able to express the joint creative vision that sustained their long personal and professional partnership.\n\n**22**  \n**Mark for Review**  \nWhich choice completes the text with the most logical transition?  \nA) In this way,  \nB) For instance,  \nC) Later,  \nD) On the other hand,  \n\n--- \n\nLet me know if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "At a time when many women writers used male pseudonyms to gain greater freedom of self-expression by evading gender conventions, Katherine Bradley and Edith Cooper adapted the practice by publishing poetry, prose, and drama for four decades under the shared name Michael Field. The duo was able to express the joint creative vision that sustained their long personal and professional partnership.",
+      "question_text": "Which choice completes the text with the most logical transition?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) In this way,",
+        "B) For instance,",
+        "C) Later,",
+        "D) On the other hand,"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The question requires identifying the transition that logically connects the description of the general practice to the specific example of Bradley and Cooper.",
+      "domain": "Craft and Structure",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:00:47.485040"
+}

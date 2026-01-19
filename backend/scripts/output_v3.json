@@ -1,0 +1,24 @@
+[
+  {
+    "question_text": "<p>The solution to the given system of equations is \\((x, y)\\). What is the value of \\(4x\\)?</p><p>\\[2x = 9 + 7y\\]\\[-2x = 3 + 7y\\]</p>",
+    "question_type": "student_produced_response",
+    "question_image_url": "",
+    "options": [],
+    "correct_answer": [
+      "-6"
+    ],
+    "explanation": "Add the two equations: (2x) + (-2x) = (9 + 7y) + (3 + 7y) \u2192 0 = 12 + 14y \u2192 -12 = 14y \u2192 y = -12/14 = -6/7. Substitute y into the first equation: 2x = 9 + 7(-6/7) \u2192 2x = 9 - 6 \u2192 2x = 3 \u2192 x = 3/2. Then, 4x = 4*(3/2) = 6.",
+    "domain": "Algebra",
+    "difficulty": "Medium"
+  },
+  {
+    "question_text": "<p>A bank account was opened with an initial deposit. Over the next several months, regular deposits were made into this account, and there were no withdrawals made during this time. The graph of the function $f$ shown, where $y = f(x)$, estimates the account balance, in dollars, in this bank account $x$ months since the initial deposit. To the nearest whole dollar, what is the amount of the initial deposit estimated by the graph?</p>",
+    "question_type": "student_produced_response",
+    "question_image_url": "page_65_graph_1.jpg",
+    "options": [],
+    "correct_answer": [],
+    "explanation": "",
+    "domain": "Algebra",
+    "difficulty": "Medium"
+  }
+]

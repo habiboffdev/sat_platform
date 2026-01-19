@@ -1,0 +1,29 @@
+{
+  "page_num": 43,
+  "ocr_markdown": "```markdown\n# Section 1, Module 2: Reading and Writing\n\n**Directions**\n\nAs observed in a 2011 study by Emilio Garc\u00eda-Robledo and Alfonso Corzo, macroalgal proliferation may have a suppressive effect on the abundance of cyanobacteria and other microphytobenthos (MPB)\u2014chlorophyll-producing microbes inhabiting marine sediment\u2014in part by reducing the amount of sunlight available to MPB. Examining benthic chlorophyll concentrations (a widely used proxy for MPB biomass) in mudflats in Curlew Bay and other coastal sites in Virginia, Alice F. Besterman and Michael L. Pace found that those concentrations did not negatively correlate with macroalgal proliferation. However, they noted that MPB may respond to low-light conditions by producing higher-than-normal concentrations of chlorophyll, and they thus concluded that _____\n\n## Question 14\n\nWhich choice most logically completes the text?\n\nA) researchers ought to account for the possibility that because MPB have the capacity to compensate for reduced sunlight availability, benthic chlorophyll concentrations may not always be a reliable indicator of MPB biomass.\n\nB) although their finding was inconsistent with that of Garc\u00eda-Robledo and Corzo, this discrepancy was not attributable to the ability of MPB to accelerate chlorophyll production to mitigate the negative impact of macroalgal accumulations.\n\nC) although elevated levels of macroalgae do not always correspond to increased levels of benthic chlorophyll, there is likely a larger trend in MPB biomass that is related to macroalgal presence but unrelated to light conditions.\n\nD) the effect of macroalgal concentrations on MPB abundance that Garc\u00eda-Robledo and Corzo reported was not observed in Curlew Bay and other Virginia sites because low-light conditions likely are not generalizable across the sites in the studies.\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "As observed in a 2011 study by Emilio Garc\u00eda-Robledo and Alfonso Corzo, macroalgal proliferation may have a suppressive effect on the abundance of cyanobacteria and other microphytobenthos (MPB)\u2014chlorophyll-producing microbes inhabiting marine sediment\u2014in part by reducing the amount of sunlight available to MPB. Examining benthic chlorophyll concentrations (a widely used proxy for MPB biomass) in mudflats in Curlew Bay and other coastal sites in Virginia, Alice F. Besterman and Michael L. Pace found that those concentrations did not negatively correlate with macroalgal proliferation. However, they noted that MPB may respond to low-light conditions by producing higher-than-normal concentrations of chlorophyll, and they thus concluded that _____",
+      "question_text": "Which choice most logically completes the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) researchers ought to account for the possibility that because MPB have the capacity to compensate for reduced sunlight availability, benthic chlorophyll concentrations may not always be a reliable indicator of MPB biomass.",
+        "B) although their finding was inconsistent with that of Garc\u00eda-Robledo and Corzo, this discrepancy was not attributable to the ability of MPB to accelerate chlorophyll production to mitigate the negative impact of macroalgal accumulations.",
+        "C) although elevated levels of macroalgae do not always correspond to increased levels of benthic chlorophyll, there is likely a larger trend in MPB biomass that is related to macroalgal presence but unrelated to light conditions.",
+        "D) the effect of macroalgal concentrations on MPB abundance that Garc\u00eda-Robledo and Corzo reported was not observed in Curlew Bay and other Virginia sites because low-light conditions likely are not generalizable across the sites in the studies."
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "The text discusses how MPB may compensate for low light by producing more chlorophyll, suggesting chlorophyll concentration might not accurately reflect biomass.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:56:04.689851"
+}

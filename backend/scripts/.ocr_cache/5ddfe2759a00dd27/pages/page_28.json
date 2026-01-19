@@ -1,0 +1,29 @@
+{
+  "page_num": 28,
+  "ocr_markdown": "Here is the extracted text:\n\n### Section 1, Module 1: Reading and Writing\n**Directions**\n\nWhile researching a topic, a student has taken the following notes:\n- Refrigerants are chemical compounds used in cooling technologies, such as air conditioners.\n- Air conditioners can use refrigerants to absorb heat and release cold air.\n- The refrigerant dichloromethane is a hydrochlorocarbon (HCC).\n- HCCs are composed of the elements hydrogen, chlorine, and carbon.\n- The refrigerant tetradecafluorohexane is a perfluorocarbon (PFC).\n- PFCs are composed of fluorine and carbon.\n\n---\n\n**26. Mark for Review**\n\nThe student wants to contrast dichloromethane and tetradecafluorohexane. Which choice most effectively uses relevant information from the notes to accomplish this goal?\n- A) Dichloromethane, a hydrochlorocarbon, is composed of hydrogen, chlorine, and carbon; tetradecafluorohexane, a perfluorocarbon, is composed of fluorine and carbon.\n- B) Dichloromethane and tetradecafluorohexane are chemical compounds used in cooling technologies; the compounds are known as refrigerants.\n- C) The hydrochlorocarbon dichloromethane and the perfluorocarbon tetradecafluorohexane are both refrigerants that can be used in cooling technologies like air conditioners.\n- D) Tetradecafluorohexane, a refrigerant, can be used in cooling technologies to absorb heat and release cold air.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The student wants to contrast dichloromethane and tetradecafluorohexane. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) Dichloromethane, a hydrochlorocarbon, is composed of hydrogen, chlorine, and carbon; tetradecafluorohexane, a perfluorocarbon, is composed of fluorine and carbon.",
+        "B) Dichloromethane and tetradecafluorohexane are chemical compounds used in cooling technologies; the compounds are known as refrigerants.",
+        "C) The hydrochlorocarbon dichloromethane and the perfluorocarbon tetradecafluorohexane are both refrigerants that can be used in cooling technologies like air conditioners.",
+        "D) Tetradecafluorohexane, a refrigerant, can be used in cooling technologies to absorb heat and release cold air."
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "Option A directly contrasts the chemical composition of the two refrigerants, highlighting their differences as hydrochlorocarbon vs perfluorocarbon and their elemental makeup.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:45:47.611138"
+}

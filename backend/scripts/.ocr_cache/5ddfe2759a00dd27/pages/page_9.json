@@ -1,0 +1,29 @@
+{
+  "page_num": 9,
+  "ocr_markdown": "### Section 1, Module 1: Reading and Writing\n\n**Directions**\n\nWomen like Dorothy T. Blum made important early contributions to the history of US cryptology, a field concerned with secure data communication and storage. Blum provided cryptological services for the US Army in the 1940s and then joined the National Security Agency (NSA). She was a pioneer in transitioning the NSA to using computers for cryptoanalysis. In this way, Blum and others like her helped make it possible for more women\u2014such as Maureen Baginski, who currently works in intelligence and supports the FBI\u2014to enter the field of cryptology.\n\n### Question 7\n\nWhich choice best states the main idea of the text?\n\nA) Cryptology is a field that focuses primarily on securely managing data.\n\nB) Women such as Dorothy T. Blum and Maureen Baginski have contributed to the field of cryptology.\n\nC) Dorothy T. Blum and Maureen Baginski worked together on an important project in the field of cryptology.\n\nD) Cryptology should be taught more often in schools to encourage more women to enter the field.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Women like Dorothy T. Blum made important early contributions to the history of US cryptology, a field concerned with secure data communication and storage. Blum provided cryptological services for the US Army in the 1940s and then joined the National Security Agency (NSA). She was a pioneer in transitioning the NSA to using computers for cryptoanalysis. In this way, Blum and others like her helped make it possible for more women\u2014such as Maureen Baginski, who currently works in intelligence and supports the FBI\u2014to enter the field of cryptology.",
+      "question_text": "Which choice best states the main idea of the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) Cryptology is a field that focuses primarily on securely managing data.",
+        "B) Women such as Dorothy T. Blum and Maureen Baginski have contributed to the field of cryptology.",
+        "C) Dorothy T. Blum and Maureen Baginski worked together on an important project in the field of cryptology.",
+        "D) Cryptology should be taught more often in schools to encourage more women to enter the field."
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "The text emphasizes the contributions of women like Blum and Baginski to cryptology.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:34:36.480495"
+}

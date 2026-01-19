@@ -1,0 +1,29 @@
+{
+  "page_num": 6,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 1: Reading and Writing**\n\n**Directions**\n\nScientists discovered a 390-million-year-old fossilized forest of *Calamophyton* trees in modern-day England. The scientists believe the emergence of these *Calamophyton* forests changed the land significantly. For example, the tree roots would have greatly reduced soil erosion, and the accumulated twigs the trees shed likely created new habitats for animal life.\n\n**4. Mark for Review**\n\nWhich choice best describes the function of the underlined sentence in the text as a whole?  \n- A) It suggests that there are likely fossilized *Calamophyton* forests from before 390 million years ago.  \n- B) It provides two competing views of when the *Calamophyton* forest likely merged.  \n- C) It illustrates how *Calamophyton* forests likely changed conditions on the land.  \n- D) It indicates how fast the *Calamophyton* forest spread.  \n\n--- \n\nLet me know if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Scientists discovered a 390-million-year-old fossilized forest of Calamophyton trees in modern-day England. The scientists believe the emergence of these Calamophyton forests changed the land significantly. For example, the tree roots would have greatly reduced soil erosion, and the accumulated twigs the trees shed likely created new habitats for animal life.",
+      "question_text": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) It suggests that there are likely fossilized Calamophyton forests from before 390 million years ago.",
+        "B) It provides two competing views of when the Calamophyton forest likely merged.",
+        "C) It illustrates how Calamophyton forests likely changed conditions on the land.",
+        "D) It indicates how fast the Calamophyton forest spread."
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The underlined sentence provides specific examples of how Calamophyton forests changed land conditions, supporting the main idea.",
+      "domain": "Craft and Structure",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:32:45.366865"
+}

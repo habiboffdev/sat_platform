@@ -1,0 +1,39 @@
+{
+  "page_num": 91,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n---\n\n**12**  \n*Mark for Review*\n\nThe scatterplot shows data set A, which consists of the weights $y$, in pounds, of a Labrador retriever puppy at various ages, $x$, in months. The equation of a line of best fit for the relationship in data set A can be written as $y = -5.1 + 8.7x$, where $2 \\leq x \\leq 6$.\n\nThe puppy was weighed again at 9 months old and weighed 52 pounds. Data set B consists of all the data points in data set A as well as the data point (9, 52). The equation of a line of best fit for data set B can be written as $y = r + sx$, where $r$ and $s$ are constants and $2 \\leq x \\leq 9$. Assuming the equations of the lines of best fit are calculated in the same way, which of the following is the best estimate for the value of $s$?\n\nA) 5.9  \nB) 8.7  \nC) 13.8  \nD) 17.7  \n\n---",
+  "is_question": true,
+  "graphs": [
+    {
+      "label": "scatterplot",
+      "bbox": [
+        300,
+        420,
+        1000,
+        1000
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The scatterplot shows data set A, which consists of the weights y, in pounds, of a Labrador retriever puppy at various ages, x, in months. The equation of a line of best fit for the relationship in data set A can be written as y = -5.1 + 8.7x, where 2 \u2264 x \u2264 6. The puppy was weighed again at 9 months old and weighed 52 pounds. Data set B consists of all the data points in data set A as well as the data point (9, 52). The equation of a line of best fit for data set B can be written as y = r + sx, where r and s are constants and 2 \u2264 x \u2264 9. Assuming the equations of the lines of best fit are calculated in the same way, which of the following is the best estimate for the value of s?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "page_91_graph_1.jpg",
+      "options": [
+        "A) 5.9",
+        "B) 8.7",
+        "C) 13.8",
+        "D) 17.7"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The question involves comparing lines of best fit for two data sets and estimating the slope s for data set B after adding an outlier point.",
+      "domain": "Problem Solving and Data Analysis",
+      "difficulty": "Hard"
+    }
+  ],
+  "processed_at": "2025-12-24T21:56:53.093636"
+}

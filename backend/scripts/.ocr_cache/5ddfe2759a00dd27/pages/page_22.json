@@ -1,0 +1,29 @@
+{
+  "page_num": 22,
+  "ocr_markdown": "## Section 1, Module 1: Reading and Writing\n\n**Directions**\n\nAlthough the term \u201cballoonomania\u201d\u2014referring to the hot-air balloon fad in England and France in the late 1700s\u2014might suggest that the public as a whole was captivated by the technology, it was not universally ___ whereas many flocked to balloon launches and purchased balloon-themed items ranging from dinnerware to accessories, others dismissed the hot-air balloon as an impractical and dangerous extravagance.\n\n**20. Mark for Review**  \nWhich choice completes the text so that it conforms to the conventions of Standard English?\n\nA) embraced:  \nB) embraced  \nC) embraced,  \nD) embraced and  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Although the term \u201cballoonomania\u201d\u2014referring to the hot-air balloon fad in England and France in the late 1700s\u2014might suggest that the public as a whole was captivated by the technology, it was not universally ___ whereas many flocked to balloon launches and purchased balloon-themed items ranging from dinnerware to accessories, others dismissed the hot-air balloon as an impractical and dangerous extravagance.",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. embraced:",
+        "B. embraced",
+        "C. embraced,",
+        "D. embraced and"
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The correct punctuation is a comma before 'whereas' to connect two independent clauses.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:42:07.664799"
+}

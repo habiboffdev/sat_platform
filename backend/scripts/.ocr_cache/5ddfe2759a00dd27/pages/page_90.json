@@ -1,0 +1,24 @@
+{
+  "page_num": 90,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text from the SAT page:\n\n---\n\n**11**  Mark for Review\n\nOn a plot of land, 48.0% of the square footage is farmland and the remaining square footage is pasture. There are buildings on exactly 23.5% of the square footage of the farmland, and there are buildings on exactly 16.0% of the square footage of the pasture. If there are buildings on exactly $p\\%$ of the square footage of the plot of land, what is the value of $p$?\n\n**Answer Preview:**\n\n--- \n\nFeel free to ask if you need more assistance!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "On a plot of land, 48.0% of the square footage is farmland and the remaining square footage is pasture. There are buildings on exactly 23.5% of the square footage of the farmland, and there are buildings on exactly 16.0% of the square footage of the pasture. If there are buildings on exactly $p\\%$ of the square footage of the plot of land, what is the value of $p$?",
+      "question_type": "student_produced_response",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Calculate the weighted average of buildings on farmland and pasture based on their percentages of total land.",
+      "domain": "Problem Solving and Data Analysis",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:38:11.948414"
+}

@@ -1,0 +1,29 @@
+{
+  "page_num": 13,
+  "ocr_markdown": "# Section 1, Module 1: Reading and Writing\n\n## Directions\n\n### Numbers of the 23 Non-native Tree Species Reported and the Insect and Fungus Threats to Them\n\n| Country  | Trees | Fungi | Insects |\n|----------|-------|-------|---------|\n| Austria  | 13    | 51    | 50      |\n| Belgium  | 4     | 13    | 11      |\n| Bulgaria | 9     | 14    | 16      |\n\nElisabeth P\u00f6tzelsberger and colleagues gathered data on 23 non-native tree species grown in Europe. They analyzed reports from Austria, Bulgaria, and Belgium about the number of these species grown in those countries as well as the numbers of insect and fungus species that damage those trees. The researchers concluded that Austria had a greater number of damaging fungus species than either of the other countries did.\n\n### Question 11: Mark for Review\n\nWhich choice best describes data from the table that support P\u00f6tzelsberger and colleagues\u2019 conclusion?\n\n**A.** Belgium reported 13 damaging fungus species but only 11 damaging insect species.\n\n**B.** Austria reported 51 damaging fungus species, whereas Bulgaria reported 16 damaging insect species.\n\n**C.** Bulgaria and Belgium reported 9 and 4 damaging fungus species, respectively, which is far fewer than Austria reported.\n\n**D.** Austria reported 51 damaging fungus species, which is more than either Bulgaria or Belgium reported.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Elisabeth P\u00f6tzelsberger and colleagues gathered data on 23 non-native tree species grown in Europe. They analyzed reports from Austria, Bulgaria, and Belgium about the number of these species grown in those countries as well as the numbers of insect and fungus species that damage those trees. The researchers concluded that Austria had a greater number of damaging fungus species than either of the other countries did.",
+      "question_text": "Which choice best describes data from the table that support P\u00f6tzelsberger and colleagues\u2019 conclusion?",
+      "question_type": "multiple_choice",
+      "chart_title": "Numbers of the 23 Non-native Tree Species Reported and the Insect and Fungus Threats to Them",
+      "chart_data": "<table><tr><th>Country</th><th>Trees</th><th>Fungi</th><th>Insects</th></tr><tr><td>Austria</td><td>13</td><td>51</td><td>50</td></tr><tr><td>Belgium</td><td>4</td><td>13</td><td>11</td></tr><tr><td>Bulgaria</td><td>9</td><td>14</td><td>16</td></tr></table>",
+      "question_image_url": "",
+      "options": [
+        "A. Belgium reported 13 damaging fungus species but only 11 damaging insect species.",
+        "B. Austria reported 51 damaging fungus species, whereas Bulgaria reported 16 damaging insect species.",
+        "C. Bulgaria and Belgium reported 9 and 4 damaging fungus species, respectively, which is far fewer than Austria reported.",
+        "D. Austria reported 51 damaging fungus species, which is more than either Bulgaria or Belgium reported."
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "Option D directly compares Austria's fungus count (51) with Bulgaria (14) and Belgium (13), supporting the conclusion that Austria has more damaging fungus species.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:37:46.018154"
+}

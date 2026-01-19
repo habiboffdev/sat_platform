@@ -1,0 +1,29 @@
+{
+  "page_num": 82,
+  "ocr_markdown": "# SAT Question Extract\n\n**3**\n\nThe measure of angle \\( G \\) is \\( \\frac{\\pi}{10} \\) radians. If the measure of angle \\( G \\) is \\( 9n \\) degrees, where \\( n \\) is a constant, what is the value of \\( n \\)?\n\nA) 2  \nB) 9  \nC) 10  \nD) 18  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The measure of angle G is \u03c0/10 radians. If the measure of angle G is 9n degrees, where n is a constant, what is the value of n?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 2",
+        "B) 9",
+        "C) 10",
+        "D) 18"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "Convert \u03c0/10 radians to degrees using the formula degrees = radians \u00d7 (180/\u03c0). \u03c0/10 \u00d7 180/\u03c0 = 18 degrees. Set equal to 9n: 9n = 18, so n = 2.",
+      "domain": "Geometry and Trigonometry",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:34:21.683910"
+}

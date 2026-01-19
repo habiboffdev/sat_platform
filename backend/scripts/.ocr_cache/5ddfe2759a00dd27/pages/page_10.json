@@ -1,0 +1,29 @@
+{
+  "page_num": 10,
+  "ocr_markdown": "## Section 1, Module 1: Reading and Writing\n\n**Directions**\n\nResearchers who examined data from radio-tagged southern sea otters (*Enhydra lutris nereis*) identified fitness benefits gained by otters that used tools. By using fixed stones as anvils, tool-using otters gained access to high-quality, hard-shelled prey (e.g., mussels and clams) that they could usually not access through biting alone. Non-tool-using otters foraged abundant, energy-poor, easily extractable prey instead (e.g., snails). Even when easily processed prey were depleted, tool-using otters that processed mussels and clams were thus able to obtain their needed energy resources and to do so without incurring tooth damage.\n\n### Question 8\n\nWhat does the text most strongly suggest about southern sea otters in environments where snails, mussels, and clams are present?\n\n- **A**: Those otters whose diet consists mainly of snails will likely exhibit less tooth damage than will those otters that use tools to consume mussels and clams.\n- **B**: Those otters that do not use tools will likely have more robust health than those otters that do use tools.\n- **C**: Those otters that do not use tools will likely need to process larger amounts of prey to meet their energy requirements than will those otters that use tools.\n- **D**: Those otters that consume mussels and clams without the use of tools will likely spend less time foraging than will those otters that use tools to access the same prey resources.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Researchers who examined data from radio-tagged southern sea otters (*Enhydra lutris nereis*) identified fitness benefits gained by otters that used tools. By using fixed stones as anvils, tool-using otters gained access to high-quality, hard-shelled prey (e.g., mussels and clams) that they could usually not access through biting alone. Non-tool-using otters foraged abundant, energy-poor, easily extractable prey instead (e.g., snails). Even when easily processed prey were depleted, tool-using otters that processed mussels and clams were thus able to obtain their needed energy resources and to do so without incurring tooth damage.",
+      "question_text": "What does the text most strongly suggest about southern sea otters in environments where snails, mussels, and clams are present?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Those otters whose diet consists mainly of snails will likely exhibit less tooth damage than will those otters that use tools to consume mussels and clams.",
+        "B. Those otters that do not use tools will likely have more robust health than those otters that do use tools.",
+        "C. Those otters that do not use tools will likely need to process larger amounts of prey to meet their energy requirements than will those otters that use tools.",
+        "D. Those otters that consume mussels and clams without the use of tools will likely spend less time foraging than will those otters that use tools to access the same prey resources."
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The text states that non-tool-using otters forage 'energy-poor' prey (snails), implying they need to consume more to meet energy needs compared to tool-using otters who access high-quality prey.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:35:21.490130"
+}

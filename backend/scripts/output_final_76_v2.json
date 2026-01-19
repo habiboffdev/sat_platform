@@ -1,0 +1,22 @@
+[
+  {
+    "passage_text": "",
+    "question_text": "For how many of the 9 data points is the actual y-value greater than the y-value predicted by the line of best fit?",
+    "question_type": "multiple_choice",
+    "chart_title": "",
+    "chart_data": "",
+    "question_image_url": "page_76_graph_1.jpg",
+    "options": [
+      "A) 8",
+      "B) 7",
+      "C) 5",
+      "D) 2"
+    ],
+    "correct_answer": [
+      "[NEED_ANSWER]"
+    ],
+    "explanation": "Count data points above the line of best fit in scatterplot.",
+    "domain": "Problem Solving and Data Analysis",
+    "difficulty": "Medium"
+  }
+]

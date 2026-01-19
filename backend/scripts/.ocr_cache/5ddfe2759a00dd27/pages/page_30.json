@@ -1,0 +1,29 @@
+{
+  "page_num": 30,
+  "ocr_markdown": "```markdown\n# Section 1, Module 2: Reading and Writing\n\n**Directions**\n\nStudying menus from nineteenth-century restaurants, old coupons clipped out of newspapers, and posters promoting concerts by long-forgotten musicians may seem like a frivolous pursuit, but ephemeral objects like these are useful as evidence of cultural change: they can _____ shifts in norms, values, and concerns that traditional objects of historical inquiry may not.\n\n## 1\nWhich choice completes the text with the most logical and precise word or phrase?\n\nA. dissociate from  \nB. collude with  \nC. compensate for  \nD. attest to  \n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Studying menus from nineteenth-century restaurants, old coupons clipped out of newspapers, and posters promoting concerts by long-forgotten musicians may seem like a frivolous pursuit, but ephemeral objects like these are useful as evidence of cultural change: they can _____ shifts in norms, values, and concerns that traditional objects of historical inquiry may not.",
+      "question_text": "Which choice completes the text with the most logical and precise word or phrase?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. dissociate from",
+        "B. collude with",
+        "C. compensate for",
+        "D. attest to"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "The word 'attest to' means to provide evidence for, which fits the context of ephemeral objects serving as evidence for cultural shifts.",
+      "domain": "Craft and Structure",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:46:52.636869"
+}

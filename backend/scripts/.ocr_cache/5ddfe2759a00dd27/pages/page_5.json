@@ -1,0 +1,29 @@
+{
+  "page_num": 5,
+  "ocr_markdown": "```markdown\n#### Section 1, Module 1: Reading and Writing\n\n____ traditional descriptions of pollination syndromes (suites of floral traits, such as nectar composition and symmetry, hypothesized to have independently evolved as a result of selection pressure exerted by pollinators) and recent empirical observations of floral-trait combinations have led some ecologists to express reservations about the utility of those descriptions.\n\n**3.** Which choice completes the text with the most logical and precise word or phrase?\n\nA) Discrepancies between  \nB) Proclamations of  \nC) Recurrences of  \nD) Affinities between  \n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Traditional descriptions of pollination syndromes (suites of floral traits, such as nectar composition and symmetry, hypothesized to have independently evolved as a result of selection pressure exerted by pollinators) and recent empirical observations of floral-trait combinations have led some ecologists to express reservations about the utility of those descriptions.",
+      "question_text": "Which choice completes the text with the most logical and precise word or phrase?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) Discrepancies between",
+        "B) Proclamations of",
+        "C) Recurrences of",
+        "D) Affinities between"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "The text discusses ecologists' reservations due to inconsistencies between traditional descriptions and recent observations.",
+      "domain": "Craft and Structure",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:32:08.405549"
+}

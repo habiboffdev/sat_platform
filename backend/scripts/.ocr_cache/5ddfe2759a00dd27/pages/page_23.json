@@ -1,0 +1,29 @@
+{
+  "page_num": 23,
+  "ocr_markdown": "Sure! Here is the extracted text in clean Markdown format:\n\n### Section 1, Module 1: Reading and Writing\n\n**Directions**\n\nIn February 1864, James Johnson joined the US Army. He went on to serve in the 18th New York Cavalry during the US Civil War and, _____ earned a place in US history as one of the war\u2019s few Chinese-born American soldiers.\n\n**21**  \nWhich choice completes the text with the most logical transition?  \nA) usually,  \nB) for instance,  \nC) in any case,  \nD) in doing so,",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "In February 1864, James Johnson joined the US Army. He went on to serve in the 18th New York Cavalry during the US Civil War and, _____ earned a place in US history as one of the war\u2019s few Chinese-born American soldiers.",
+      "question_text": "Which choice completes the text with the most logical transition?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) usually,",
+        "B) for instance,",
+        "C) in any case,",
+        "D) in doing so,"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "The transition 'in doing so' logically connects his service to earning a historical place.",
+      "domain": "Expression of Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:42:41.149687"
+}

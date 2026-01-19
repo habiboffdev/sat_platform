@@ -1,0 +1,29 @@
+{
+  "page_num": 17,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 1: Reading and Writing**\n\n**Directions:**\n\nMountain goats were made to climb. In addition to having hard hooves that can dig into nearly any groove or _____ mountain goats have slender bodies ideal for scaling nearly ninety-degree cliffs.\n\n**15** Mark for Review  \nWhich choice completes the text so that it conforms to the conventions of Standard English?\n\n- **A** crack, or\n- **B** crack or\n- **C** crack\n- **D** crack,\n\n--- \n\nLet me know if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Mountain goats were made to climb. In addition to having hard hooves that can dig into nearly any groove or",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. crack, or",
+        "B. crack or",
+        "C. crack",
+        "D. crack,"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Question tests punctuation rules in a series within Standard English Conventions.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:39:55.050342"
+}

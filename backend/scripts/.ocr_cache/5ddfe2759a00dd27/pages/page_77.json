@@ -1,0 +1,29 @@
+{
+  "page_num": 77,
+  "ocr_markdown": "Here's the extracted text from the provided SAT page:\n\n---\n\n**20**  \n**Mark for Review**\n\n$$ RS = 504 $$  \n$$ ST = 128 $$  \n$$ TR = 520 $$  \n\nThe side lengths of right triangle \\( RST \\) are given. Triangle \\( RST \\) is similar to triangle \\( UVW \\), where \\( S \\) corresponds to \\( V \\) and \\( T \\) corresponds to \\( W \\). What is the value of \\( \\tan W \\)?\n\nA) \\( \\frac{16}{65} \\)  \nB) \\( \\frac{16}{63} \\)  \nC) \\( \\frac{63}{65} \\)  \nD) \\( \\frac{63}{16} \\)\n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The side lengths of right triangle RST are given. Triangle RST is similar to triangle UVW, where S corresponds to V and T corresponds to W. What is the value of tan W?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 16/65",
+        "B) 16/63",
+        "C) 63/65",
+        "D) 63/16"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Find which angle is the right angle in RST using Pythagorean theorem, then determine corresponding angle in UVW to calculate tan W.",
+      "domain": "Geometry and Trigonometry",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:32:21.838252"
+}

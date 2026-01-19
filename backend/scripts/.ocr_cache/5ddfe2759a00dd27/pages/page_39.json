@@ -1,0 +1,29 @@
+{
+  "page_num": 39,
+  "ocr_markdown": "# Section 1, Module 2: Reading and Writing\n\n## Home Video Game Systems of the 1970s and 1980s\n\n| System         | Manufacturer | System type | Approximate number of units sold worldwide |\n|----------------|--------------|-------------|---------------------------------------------|\n| ColecoVision    | Coleco      | console     | 2,000,000                                   |\n| Intellivision   | Mattel      | console     | 3,000,000                                   |\n| MSX             | ASCII Corp. | computer    | 4,000,000                                   |\n| Game & Watch    | Nintendo    | handheld    | 18,600,000                                  |\n\nA student is writing a research paper on the global rise of the home video game industry during the 1970s and 1980s. The student is surprised by differences in the number of units sold by some systems compared to those sold by others. Most remarkably, the _____.\n\n## Question 10: Mark for Review\n\nWhich choice most effectively uses data from the table to complete the statement?\n\n- A. MSX sold approximately 4,000,000 units, whereas the Intellivision sold only approximately 3,000,000 units.\n- B. MSX sold approximately 18,600,000 units, whereas the Intellivision sold only approximately 2,000,000 units.\n- C. Game & Watch sold approximately 4,000,000 units, whereas the ColecoVision sold only approximately 3,000,000 units.\n- D. Game & Watch sold approximately 18,600,000 units, whereas the ColecoVision sold only approximately 2,000,000 units.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "Which choice most effectively uses data from the table to complete the statement?",
+      "question_type": "multiple_choice",
+      "chart_title": "Home Video Game Systems of the 1970s and 1980s",
+      "chart_data": "<table><tr><th>System</th><th>Manufacturer</th><th>System type</th><th>Approximate number of units sold worldwide</th></tr><tr><td>ColecoVision</td><td>Coleco</td><td>console</td><td>2,000,000</td></tr><tr><td>Intellivision</td><td>Mattel</td><td>console</td><td>3,000,000</td></tr><tr><td>MSX</td><td>ASCII Corp.</td><td>computer</td><td>4,000,000</td></tr><tr><td>Game & Watch</td><td>Nintendo</td><td>handheld</td><td>18,600,000</td></tr></table>",
+      "question_image_url": "",
+      "options": [
+        "A. MSX sold approximately 4,000,000 units, whereas the Intellivision sold only approximately 3,000,000 units.",
+        "B. MSX sold approximately 18,600,000 units, whereas the Intellivision sold only approximately 2,000,000 units.",
+        "C. Game & Watch sold approximately 4,000,000 units, whereas the ColecoVision sold only approximately 3,000,000 units.",
+        "D. Game & Watch sold approximately 18,600,000 units, whereas the ColecoVision sold only approximately 2,000,000 units."
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "Choice D correctly uses the largest sales figure (Game & Watch at 18.6 million) and contrasts it with one of the smallest (ColecoVision at 2 million), highlighting the most remarkable difference.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:53:50.452429"
+}

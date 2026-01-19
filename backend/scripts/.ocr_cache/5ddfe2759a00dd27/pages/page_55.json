@@ -1,0 +1,29 @@
+{
+  "page_num": 55,
+  "ocr_markdown": "```markdown\n### Section 1, Module 2: Reading and Writing\n\n**Directions**\n- Snow hydrologist Julie Koeberle helps maintain automated snow measurement stations.\n- They are called SNOTEL sites.\n- There are around 90 stations throughout Wyoming.\n- One is at Bear Trap Meadow.\n- The data collected can help researchers make downstream water supply predictions.\n\n---\n\n**26 Mark for Review**\n\nWhich choice most effectively uses information from the given sentences to provide an example of a SNOTEL site?\n- A. The data collected by SNOTEL sites can help researchers predict downstream water supplies.\n- B. The SNOTEL site at Bear Trap Meadow is one of around 90 automated snow measurement stations in Wyoming.\n- C. Snow hydrologist Julie Koeberle helps maintain automated snow monitoring stations known as SNOTEL sites.\n- D. Located throughout Wyoming, SNOTEL sites monitor snow conditions.\n```\n",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Snow hydrologist Julie Koeberle helps maintain automated snow measurement stations. They are called SNOTEL sites. There are around 90 stations throughout Wyoming. One is at Bear Trap Meadow. The data collected can help researchers make downstream water supply predictions.",
+      "question_text": "Which choice most effectively uses information from the given sentences to provide an example of a SNOTEL site?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. The data collected by SNOTEL sites can help researchers predict downstream water supplies.",
+        "B. The SNOTEL site at Bear Trap Meadow is one of around 90 automated snow measurement stations in Wyoming.",
+        "C. Snow hydrologist Julie Koeberle helps maintain automated snow monitoring stations known as SNOTEL sites.",
+        "D. Located throughout Wyoming, SNOTEL sites monitor snow conditions."
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "Option B directly references Bear Trap Meadow as a specific example of a SNOTEL site, incorporating the numerical context (90 stations) and location (Wyoming) from the passage.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:03:10.371144"
+}

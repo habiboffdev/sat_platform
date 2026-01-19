@@ -1,0 +1,29 @@
+{
+  "page_num": 11,
+  "ocr_markdown": "# Section 1, Module 1: Reading and Writing\n\n**Directions**\n\nOver the course of the 1900s, more and more Native Hawaiians spoke English instead of the Hawaiian language. To preserve their language, Native Hawaiian teachers founded the \u02bbAha P\u016bn\u0101na Leo preschool in 1984. They spoke Hawaiian while teaching, and their Native Hawaiian students were soon able to understand and speak it themselves. The school was a huge success. Eventually it opened locations around Hawai\u02bbi and started teaching Hawaiian to elementary and high school students too. Thanks to \u02bbAha P\u016bn\u0101na Leo, the number of young people who speak the language has increased.\n\n---\n\n**9**  \nWhich statement, if true, would most directly support the underlined claim?  \n\n**A.** Besides Native Hawaiians, tens of thousands of people from other Pacific Islander communities live in Hawai\u02bbi today, including over 37,000 Samoans.  \n\n**B.** Fewer than fifty children could speak Hawaiian when \u02bbAha P\u016bn\u0101na Leo was founded, but now more than 2,000 students at \u02bbAha P\u016bn\u0101na Leo speak it.  \n\n**C.** Hawaiian is very similar to other languages that are spoken on the Polynesian Islands of the Pacific Ocean, including Tahitian, Samoan, and M\u0101ori.  \n\n**D.** Roughly 680,000 Native Hawaiian people lived in the United States in 2020, and a little less than half of them lived in Hawai\u02bbi.  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Over the course of the 1900s, more and more Native Hawaiians spoke English instead of the Hawaiian language. To preserve their language, Native Hawaiian teachers founded the \u02bbAha P\u016bn\u0101na Leo preschool in 1984. They spoke Hawaiian while teaching, and their Native Hawaiian students were soon able to understand and speak it themselves. The school was a huge success. Eventually it opened locations around Hawai\u02bbi and started teaching Hawaiian to elementary and high school students too. Thanks to \u02bbAha P\u016bn\u0101na Leo, the number of young people who speak the language has increased.",
+      "question_text": "Which statement, if true, would most directly support the underlined claim?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Besides Native Hawaiians, tens of thousands of people from other Pacific Islander communities live in Hawai\u02bbi today, including over 37,000 Samoans.",
+        "B. Fewer than fifty children could speak Hawaiian when \u02bbAha P\u016bn\u0101na Leo was founded, but now more than 2,000 students at \u02bbAha P\u016bn\u0101na Leo speak it.",
+        "C. Hawaiian is very similar to other languages that are spoken on the Polynesian Islands of the Pacific Ocean, including Tahitian, Samoan, and M\u0101ori.",
+        "D. Roughly 680,000 Native Hawaiian people lived in the United States in 2020, and a little less than half of them lived in Hawai\u02bbi."
+      ],
+      "correct_answer": [
+        "B"
+      ],
+      "explanation": "Option B provides direct numerical evidence of the increase in young Hawaiian speakers, supporting the claim that the number has grown due to \u02bbAha P\u016bn\u0101na Leo's efforts.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:36:13.775411"
+}

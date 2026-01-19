@@ -1,0 +1,29 @@
+{
+  "page_num": 53,
+  "ocr_markdown": "```markdown\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nJohn Quincy Adams employed the pseudonym \u201cMarcellus\u201d\u2014a reference to a leader of an ancient Roman army\u2014in political essays he wrote in 1793, a choice that accomplished far more than simply concealing his authorship. ______ it wasn\u2019t an arbitrary pen name but rather a complex rhetorical strategy through which Adams aligned his political views with the venerated republican ideals of the ancient world, thereby bolstering the authority of his writing.\n\n**24. Mark for Review**\n\nWhich choice completes the text with the most logical transition?\n\nA. Conversely,  \nB. In addition,  \nC. However,  \nD. Indeed,\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "John Quincy Adams employed the pseudonym \u201cMarcellus\u201d\u2014a reference to a leader of an ancient Roman army\u2014in political essays he wrote in 1793, a choice that accomplished far more than simply concealing his authorship.",
+      "question_text": "Which choice completes the text with the most logical transition?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. Conversely,",
+        "B. In addition,",
+        "C. However,",
+        "D. Indeed,"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "The transition 'Indeed,' logically emphasizes and confirms the previous statement about the pseudonym's purpose.",
+      "domain": "Expression of Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:01:42.032879"
+}

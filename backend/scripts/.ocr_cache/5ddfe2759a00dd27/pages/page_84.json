@@ -1,0 +1,29 @@
+{
+  "page_num": 84,
+  "ocr_markdown": "Here is the extracted text from the SAT page:\n\n---\n\n**5**  \nMark for Review  \n\nWhich expression is equivalent to \\((8nr^2 + 2nr) + (4n^2r + 3nr)?\\  \n\nA) \\(12n^2r^2 + 5nr\\)  \nB) \\(12n^3r^3 + 5n^2r^2\\)  \nC) \\(32n^3r^3 + 6n^2r^2\\)  \nD) \\(8nr^2 + 4n^2r + 5nr\\)  \n\n---\n\n",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "Which expression is equivalent to (8nr^2 + 2nr) + (4n^2r + 3nr)?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 12n^2r^2 + 5nr",
+        "B) 12n^3r^3 + 5n^2r^2",
+        "C) 32n^3r^3 + 6n^2r^2",
+        "D) 8nr^2 + 4n^2r + 5nr"
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "Combine like terms: 8nr^2 remains, 4n^2r remains, and 2nr + 3nr = 5nr.",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:35:08.039029"
+}

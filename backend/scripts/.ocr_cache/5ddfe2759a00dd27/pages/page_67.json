@@ -1,0 +1,29 @@
+{
+  "page_num": 67,
+  "ocr_markdown": "Sure! Here\u2019s the text extracted from the SAT page:\n\n---\n\n**10**  \n**Mark for Review**\n\nA rectangle has a length that is 73 times its width. The function $y = (73w)(w)$ represents this situation, where $y$ is the area, in square feet, of the rectangle and $y > 0$. Which of the following is the best interpretation of $73w$ in this context?\n\nA. The length of the rectangle, in feet  \nB. The area of the rectangle, in square feet  \nC. The difference between the length and the width of the rectangle, in feet  \nD. The width of the rectangle, in feet  \n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "A rectangle has a length that is 73 times its width. The function $y = (73w)(w)$ represents this situation, where $y$ is the area, in square feet, of the rectangle and $y > 0$. Which of the following is the best interpretation of $73w$ in this context?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. The length of the rectangle, in feet",
+        "B. The area of the rectangle, in square feet",
+        "C. The difference between the length and the width of the rectangle, in feet",
+        "D. The width of the rectangle, in feet"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "Since the length is 73 times the width, 73w directly represents the length.",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:24:02.022445"
+}

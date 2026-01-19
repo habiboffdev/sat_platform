@@ -1,0 +1,19 @@
+[
+  {
+    "question_text": "<p>The mating environment hypothesis predicts that populations of flowering plants compensate for reduced mating opportunities due to dichogamy (a plant's expression of male and female functions at separate times to prevent self-pollination) by adjusting the bias of floral sex allocation during the flowering period, increasing the probability of successful cross-plant pollination. Researchers tested the hypothesis by examining a population of broadleaf arrowhead, a plant for which bloom onset generally takes longer for male flowers than for female flowers, during the flowering season. They concluded that the mating environment hypothesis is not well supported by their observational data.</p><p>Which choice best describes data from the table that support the researchers' conclusion?</p>",
+    "question_type": "multiple_choice",
+    "question_image_url": "",
+    "options": [
+      "Whereas the total number of open flowers per growth unit peaked on day 15, the proportion of male flowers experienced a peak earlier in the flowering season, on day 10.",
+      "Despite the sharp reduction in the total number of open flowers per growth unit from day 15 to 20, there was no decline in the estimated reproductive success rate of male flowers in that interval.",
+      "Sex allocations were largely evenly distributed on days 10 and 15 but were female biased on days 5 and 20.",
+      "Although sex allocations became overwhelmingly female biased by day 20, male flowers' estimated reproductive success rate did not vary from day 5 to 20."
+    ],
+    "correct_answer": [
+      "D"
+    ],
+    "explanation": "The mating environment hypothesis predicts that plants adjust sex allocation to compensate for reduced mating opportunities. If the hypothesis were supported, we would see changes in male flower reproductive success corresponding to changes in sex allocation. However, the data shows that despite the proportion of male flowers decreasing dramatically from 0.48 on day 15 to 0.13 on day 20 (indicating overwhelming female bias), the estimated reproductive success rate of male flowers remained constant at 0.29 from day 5 through day 15 (with no data for day 20, but no indication of change). This lack of variation in reproductive success despite changing sex allocation contradicts the hypothesis.",
+    "domain": "Science",
+    "difficulty": "Medium"
+  }
+]

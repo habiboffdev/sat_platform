@@ -1,0 +1,29 @@
+{
+  "page_num": 7,
+  "ocr_markdown": "```markdown\n# Section 1, Module 1: Reading and Writing\n\n**Directions:**\n\nThe following text is from Louise Erdrich's 1986 novel *The Beet Queen*. The narrator discusses her relationship with her young niece, Dot. Celestine, the narrator's sister-in-law, is Dot's mother.\n\nDot and I had a mental connection, I was sure of it. I understood things about the baby that her mother could not accept.\n\nFor instance, she was never meant to be a baby. Dot was as impatient with babyhood as I. She tried at once to grow out of it. Celestine never saw that, because she, and only she, took pleasure in Dot's helpless softness. Only Celestine was saddened by her daughter's fierce progress. Day by day, Dot grew stronger. In her shopping-cart stroller she exercised to exhaustion, bouncing for hours to develop her leg muscles.\n\n---\n\n**Question 5**\n\nWhich choice best describes the main purpose of the text?\n\nA) To present the narrator's belief that she understands Dot better than Celestine does\n\nB) To speculate that when Dot is older, her personality will be like Celestine\u2019s\n\nC) To discuss what the narrator and Celestine do to amuse Dot\n\nD) To compare the narrator's physical appearance to the physical appearance of Celestine\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Dot and I had a mental connection, I was sure of it. I understood things about the baby that her mother could not accept. For instance, she was never meant to be a baby. Dot was as impatient with babyhood as I. She tried at once to grow out of it. Celestine never saw that, because she, and only she, took pleasure in Dot's helpless softness. Only Celestine was saddened by her daughter's fierce progress. Day by day, Dot grew stronger. In her shopping-cart stroller she exercised to exhaustion, bouncing for hours to develop her leg muscles.",
+      "question_text": "Which choice best describes the main purpose of the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) To present the narrator's belief that she understands Dot better than Celestine does",
+        "B) To speculate that when Dot is older, her personality will be like Celestine\u2019s",
+        "C) To discuss what the narrator and Celestine do to amuse Dot",
+        "D) To compare the narrator's physical appearance to the physical appearance of Celestine"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "The text focuses on the narrator's perspective that she has a unique understanding of Dot, contrasting with Celestine's view.",
+      "domain": "Information and Ideas",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T20:33:21.730561"
+}

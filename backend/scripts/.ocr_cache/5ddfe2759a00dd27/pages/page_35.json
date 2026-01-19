@@ -1,0 +1,29 @@
+{
+  "page_num": 35,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text from the SAT page:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nThe Heege Manuscript (HM) is a collection of booklets of once-unbound paper sheets on which Richard Heege copied various texts at his fifteenth-century home between Derbyshire and Nottinghamshire in England. Most other contemporaneous personal manuscripts like the Findern Anthology (FA) consist primarily of pieces by celebrated medieval authors like Hoccleve and other readings favored by elites, whereas the HM has a distinctive emphasis on the popular, including entertainments like crude comedies, and the practical, with advice about manners.\n\n---\n\n**6 Mark for Review**\n\nWhich choice best describes the function of the underlined portion in the text as a whole?\n\nA) To suggest that the FA is a poor point of comparison for a collection like the HM\n\nB) To emphasize the ubiquity of hand-copied collections like the FA and the HM in medieval England\n\nC) To provide context for the text\u2019s suggestion that the HM is an outlier among collections of its time\n\nD) To illustrate how the discussion of the HM earlier in the text can improve historians\u2019 understanding of the FA",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "The Heege Manuscript (HM) is a collection of booklets of once-unbound paper sheets on which Richard Heege copied various texts at his fifteenth-century home between Derbyshire and Nottinghamshire in England. Most other contemporaneous personal manuscripts like the Findern Anthology (FA) consist primarily of pieces by celebrated medieval authors like Hoccleve and other readings favored by elites, whereas the HM has a distinctive emphasis on the popular, including entertainments like crude comedies, and the practical, with advice about manners.",
+      "question_text": "Which choice best describes the function of the underlined portion in the text as a whole?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) To suggest that the FA is a poor point of comparison for a collection like the HM",
+        "B) To emphasize the ubiquity of hand-copied collections like the FA and the HM in medieval England",
+        "C) To provide context for the text\u2019s suggestion that the HM is an outlier among collections of its time",
+        "D) To illustrate how the discussion of the HM earlier in the text can improve historians\u2019 understanding of the FA"
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The underlined portion contrasts the HM with other manuscripts like the FA to highlight its unique characteristics, supporting the idea that it is an outlier.",
+      "domain": "Craft and Structure",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:50:08.560408"
+}

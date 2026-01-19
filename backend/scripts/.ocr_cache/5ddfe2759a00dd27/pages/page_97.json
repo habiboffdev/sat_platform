@@ -1,0 +1,29 @@
+{
+  "page_num": 97,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text:\n\n---\n\n**18**\n\nThe equation \\( d = 6t + 210 \\) gives the distance \\( d \\), in feet, from a reference point on the surface of Mars to a Mars rover, where \\( t \\) is the number of minutes after the start of a period of observation. By how many feet does the Mars rover's distance from the reference point increase over a period of 20 minutes?\n\n- A) 330\n- B) 230\n- C) 120\n- D) 6\n\n---",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "The equation \\( d = 6t + 210 \\) gives the distance \\( d \\), in feet, from a reference point on the surface of Mars to a Mars rover, where \\( t \\) is the number of minutes after the start of a period of observation. By how many feet does the Mars rover's distance from the reference point increase over a period of 20 minutes?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 330",
+        "B) 230",
+        "C) 120",
+        "D) 6"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The increase in distance is determined by the coefficient of t, which is 6 feet per minute, multiplied by the time period of 20 minutes.",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:42:54.211596"
+}

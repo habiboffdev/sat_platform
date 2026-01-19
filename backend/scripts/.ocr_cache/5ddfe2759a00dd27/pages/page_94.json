@@ -1,0 +1,29 @@
+{
+  "page_num": 94,
+  "ocr_markdown": "### SAT Question Extract\n\n**15**  \nA company developed a plan to set the selling price of a product. The company determined that for a selling price of \\$120.00, zero products would be sold. For each \\$2.50 decrease in the selling price, the number of products sold would increase by one. For a revenue of exactly \\$1,437.50, which of the following could be the number of products sold?  \n(revenue = price \u00d7 number of products sold)\n\n- **A**  23  \n- **B**  24  \n- **C**  527  \n- **D**  1,440  ",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "A company developed a plan to set the selling price of a product. The company determined that for a selling price of $120.00, zero products would be sold. For each $2.50 decrease in the selling price, the number of products sold would increase by one. For a revenue of exactly $1,437.50, which of the following could be the number of products sold? (revenue = price \u00d7 number of products sold)",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. 23",
+        "B. 24",
+        "C. 527",
+        "D. 1,440"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "This is an algebra problem involving linear relationships between price, quantity sold, and revenue. The correct answer can be found by setting up an equation for revenue based on the given conditions.",
+      "domain": "Algebra",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:40:49.890261"
+}

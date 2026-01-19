@@ -1,0 +1,29 @@
+{
+  "page_num": 18,
+  "ocr_markdown": "```markdown\n# Section 1, Module 1: Reading and Writing\n\n### Directions\n\nAs an object-oriented computer programming language, Perl is used by coders like Black Girls Code founder Kimberly Bryant to create computer programs by manipulating \u201cobjects\u201d (that is, specifically defined variables or combinations of variables) into interacting with each other. Conversely, languages like Scheme, used in software development, _____ object oriented.\n\n### 16\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\n\nA. is not  \nB. are not  \nC. was not  \nD. has not been  \n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "As an object-oriented computer programming language, Perl is used by coders like Black Girls Code founder Kimberly Bryant to create computer programs by manipulating \u201cobjects\u201d (that is, specifically defined variables or combinations of variables) into interacting with each other. Conversely, languages like Scheme, used in software development, _____ object oriented.",
+      "question_text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. is not",
+        "B. are not",
+        "C. was not",
+        "D. has not been"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Question tests subject-verb agreement and verb tense with 'languages like Scheme' as the subject.",
+      "domain": "Standard English Conventions",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:40:20.848044"
+}

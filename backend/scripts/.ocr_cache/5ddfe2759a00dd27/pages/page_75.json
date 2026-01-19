@@ -1,0 +1,29 @@
+{
+  "page_num": 75,
+  "ocr_markdown": "```markdown\n18. Mark for Review\n\nThe dot plots represent the distributions of values in data sets A and B.\n\nData Set A  \nData Set B\n\nValue  \n4 5 6 7 8 9 10  \n\nValue  \n4 5 6 7 8 9 10  \n\nWhich of the following statements must be true?  \nI. The median of data set A is equal to the median of data set B.  \nII. The standard deviation of data set A is equal to the standard deviation of data set B.  \n\nA. I and II  \nB. I only  \nC. II only  \nD. Neither I nor II  \n```\n",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "Which of the following statements must be true? I. The median of data set A is equal to the median of data set B. II. The standard deviation of data set A is equal to the standard deviation of data set B.",
+      "question_type": "multiple_choice",
+      "chart_title": "Dot plots of data sets A and B",
+      "chart_data": "<table><tr><th>Data Set A</th><th>Data Set B</th></tr><tr><td>Value: 4 5 6 7 8 9 10</td><td>Value: 4 5 6 7 8 9 10</td></tr></table>",
+      "question_image_url": "",
+      "options": [
+        "A. I and II",
+        "B. I only",
+        "C. II only",
+        "D. Neither I nor II"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "The dot plots show identical value ranges but without specific data point frequencies, medians and standard deviations cannot be definitively compared without additional information.",
+      "domain": "Problem Solving and Data Analysis",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:28:50.243917"
+}

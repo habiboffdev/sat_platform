@@ -1,0 +1,29 @@
+{
+  "page_num": 63,
+  "ocr_markdown": "```markdown\n9. Mark for Review\n\nWhat is the solution $(x, y)$ to the given system of equations?\n\n$$\ny = -12x + 16\n$$\n\n$$\ny = -20x + 24\n$$\n\nA. (1, 4)  \nB. (16, 24)  \nC. (24, 16)  \nD. (4, 1)  \n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "What is the solution $(x, y)$ to the given system of equations?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. (1, 4)",
+        "B. (16, 24)",
+        "C. (24, 16)",
+        "D. (4, 1)"
+      ],
+      "correct_answer": [
+        "A"
+      ],
+      "explanation": "Set equations equal: -12x + 16 = -20x + 24 \u2192 8x = 8 \u2192 x=1. Substitute: y=-12(1)+16=4. Solution is (1,4).",
+      "domain": "Algebra",
+      "difficulty": "Easy"
+    }
+  ],
+  "processed_at": "2025-12-24T21:06:23.330112"
+}

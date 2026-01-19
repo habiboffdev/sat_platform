@@ -1,0 +1,29 @@
+{
+  "page_num": 92,
+  "ocr_markdown": "Here's the extracted text from the SAT page:\n\n```\n13\nIf |16 - 2x| = 58, which of the following is a value of 8 - x?\n\nA) 0\nB) 8\nC) 29\nD) 42\n```",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "",
+      "question_text": "If |16 - 2x| = 58, which of the following is a value of 8 - x?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A) 0",
+        "B) 8",
+        "C) 29",
+        "D) 42"
+      ],
+      "correct_answer": [
+        "[NEED_ANSWER]"
+      ],
+      "explanation": "Solve the absolute value equation |16 - 2x| = 58 to find possible values of x, then compute 8 - x for each.",
+      "domain": "Algebra",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T21:39:27.827437"
+}

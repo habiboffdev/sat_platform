@@ -1,0 +1,29 @@
+{
+  "page_num": 34,
+  "ocr_markdown": "# Section 1, Module 2: Reading and Writing\n\n**Directions:**\n\nThe *Reckoning and Resilience* (2022) exhibition at Duke University's Nasher Museum of Art in Durham, North Carolina, was curated to feature the work of thirty North Carolina artists. The included artists represent a wide variety of artistic disciplines, from painters such as Juan Logan to the sculptor Stephen Hayes. In its inclusion of many borrowed works, the exhibition is atypical for the Nasher Museum, which tends to curate its exhibitions around the permanent collection of contemporary art that it owns.\n\n---\n\n**5. Mark for Review**\n\nWhich choice best describes the overall structure of the text?\n\nA. It explains how an art exhibition differs from many other exhibitions, then analyzes the significance of that difference.\n\nB. It presents the unusual goals curators had for an art exhibition, then evaluates whether the curators achieved those goals.\n\nC. It provides an overview of an art exhibition, then explains what makes the exhibition unusual for the institution that organized it.\n\nD. It discusses the wide range of disciplines represented in an art exhibition, then explains why curators included works in those disciplines.",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "The *Reckoning and Resilience* (2022) exhibition at Duke University's Nasher Museum of Art in Durham, North Carolina, was curated to feature the work of thirty North Carolina artists. The included artists represent a wide variety of artistic disciplines, from painters such as Juan Logan to the sculptor Stephen Hayes. In its inclusion of many borrowed works, the exhibition is atypical for the Nasher Museum, which tends to curate its exhibitions around the permanent collection of contemporary art that it owns.",
+      "question_text": "Which choice best describes the overall structure of the text?",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. It explains how an art exhibition differs from many other exhibitions, then analyzes the significance of that difference.",
+        "B. It presents the unusual goals curators had for an art exhibition, then evaluates whether the curators achieved those goals.",
+        "C. It provides an overview of an art exhibition, then explains what makes the exhibition unusual for the institution that organized it.",
+        "D. It discusses the wide range of disciplines represented in an art exhibition, then explains why curators included works in those disciplines."
+      ],
+      "correct_answer": [
+        "C"
+      ],
+      "explanation": "The text first provides an overview of the exhibition (artists, disciplines) and then explains its atypical nature due to borrowed works.",
+      "domain": "Craft and Structure",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:49:19.892401"
+}

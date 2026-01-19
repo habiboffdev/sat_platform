@@ -1,0 +1,29 @@
+{
+  "page_num": 42,
+  "ocr_markdown": "Sure! Here\u2019s the extracted text:\n\n---\n\n**Section 1, Module 2: Reading and Writing**\n\n**Directions**\n\nAlthough Grant Tavirnor concludes that computer games are art by virtue of their forming a subcategory of fiction, and Berys Gaut similarly places them within the realm of cinema, neither approach adequately captures a central aspect of playing these games: when the player no longer attends to the narrative and is instead simply absorbed in the instrumentalities of gameplay. This is among the reasons philosopher C. Thi Nguyen contends that the work of computer-game designers is in what he calls the medium of player agency, which the designer prescribes through rules and goals, and which elicits positive aesthetic experiences in the player who agrees to adopt it. Therefore, Nguyen's position is that Tavirnor\u2019s and Gaut\u2019s frameworks _____\n\n**13** Mark for Review\n\nWhich choice most logically completes the text?\n\nA. are helpful starting points for studying computer games as art, even though these frameworks are overly simplistic.\n\nB. are useful for analyzing the narrative aspects of computer games, even if neither attempts to address player agency.\n\nC. overstate the influence of fiction and cinema on the narrative elements of computer games.\n\nD. subsume computer games under other categories of media that do not address a feature of games that is integral to player enjoyment.\n\n--- \n\nFeel free to ask if you need anything else!",
+  "is_question": true,
+  "graphs": [],
+  "questions": [
+    {
+      "passage_text": "Although Grant Tavirnor concludes that computer games are art by virtue of their forming a subcategory of fiction, and Berys Gaut similarly places them within the realm of cinema, neither approach adequately captures a central aspect of playing these games: when the player no longer attends to the narrative and is instead simply absorbed in the instrumentalities of gameplay. This is among the reasons philosopher C. Thi Nguyen contends that the work of computer-game designers is in what he calls the medium of player agency, which the designer prescribes through rules and goals, and which elicits positive aesthetic experiences in the player who agrees to adopt it.",
+      "question_text": "Therefore, Nguyen's position is that Tavirnor\u2019s and Gaut\u2019s frameworks _____",
+      "question_type": "multiple_choice",
+      "chart_title": "",
+      "chart_data": "",
+      "question_image_url": "",
+      "options": [
+        "A. are helpful starting points for studying computer games as art, even though these frameworks are overly simplistic.",
+        "B. are useful for analyzing the narrative aspects of computer games, even if neither attempts to address player agency.",
+        "C. overstate the influence of fiction and cinema on the narrative elements of computer games.",
+        "D. subsume computer games under other categories of media that do not address a feature of games that is integral to player enjoyment."
+      ],
+      "correct_answer": [
+        "D"
+      ],
+      "explanation": "Nguyen argues that Tavirnor and Gaut's frameworks categorize games under fiction/cinema but fail to address player agency, which is central to gameplay enjoyment.",
+      "domain": "Information and Ideas",
+      "difficulty": "Medium"
+    }
+  ],
+  "processed_at": "2025-12-24T20:55:17.780749"
+}
