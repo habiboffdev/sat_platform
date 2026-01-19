@@ -1,0 +1,342 @@
+/* LandingPage.module.css */
+
+/* Light Luxury Theme */
+.container {
+    --bg-color: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #0f172a;
+    /* Slate 900 */
+    --text-secondary: #64748b;
+    /* Slate 500 */
+    --accent-color: #2563eb;
+    /* Strong Blue */
+    --accent-glow: rgba(37, 99, 235, 0.15);
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Typography Overrides */
+.heroTitle {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.heroSubtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+/* Layout Utilities */
+.section {
+    padding: 6rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Navbar */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.navLinks {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.navLinks a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navLinks a:hover {
+    color: var(--accent-color);
+}
+
+/* Redesigned Clean Button */
+.button {
+    all: unset;
+    cursor: pointer;
+    padding: 0.875rem 2rem;
+    background: var(--text-primary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 999px;
+    /* Pill shape for primary CTA */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background: #1e293b;
+}
+
+.buttonOutline {
+    background: white;
+    border: 1px solid var(--card-border);
+    color: var(--text-primary);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.buttonOutline:hover {
+    border-color: var(--text-primary);
+    background: var(--bg-secondary);
+}
+
+/* Card Button (The one user hated) - Now Solid Full Width */
+.cardButton {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    background: #f1f5f9;
+    /* Light slate bg */
+    color: var(--text-primary);
+    font-weight: 700;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.2s ease;
+    display: block;
+    box-sizing: border-box;
+}
+
+.cardButton:hover {
+    background: var(--text-primary);
+    color: white;
+}
+
+
+/* Hero Section */
+.heroSection {
+    padding-top: 18vh;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background: radial-gradient(circle at 80% 20%, var(--accent-glow) 0%, transparent 50%);
+}
+
+.glowBlob {
+    display: none;
+    /* Removed for cleaner light theme */
+}
+
+/* Image Placeholder */
+.imagePlaceholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #e2e8f0;
+    background-image:
+        linear-gradient(45deg, #cbd5e1 25%, transparent 25%),
+        linear-gradient(-45deg, #cbd5e1 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #cbd5e1 75%),
+        linear-gradient(-45deg, transparent 75%, #cbd5e1 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    border: 1px dashed var(--text-secondary);
+}
+
+/* Stats Ticker */
+.tickerWrap {
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    padding: 4rem 0;
+}
+
+.ticker {
+    display: flex;
+    gap: 8rem;
+    white-space: nowrap;
+    animation: ticker 50s linear infinite;
+    min-width: max-content;
+}
+
+.tickerItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.tickerValue {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.tickerLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+}
+
+/* Feature Cards */
+.featureCard {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent-color);
+}
+
+.sectionTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.sectionDesc {
+    color: var(--text-secondary);
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+}
+
+/* Course Cards */
+.courseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
+}
+
+.courseCard {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.courseCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent-color);
+}
+
+.courseCardTitle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.courseCardList {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    color: var(--text-secondary);
+}
+
+.courseCardList li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 3rem;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .ticker {
+        gap: 4rem;
+    }
+}
