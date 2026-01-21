@@ -14,3 +14,4 @@ release:
   image: web
   command:
     - alembic upgrade head
+
