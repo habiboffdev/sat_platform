@@ -58,3 +58,4 @@ plugins = ["pydantic.mypy"]
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
+# Rebuild trigger: Wed Jan 21 05:47:55 +05 2026
