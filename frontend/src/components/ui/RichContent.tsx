@@ -5,6 +5,7 @@ import { processLatexInText } from '@/lib/latex';
 interface RichContentProps {
   content: string;
   className?: string;
+  inline?: boolean;
 }
 
 /**
@@ -13,7 +14,7 @@ interface RichContentProps {
  * - HTML tables with proper styling
  * - Standard HTML content
  */
-export function RichContent({ content, className = '' }: RichContentProps) {
+export function RichContent({ content, className = '', inline = false }: RichContentProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,6 +26,15 @@ export function RichContent({ content, className = '' }: RichContentProps) {
     // Set the processed content
     containerRef.current.innerHTML = processedContent;
   }, [content]);
+
+  if (inline) {
+    return (
+      <span
+        ref={containerRef as React.RefObject<HTMLSpanElement>}
+        className={`rich-content ${className}`}
+      />
+    );
+  }
 
   return (
     <div

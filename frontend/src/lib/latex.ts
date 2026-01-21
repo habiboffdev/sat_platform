@@ -129,6 +129,11 @@ export function isMathExpression(content: string): boolean {
         return true;
     }
 
+    // Numeric coordinate pairs like (5, 6), (-3, 10), (0, -2)
+    if (/^\(-?\d+,\s*-?\d+\)$/.test(trimmed)) {
+        return true;
+    }
+
     // FINAL FALLBACK: For short content, try KaTeX parsing
     // This catches edge cases that are valid LaTeX but don't match simple regexes
     if (wordCount <= 4 && canKaTeXParse(trimmed)) {

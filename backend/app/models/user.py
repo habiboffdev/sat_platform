@@ -1,10 +1,14 @@
 from datetime import datetime
+from typing import TYPE_CHECKING
 
 from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.models.base import Base, TimestampMixin
 from app.models.enums import SubscriptionPlan, SubscriptionStatus, UserRole
+
+if TYPE_CHECKING:
+    from app.models.ocr import OCRJob
 
 
 class User(Base, TimestampMixin):
@@ -48,6 +52,9 @@ class User(Base, TimestampMixin):
     )
     study_plans: Mapped[list["StudyPlan"]] = relationship(
         "StudyPlan", back_populates="user", foreign_keys="StudyPlan.user_id"
+    )
+    ocr_jobs: Mapped[list["OCRJob"]] = relationship(
+        "OCRJob", back_populates="user"
     )
 
 
@@ -95,7 +102,8 @@ class RefreshToken(Base, TimestampMixin):
 
 
 # Import at bottom to avoid circular imports
-from app.models.test import TestAttempt  # noqa: E402
-from app.models.content import ContentProgress  # noqa: E402
-from app.models.organization import OrganizationMember  # noqa: E402
-from app.models.analytics import Notification, StudyPlan  # noqa: E402
+from app.models.test import TestAttempt  # noqa: E402, F401
+from app.models.content import ContentProgress  # noqa: E402, F401
+from app.models.organization import OrganizationMember  # noqa: E402, F401
+from app.models.analytics import Notification, StudyPlan  # noqa: E402, F401
+# OCRJob is imported via TYPE_CHECKING to avoid registering OCR model enums during migration

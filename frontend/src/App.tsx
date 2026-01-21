@@ -15,6 +15,8 @@ import QuestionBankPage from '@/pages/admin/QuestionBankPage';
 import ImportQuestionsPage from '@/pages/admin/ImportQuestionsPage';
 import CreateTestPage from '@/pages/admin/CreateTestPage';
 import ScoreAnalyticsPage from '@/pages/admin/ScoreAnalyticsPage';
+import OCRImportPage from '@/pages/admin/OCRImportPage';
+import OCRReviewPage from '@/pages/admin/OCRReviewPage';
 import ExamPage from '@/pages/exam/ExamPage';
 import DashboardPage from '@/pages/student/DashboardPage';
 import ResultsPage from '@/pages/student/ResultsPage';
@@ -60,6 +62,8 @@ function App() {
               <Route path="import" element={<ImportQuestionsPage />} />
               <Route path="create-test" element={<CreateTestPage />} />
               <Route path="score-analytics" element={<ScoreAnalyticsPage />} />
+              <Route path="ocr" element={<OCRImportPage />} />
+              <Route path="ocr/:jobId/review" element={<OCRReviewPage />} />
             </Route>
           </Route>
 

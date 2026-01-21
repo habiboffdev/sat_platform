@@ -25,14 +25,20 @@ def create_application() -> FastAPI:
         lifespan=lifespan,
     )
 
-    # CORS middleware
+    # CORS middleware - allow all origins in development
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_origins_list,
-        allow_credentials=True,
+        allow_origins=["*"],
+        allow_credentials=False,  # Must be False when using ["*"]
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+    # Mount OCR uploads for serving cropped images (must be before /static for correct routing)
+    from pathlib import Path
+    ocr_upload_path = Path(settings.ocr_upload_dir).resolve()
+    ocr_upload_path.mkdir(parents=True, exist_ok=True)
+    app.mount("/static/ocr", StaticFiles(directory=str(ocr_upload_path)), name="ocr_static")
 
     # Mount static files
     app.mount("/static", StaticFiles(directory="static"), name="static")

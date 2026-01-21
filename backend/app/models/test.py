@@ -161,6 +161,10 @@ class Question(Base, TimestampMixin):
     # Skill tags for analytics (e.g., ["linear-equations", "word-problems"])
     skill_tags: Mapped[list[str] | None] = mapped_column(JSON)
 
+    # Structured table data for questions with tables
+    # Format: {"headers": ["Col1", "Col2"], "rows": [["val1", "val2"]], "title": "..."}
+    table_data: Mapped[dict | None] = mapped_column(JSON)
+
     # For grid-in: constraints
     # e.g., {"min": -9999, "max": 9999, "allow_fraction": true, "allow_decimal": true}
     answer_constraints: Mapped[dict | None] = mapped_column(JSON)

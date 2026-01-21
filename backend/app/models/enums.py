@@ -103,3 +103,37 @@ class TestScope(str, Enum):
     RW_ONLY = "rw_only"  # Reading & Writing only
     MATH_ONLY = "math_only"  # Math only
     SINGLE_MODULE = "single_module"  # Single module practice
+
+
+# ===== OCR Processing Enums =====
+
+
+class OCRJobStatus(str, Enum):
+    """Status of an OCR processing job."""
+    PENDING = "pending"  # Waiting to start
+    UPLOADING = "uploading"  # PDF being uploaded
+    PROCESSING = "processing"  # OCR in progress
+    STRUCTURING = "structuring"  # Converting to JSON
+    REVIEW = "review"  # Ready for human review
+    IMPORTING = "importing"  # Being imported to database
+    COMPLETED = "completed"  # Successfully finished
+    FAILED = "failed"  # Error occurred
+    CANCELLED = "cancelled"  # User cancelled
+
+
+class OCRProvider(str, Enum):
+    """OCR API providers."""
+    DEEPINFRA = "deepinfra"  # DeepInfra (olmOCR, Qwen, DeepSeek)
+    OPENAI = "openai"  # OpenAI (gpt-4o-mini)
+    HYBRID = "hybrid"  # OpenAI for OCR + DeepInfra for structuring
+    REPLICATE = "replicate"  # Replicate (dots.ocr)
+    OPENROUTER = "openrouter"  # OpenRouter (Qwen 2.5 VL, DeepSeek)
+
+
+class QuestionReviewStatus(str, Enum):
+    """Review status for extracted questions."""
+    PENDING = "pending"  # Not yet reviewed
+    APPROVED = "approved"  # Approved for import
+    REJECTED = "rejected"  # Will not be imported
+    NEEDS_EDIT = "needs_edit"  # Requires manual corrections
+    IMPORTED = "imported"  # Successfully imported

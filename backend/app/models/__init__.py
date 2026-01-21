@@ -14,6 +14,8 @@ from app.models.enums import (
     TestType,
     UserRole,
 )
+# OCR-specific enums: OCRJobStatus, OCRProvider, QuestionReviewStatus
+# Import from app.models.enums or app.models.ocr when needed
 from app.models.user import RefreshToken, Subscription, User
 from app.models.test import (
     AttemptAnswer,
@@ -47,6 +49,9 @@ from app.models.analytics import (
     StudySession,
     UserAchievement,
 )
+# OCR models are imported separately to avoid circular deps and enum conflicts
+# Import directly from app.models.ocr when needed
+# from app.models.ocr import ExtractedQuestion, OCRJob, OCRJobPage
 
 __all__ = [
     # Base
@@ -102,4 +107,8 @@ __all__ = [
     "StudyPlanTask",
     "StudySession",
     "UserAchievement",
+    # OCR models - import from app.models.ocr directly
+    # "ExtractedQuestion", "OCRJob", "OCRJobPage",
+    # OCR enums - import from app.models.enums directly
+    # "OCRJobStatus", "OCRProvider", "QuestionReviewStatus",
 ]

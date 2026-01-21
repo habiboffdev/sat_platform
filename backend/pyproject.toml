@@ -20,6 +20,9 @@ dependencies = [
     "redis>=5.0.1",
     "celery>=5.3.6",
     "email-validator>=2.1.0",
+    "pymupdf>=1.23.0",
+    "pillow>=10.0.0",
+    "flower>=2.0.0",
 ]
 
 [project.optional-dependencies]

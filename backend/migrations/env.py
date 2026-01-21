@@ -10,6 +10,7 @@ from app.core.config import settings
 from app.core.database import Base
 
 # Import all models to ensure they're registered with Base.metadata
+# NOTE: OCR models are imported separately to avoid enum conflicts during migration
 from app.models import (  # noqa: F401
     Achievement,
     Assignment,
@@ -43,6 +44,10 @@ from app.models import (  # noqa: F401
     User,
     UserAchievement,
 )
+
+# OCR models (ExtractedQuestion, OCRJob, OCRJobPage) are NOT imported here
+# to avoid auto-creating enum types before the migration runs.
+# They are created in the 001_add_ocr_tables migration.
 
 config = context.config
 

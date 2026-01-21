@@ -6,6 +6,7 @@ from app.api.v1.endpoints import (
     attempts,
     content,
     drills,
+    ocr,
     organizations,
     passages,
     questions,
@@ -27,4 +28,5 @@ api_router.include_router(organizations.router)
 api_router.include_router(questions.router)
 api_router.include_router(drills.router)
 api_router.include_router(uploads.router)
+api_router.include_router(ocr.router)
 

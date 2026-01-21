@@ -4,6 +4,8 @@ from sqlalchemy import select
 from app.core.database import async_session_maker
 from app.models.user import User
 from app.models.enums import UserRole
+# Import OCR models to resolve relationship
+from app.models.ocr import OCRJob, OCRJobPage, ExtractedQuestion  # noqa: F401
 
 async def make_admin(email: str):
     async with async_session_maker() as session:

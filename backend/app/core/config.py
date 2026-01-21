@@ -104,12 +104,49 @@ class Settings(BaseSettings):
 
     # File upload limits
     max_image_size_mb: int = 5
+    max_pdf_size_mb: int = 100  # PDFs can be large
     allowed_image_types: str = "image/png,image/jpeg,image/gif,image/webp"
 
     @computed_field
     @property
     def allowed_image_types_list(self) -> list[str]:
         return [t.strip() for t in self.allowed_image_types.split(",")]
+
+    # ===== OCR Processing Settings =====
+
+    # API Keys
+    deepinfra_api_key: str | None = None
+    openai_api_key: str | None = None
+    replicate_api_key: str | None = None
+    openrouter_api_key: str | None = None
+
+    # Default OCR provider (deepinfra, openai, hybrid, replicate, openrouter)
+    ocr_default_provider: str = "hybrid"
+
+    # Model configurations
+    ocr_vision_model: str = "gpt-4o-mini"  # For OCR extraction
+    ocr_structuring_model: str = "deepseek-ai/DeepSeek-V3.1"  # For JSON structuring
+
+    # Parallel processing settings
+    # OpenRouter: ~50 concurrent, OpenAI: ~3-5 concurrent, DeepInfra: ~10 concurrent
+    ocr_max_concurrent_pages: int = 10  # Max parallel API calls (increase for OpenRouter)
+    ocr_batch_size: int = 10  # Pages per batch for checkpointing
+
+    # Timeouts (in seconds)
+    ocr_api_timeout: int = 120  # Per-page API timeout
+    ocr_structuring_timeout: int = 180  # JSON structuring timeout
+
+    # Retry settings
+    ocr_max_retries: int = 3
+    ocr_retry_delay: int = 2  # Base delay for exponential backoff
+
+    # Cost tracking (in USD cents per 1000 tokens)
+    ocr_cost_per_1k_input: float = 0.015  # gpt-4o-mini input
+    ocr_cost_per_1k_output: float = 0.060  # gpt-4o-mini output
+
+    # File storage
+    ocr_upload_dir: str = "ocr_uploads"  # S3 prefix for PDF uploads
+    ocr_cache_dir: str = ".ocr_cache"  # Local cache for intermediate results
 
 
 @lru_cache

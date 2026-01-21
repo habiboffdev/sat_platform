@@ -44,6 +44,39 @@ services:
     volumes:
       - redis_data:/data
 
+  # Celery worker for OCR processing
+  worker:
+    build: .
+    command: celery -A app.core.celery_config worker --loglevel=info --queues=default,ocr --concurrency=4
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=sat_platform
+      - REDIS_URL=redis://redis:6379/0
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DEEPINFRA_API_KEY=${DEEPINFRA_API_KEY}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    volumes:
+      - .:/app
+
+  # Flower - Celery monitoring UI (optional)
+  flower:
+    build: .
+    command: celery -A app.core.celery_config flower --port=5555
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
+      - worker
+
 volumes:
   postgres_data:
   redis_data:
