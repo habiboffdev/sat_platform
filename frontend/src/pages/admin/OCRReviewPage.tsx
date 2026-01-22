@@ -383,8 +383,8 @@ export default function OCRReviewPage() {
   const passageApprovedCount = passages.filter((p) => p.review_status === 'approved').length;
   const totalPassagesCount = passages.length;
 
-  // Failed pages (from job data)
-  const failedPagesCount = job?.failed_pages_count || 0;
+  // Failed pages (from job data) - using type assertion since property may exist at runtime
+  const failedPagesCount = (job as { failed_pages_count?: number })?.failed_pages_count || 0;
 
   // Image crop handlers
   const handleOpenCropDialog = (questionId: number, pageNumber: number) => {

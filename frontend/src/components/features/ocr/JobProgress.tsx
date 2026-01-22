@@ -25,7 +25,6 @@ import {
   type OCRJob,
   type OCRJobStatus,
   type JobProgressEvent,
-  type FailedPagesResponse,
 } from '@/services/ocr';
 
 interface JobProgressProps {

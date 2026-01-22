@@ -68,19 +68,6 @@ interface QuestionCardProps {
   className?: string;
 }
 
-/**
- * Sanitizes HTML content for safe rendering.
- * In production, use DOMPurify: `DOMPurify.sanitize(html)`
- * For now, we escape script tags as a basic safeguard since
- * the content comes from our controlled OCR pipeline.
- */
-function sanitizeHtml(html: string): string {
-  // Basic sanitization - remove script tags
-  // NOTE: For production, use DOMPurify library
-  return html
-    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-    .replace(/on\w+\s*=/gi, 'data-removed=');
-}
 
 export function QuestionCard({
   question,

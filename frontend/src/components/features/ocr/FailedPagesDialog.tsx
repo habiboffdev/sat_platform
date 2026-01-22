@@ -30,7 +30,6 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import {
   ocrService,
   type FailedPageInfo,
-  type FailedPagesResponse,
 } from '@/services/ocr';
 
 interface FailedPagesDialogProps {

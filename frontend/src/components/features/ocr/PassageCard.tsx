@@ -36,7 +36,6 @@ import {
 } from '@/components/ui/card';
 import {
   Collapsible,
-  CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
 import { RichContent } from '@/components/ui/RichContent';
