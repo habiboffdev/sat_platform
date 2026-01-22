@@ -1,7 +1,7 @@
 """Add table_data to questions and test_configs to ocr_jobs
 
-Revision ID: 002_ocr_tables_v2
-Revises: 001_add_ocr_tables
+Revision ID: ocr002_tables_v2
+Revises: ocr001_add_tables
 Create Date: 2025-01-20 14:00:00.000000
 
 """
@@ -11,8 +11,8 @@ from alembic import op
 
 
 # revision identifiers, used by Alembic.
-revision: str = '002_ocr_tables_v2'
-down_revision: Union[str, None] = '001_add_ocr_tables'
+revision: str = 'ocr002_tables_v2'
+down_revision: Union[str, None] = 'ocr001_add_tables'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

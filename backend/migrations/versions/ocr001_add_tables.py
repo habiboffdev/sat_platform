@@ -1,6 +1,6 @@
 """Add OCR processing tables
 
-Revision ID: 001_add_ocr_tables
+Revision ID: ocr001_add_tables
 Revises: 54ed715bf2c7
 Create Date: 2025-01-20 12:00:00.000000
 
@@ -11,7 +11,7 @@ from alembic import op
 
 
 # revision identifiers, used by Alembic.
-revision: str = '001_add_ocr_tables'
+revision: str = 'ocr001_add_tables'
 down_revision: Union[str, None] = '54ed715bf2c7'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None

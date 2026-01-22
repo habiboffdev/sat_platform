@@ -1,7 +1,7 @@
 """Add extracted_passages table and Phase 6 error handling columns
 
-Revision ID: 003_add_passages_and_error_handling
-Revises: 002_ocr_tables_v2
+Revision ID: ocr003_passages_errors
+Revises: ocr002_tables_v2
 Create Date: 2025-01-20 16:00:00.000000
 
 This migration adds:
@@ -15,8 +15,8 @@ from alembic import op
 
 
 # revision identifiers, used by Alembic.
-revision: str = '003_add_passages_and_error_handling'
-down_revision: Union[str, None] = '002_ocr_tables_v2'
+revision: str = 'ocr003_passages_errors'
+down_revision: Union[str, None] = 'ocr002_tables_v2'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
