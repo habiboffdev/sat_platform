@@ -10,6 +10,7 @@ import { Plus, Trash2, ChevronRight, ChevronLeft, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import {
   Select,
   SelectContent,
@@ -228,16 +229,16 @@ export function TestCreationWizard({
   };
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
+    <Card className="w-full max-w-2xl mx-auto max-h-[80vh] flex flex-col">
+      <CardHeader className="flex-shrink-0">
         <CardTitle>Create Test from OCR Import</CardTitle>
         <CardDescription>
           Configure how to organize {totalQuestions} questions into a test
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 flex-1 min-h-0 overflow-hidden flex flex-col">
         {/* Step Indicator */}
-        <div className="flex items-center justify-center gap-2 mb-6">
+        <div className="flex items-center justify-center gap-2 mb-6 flex-shrink-0">
           {['type', 'modules', 'review'].map((s, i) => (
             <div key={s} className="flex items-center">
               <div
@@ -338,11 +339,13 @@ export function TestCreationWizard({
 
         {/* Step 2: Module Configuration */}
         {step === 'modules' && (
-          <div className="space-y-4">
-            <div className="text-sm text-muted-foreground mb-4">
+          <div className="flex-1 min-h-0 flex flex-col space-y-4">
+            <div className="text-sm text-muted-foreground flex-shrink-0">
               Configure question ranges for each module. Total questions: {totalQuestions}
             </div>
 
+            <ScrollArea className="flex-1 min-h-0" style={{ maxHeight: 'calc(80vh - 320px)' }}>
+              <div className="space-y-4">
             {config.modules.map((mod, index) => (
               <Card key={index} className="p-4">
                 <div className="flex items-start justify-between mb-3">
@@ -472,7 +475,10 @@ export function TestCreationWizard({
               </Card>
             ))}
 
-            <Button variant="outline" onClick={addModule} className="w-full">
+              </div>
+            </ScrollArea>
+
+            <Button variant="outline" onClick={addModule} className="w-full flex-shrink-0">
               <Plus className="w-4 h-4 mr-2" />
               Add Module
             </Button>
@@ -481,7 +487,7 @@ export function TestCreationWizard({
 
         {/* Step 3: Review */}
         {step === 'review' && (
-          <div className="space-y-4">
+          <div className="flex-1 min-h-0 overflow-y-auto space-y-4">
             <div className="rounded-lg border p-4 space-y-3">
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Title:</span>
@@ -523,7 +529,7 @@ export function TestCreationWizard({
         )}
 
         {/* Navigation */}
-        <div className="flex justify-between pt-4 border-t">
+        <div className="flex justify-between pt-4 border-t flex-shrink-0">
           <Button
             variant="outline"
             onClick={step === 'type' ? onCancel : () => setStep(step === 'review' ? 'modules' : 'type')}

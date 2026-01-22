@@ -14,6 +14,19 @@ import {
 import { Button } from '@/components/ui/button';
 import { RichContent } from '@/components/ui/RichContent';
 
+/**
+ * Constructs full image URL from relative path.
+ * Backend returns paths like /static/ocr/... which need the API base URL.
+ */
+function getFullImageUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+  // Remove /api/v1 suffix to get base host
+  const baseHost = apiBase.replace(/\/api\/v1\/?$/, '');
+  return `${baseHost}${url}`;
+}
+
 interface QuestionViewerProps {
   question: QuestionStudentView;
 }
@@ -146,7 +159,7 @@ export function QuestionViewer({ question }: QuestionViewerProps) {
         <div className="mb-6">
           {question.question_image_url && (
             <img
-              src={question.question_image_url}
+              src={getFullImageUrl(question.question_image_url) || ''}
               alt={question.question_image_alt || 'Question image'}
               className="max-w-full rounded-lg border mb-4"
             />
@@ -200,7 +213,7 @@ export function QuestionViewer({ question }: QuestionViewerProps) {
                   <div className="flex-1 min-w-0">
                     {option.image_url && (
                       <img
-                        src={option.image_url}
+                        src={getFullImageUrl(option.image_url) || ''}
                         alt={option.image_alt || `Option ${option.id}`}
                         className="max-w-xs rounded-lg border mb-2"
                       />

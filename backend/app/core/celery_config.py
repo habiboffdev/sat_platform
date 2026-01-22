@@ -35,6 +35,9 @@ celery_app.conf.update(
         "app.tasks.ocr_tasks.process_pdf_job": {"queue": "ocr"},
         "app.tasks.ocr_tasks.process_page_batch": {"queue": "ocr"},
         "app.tasks.ocr_tasks.structure_questions": {"queue": "ocr"},
+        "app.tasks.ocr_tasks.structure_skipped_pages": {"queue": "ocr"},
+        "app.tasks.ocr_tasks.retry_failed_pages": {"queue": "ocr"},
+        "app.tasks.ocr_tasks.cancel_ocr_job": {"queue": "ocr"},
     },
 
     # Task time limits

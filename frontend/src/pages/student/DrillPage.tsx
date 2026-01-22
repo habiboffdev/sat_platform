@@ -18,6 +18,18 @@ import { cn } from '@/lib/utils';
 import { drillService, type DrillSession, type DrillAnswer, type DrillResult } from '@/services/drill';
 import { useToast } from '@/hooks/use-toast';
 
+/**
+ * Constructs full image URL from relative path.
+ * Backend returns paths like /static/ocr/... which need the API base URL.
+ */
+function getFullImageUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+  const baseHost = apiBase.replace(/\/api\/v1\/?$/, '');
+  return `${baseHost}${url}`;
+}
+
 const DOMAIN_LABELS: Record<string, string> = {
     craft_and_structure: 'Craft & Structure',
     information_and_ideas: 'Information & Ideas',
@@ -438,7 +450,7 @@ export default function DrillPage() {
 
                         {currentQuestion.question_image_url && (
                             <img
-                                src={currentQuestion.question_image_url}
+                                src={getFullImageUrl(currentQuestion.question_image_url) || ''}
                                 alt=""
                                 className="max-w-full rounded-lg"
                             />

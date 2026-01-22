@@ -21,6 +21,18 @@ import { useToast } from '@/hooks/use-toast';
 import api from '@/lib/axios';
 import { QuestionContent } from '@/components/ui/QuestionContent';
 
+/**
+ * Constructs full image URL from relative path.
+ * Backend returns paths like /static/ocr/... which need the API base URL.
+ */
+function getFullImageUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+  const baseHost = apiBase.replace(/\/api\/v1\/?$/, '');
+  return `${baseHost}${url}`;
+}
+
 // Types
 interface QuestionReview {
   id: number;
@@ -581,7 +593,7 @@ export default function ReviewPage() {
 
               {current.question_image_url && (
                 <img
-                  src={current.question_image_url}
+                  src={getFullImageUrl(current.question_image_url) || ''}
                   alt="Question illustration"
                   className="max-w-full rounded-2xl mb-10 shadow-sm border"
                 />

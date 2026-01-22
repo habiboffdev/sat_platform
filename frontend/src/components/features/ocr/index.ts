@@ -10,4 +10,5 @@ export { QuestionCard } from './QuestionCard';
 export { ImageCropDialog } from './ImageCropDialog';
 export { TestCreationWizard } from './TestCreationWizard';
 export { FailedPagesDialog } from './FailedPagesDialog';
+export { SkippedPagesDialog } from './SkippedPagesDialog';
 export { PassageCard } from './PassageCard';

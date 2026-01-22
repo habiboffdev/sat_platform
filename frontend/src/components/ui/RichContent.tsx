@@ -98,4 +98,13 @@ export const richContentStyles = `
 .rich-content p:last-child {
   margin-bottom: 0;
 }
+
+.rich-content .fill-blank {
+  display: inline-block;
+  min-width: 4em;
+  border-bottom: 2px solid currentColor;
+  text-align: center;
+  color: transparent;
+  user-select: none;
+}
 `;
