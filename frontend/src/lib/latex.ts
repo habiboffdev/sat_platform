@@ -8,27 +8,11 @@
 import katex from 'katex';
 
 /**
- * Check if KaTeX can successfully parse the content as LaTeX.
- * This is the most reliable way to detect valid LaTeX.
- */
-function canKaTeXParse(content: string): boolean {
-    try {
-        katex.renderToString(content, { throwOnError: true });
-        return true;
-    } catch {
-        return false;
-    }
-}
-
-/**
  * Check if a string looks like a LaTeX math expression rather than currency or prose.
- * 
- * Strategy:
- * 1. First, quickly reject obvious non-math (pure numbers, long prose)
- * 2. Then use KaTeX to validate if it's actually valid LaTeX
- * 
- * This approach handles edge cases like (r, s) which is valid LaTeX
- * but wouldn't match simple regex patterns.
+ *
+ * SIMPLE RULE: Render as math UNLESS it's clearly prose text.
+ * The main case to reject is currency context like "$600 car and $500" where
+ * the content between $ signs is clearly prose text.
  */
 export function isMathExpression(content: string): boolean {
     const trimmed = content.trim();
@@ -36,115 +20,59 @@ export function isMathExpression(content: string): boolean {
     // Empty content is not math
     if (!trimmed) return false;
 
-    // If it's ONLY digits, commas, decimals, and spaces - it's likely currency
-    // e.g., "600", "1,000", "2.50", "600 "
-    if (/^[\d,.\s]+$/.test(trimmed)) {
+    // ALWAYS RENDER: Single character (variable like $a$, $x$, $n$)
+    if (trimmed.length === 1) {
+        return true;
+    }
+
+    // ALWAYS RENDER: Two characters (like $xy$, $ab$, $2x$)
+    if (trimmed.length === 2) {
+        return true;
+    }
+
+    // ALWAYS RENDER if it contains LaTeX commands (backslash followed by letters)
+    // e.g., \frac, \left, \right, \sqrt, \cdot, etc.
+    if (/\\[a-zA-Z]+/.test(trimmed)) {
+        return true;
+    }
+
+    // ALWAYS RENDER if it contains math symbols/operators
+    // These are definite math indicators
+    if (/[=<>^_{}+\-*/]/.test(trimmed)) {
+        return true;
+    }
+
+    // ALWAYS RENDER if it contains parentheses with letters/numbers (function notation)
+    // e.g., p(x), f(2), sin(x)
+    if (/[a-zA-Z]\s*\(/.test(trimmed)) {
+        return true;
+    }
+
+    // ALWAYS RENDER: Numbers (like $123$, $3.14$)
+    if (/^-?[\d.,]+%?$/.test(trimmed)) {
+        return true;
+    }
+
+    // For longer content without obvious math markers, check if it's prose
+    // Split by spaces
+    const words = trimmed.split(/\s+/).filter(w => w.length > 0);
+
+    // REJECT: Starts with a number followed by word-like text (currency context)
+    // e.g., "600 car" or "500 dollars"
+    if (/^\d[\d,]*(\.\d+)?\s+[a-zA-Z]{3,}/.test(trimmed)) {
         return false;
     }
 
-    // PRIORITY CHECK: Contains LaTeX commands or escaped symbols - definitely math
-    // This matches \frac, \sqrt, \cdot, \times, and also \%, \&, \_, \#, \{, \}
-    if (/\\[a-zA-Z]+|\\[%&_#{}!$]/.test(trimmed)) {
-        return true;
-    }
-
-    // PRIORITY CHECK: Contains curly braces - likely LaTeX
-    if (/\{[^}]+\}/.test(trimmed)) {
-        return true;
-    }
-
-    // PRIORITY CHECK: Contains definite math operators
-    // Added - to the list, but we'll be careful in the prose check
-    if (/[+*/=<>^_|~-]/.test(trimmed)) {
-        return true;
-    }
-
-    // Minus sign that looks mathematical (already handled by the operator check above, 
-    // but kept as specific logic if needed for complex variants)
-    if (/\d\s*-\s*\d/.test(trimmed) || /^-\s*\d/.test(trimmed)) {
-        return true;
-    }
-
-    // NOW apply prose filters (only for content that didn't match explicit math patterns)
-
-    // Reject if it looks like a sentence (period followed by space or end)
-    if (/\.\s+[A-Z]/.test(trimmed) || (trimmed.endsWith('.') && !/\d\./.test(trimmed))) {
+    // REJECT: Contains common prose words (but NOT single letters which are variables)
+    // Only check words with 2+ characters
+    const proseWords = ['the', 'an', 'and', 'or', 'of', 'in', 'on', 'at', 'to', 'for', 'is', 'are', 'was', 'were', 'that', 'this', 'with'];
+    const lowerWords = words.filter(w => w.length >= 2).map(w => w.toLowerCase());
+    if (lowerWords.some(w => proseWords.includes(w))) {
         return false;
     }
 
-    // Reject if it has too many words
-    const wordCount = trimmed.split(/\s+/).filter(w => w.length > 0).length;
-    if (wordCount > 6) {
-        return false;
-    }
-
-    // Reject if it has comma followed by space and lowercase (prose pattern)
-    // BUT skip this if it looks like a coordinate pair (r, s)
-    if (/, \s*[a-z]/.test(trimmed) && !/^\(.*\)$/.test(trimmed)) {
-        return false;
-    }
-
-    // If it starts with a number and is followed by word-like text, it's currency context
-    if (/^\d[\d,]*(\.\d+)?[,\s]+[a-zA-Z]{2,}/.test(trimmed)) {
-        return false;
-    }
-
-    // Single letter (variable) - likely math: x, y, f, n
-    if (/^[a-zA-Z]$/.test(trimmed)) {
-        return true;
-    }
-
-    // Short expressions with letters and numbers mixed: 2x, x2, 3n
-    if (/^\d+[a-zA-Z]$/.test(trimmed) || /^[a-zA-Z]\d+$/.test(trimmed)) {
-        return true;
-    }
-
-    // Common math variable patterns: x + 2, 2x + 3y, etc.
-    if (/^[a-zA-Z]\s*[+\-*/=]\s*\d/.test(trimmed) || /^\d\s*[+\-*/=]\s*[a-zA-Z]/.test(trimmed)) {
-        return true;
-    }
-
-    // Greek letters written out with backslash
-    if (/\\(alpha|beta|gamma|delta|theta|pi|sigma|omega|lambda|mu)/i.test(trimmed)) {
-        return true;
-    }
-
-    // Parentheses with clear math content (letters and operators)
-    if (/\([^)]*[a-zA-Z][^)]*[+\-*/=^_][^)]*\)/.test(trimmed)) {
-        return true;
-    }
-
-    // Function notation: f(x), g(2), sin(x)
-    if (/^[a-zA-Z]+\([^)]+\)$/.test(trimmed)) {
-        return true;
-    }
-
-    // Subscript/superscript patterns: x_1, x^2
-    if (/[a-zA-Z][_^]\d/.test(trimmed) || /[a-zA-Z][_^]\{[^}]+\}/.test(trimmed)) {
-        return true;
-    }
-
-    // Coordinate pairs like (r, s), (x, y), (a, b)
-    if (/^\([a-zA-Z],\s*[a-zA-Z]\)$/.test(trimmed)) {
-        return true;
-    }
-
-    // Numeric coordinate pairs like (5, 6), (-3, 10), (0, -2)
-    if (/^\(-?\d+,\s*-?\d+\)$/.test(trimmed)) {
-        return true;
-    }
-
-    // FINAL FALLBACK: For short content, try KaTeX parsing
-    // This catches edge cases that are valid LaTeX but don't match simple regexes
-    if (wordCount <= 4 && canKaTeXParse(trimmed)) {
-        // If it contains letters and parentheses/brackets/operators, it's likely math
-        if (/[a-zA-Z]/.test(trimmed) && /[()[\]+\-*/=<>]/.test(trimmed)) {
-            return true;
-        }
-    }
-
-    // If none of the above, default to NOT math (be conservative)
-    return false;
+    // Everything else between $...$ should render as math
+    return true;
 }
 
 /**
@@ -249,12 +177,15 @@ export function processLatexInText(text: string): string {
 
     let processed = text;
 
+    // NOTE: Underscore-to-blank conversion removed - it was causing issues with LaTeX
+    // Fill-in-the-blank underscores from OCR should be handled at extraction time instead
+
     // Handle \[...\] display mode
     processed = processed.replace(/\\\[(.+?)\\\]/gs, (_, math) => {
         return renderMathToHtml(math, true);
     });
 
-    // Handle \(...\) inline mode  
+    // Handle \(...\) inline mode
     processed = processed.replace(/\\\((.+?)\\\)/g, (_, math) => {
         return renderMathToHtml(math, false);
     });

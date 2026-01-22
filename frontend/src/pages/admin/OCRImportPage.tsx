@@ -7,7 +7,7 @@
 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FileText, RefreshCw, Eye, Trash2, DollarSign, Clock } from 'lucide-react';
+import { FileText, RefreshCw, Eye, DollarSign, Clock, Play, FileQuestion } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -33,11 +33,11 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { useToast } from '@/hooks/use-toast';
-import { UploadZone, JobProgress } from '@/components/features/ocr';
+import { UploadZone, JobProgress, SkippedPagesDialog } from '@/components/features/ocr';
 import {
   ocrService,
   type OCRJob,
-  type OCRProvider,
+  type OCRQuality,
   type OCRJobStatus,
 } from '@/services/ocr';
 
@@ -48,9 +48,10 @@ export default function OCRImportPage() {
   const [jobs, setJobs] = useState<OCRJob[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
-  const [selectedProvider, setSelectedProvider] = useState<OCRProvider>('hybrid');
+  const [selectedQuality, setSelectedQuality] = useState<OCRQuality>('fast');
   const [activeJob, setActiveJob] = useState<OCRJob | null>(null);
   const [statusFilter, setStatusFilter] = useState<OCRJobStatus | 'all'>('all');
+  const [skippedDialogJobId, setSkippedDialogJobId] = useState<number | null>(null);
 
   // Fetch jobs on mount and after upload
   const fetchJobs = async () => {
@@ -87,10 +88,10 @@ export default function OCRImportPage() {
   const handleUpload = async (file: File) => {
     setIsUploading(true);
     try {
-      const job = await ocrService.uploadPdf(file, undefined, selectedProvider);
+      const job = await ocrService.uploadPdf(file, undefined, selectedQuality);
       toast({
         title: 'Upload started',
-        description: `Processing ${file.name} (${job.total_pages} pages)`,
+        description: `Processing ${file.name} (${job.total_pages} pages) with ${selectedQuality === 'quality' ? 'Qwen 72B' : 'Qwen 32B'}`,
       });
       setActiveJob(job);
       await fetchJobs();
@@ -117,6 +118,25 @@ export default function OCRImportPage() {
     } catch (error) {
       toast({
         title: 'Failed to cancel job',
+        variant: 'destructive',
+      });
+    }
+  };
+
+  const handleResume = async (job: OCRJob) => {
+    try {
+      const result = await ocrService.resumeJob(job.id);
+      toast({
+        title: 'Job resumed',
+        description: `Continuing from page ${result.processed_pages + 1} of ${result.total_pages}`,
+      });
+      setActiveJob(job);
+      await fetchJobs();
+    } catch (error: any) {
+      const message = error.response?.data?.detail || 'Failed to resume job';
+      toast({
+        title: 'Failed to resume job',
+        description: message,
         variant: 'destructive',
       });
     }
@@ -161,29 +181,27 @@ export default function OCRImportPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          {/* Provider Selection */}
+          {/* Quality Selection */}
           <div className="flex items-center gap-4">
-            <label className="text-sm font-medium">OCR Provider:</label>
+            <label className="text-sm font-medium">OCR Quality:</label>
             <Select
-              value={selectedProvider}
-              onValueChange={(v) => setSelectedProvider(v as OCRProvider)}
+              value={selectedQuality}
+              onValueChange={(v) => setSelectedQuality(v as OCRQuality)}
             >
-              <SelectTrigger className="w-48">
+              <SelectTrigger className="w-56">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="hybrid">
-                  Hybrid (OpenAI + DeepInfra)
+                <SelectItem value="fast">
+                  Fast (Qwen 32B) - Recommended
                 </SelectItem>
-                <SelectItem value="openrouter">
-                  OpenRouter (Best Price - Recommended)
+                <SelectItem value="quality">
+                  Quality (Qwen 72B) - Better for complex math
                 </SelectItem>
-                <SelectItem value="openai">OpenAI Only</SelectItem>
-                <SelectItem value="deepinfra">DeepInfra Only</SelectItem>
               </SelectContent>
             </Select>
             <span className="text-sm text-muted-foreground">
-              ~{ocrService.estimateCost(100, selectedProvider)}¢ per 100 pages
+              ~{ocrService.estimateCost(100, selectedQuality)}¢ per 100 pages
             </span>
           </div>
 
@@ -302,22 +320,44 @@ export default function OCRImportPage() {
                     <TableCell>
                       <div className="flex items-center gap-2">
                         {job.status === 'review' || job.status === 'completed' ? (
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => navigate(`/admin/ocr/${job.id}/review`)}
-                          >
-                            <Eye className="h-3 w-3 mr-1" />
-                            Review
-                          </Button>
+                          <>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => navigate(`/admin/ocr/${job.id}/review`)}
+                            >
+                              <Eye className="h-3 w-3 mr-1" />
+                              Review
+                            </Button>
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              onClick={() => setSkippedDialogJobId(job.id)}
+                              title="View and re-process skipped pages"
+                            >
+                              <FileQuestion className="h-3 w-3 mr-1" />
+                              Skipped
+                            </Button>
+                          </>
                         ) : ['pending', 'processing'].includes(job.status) ? (
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => handleCancel(job.id)}
-                          >
-                            Cancel
-                          </Button>
+                          <>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => handleResume(job)}
+                              title="Resume processing from where it left off"
+                            >
+                              <Play className="h-3 w-3 mr-1" />
+                              Resume
+                            </Button>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => handleCancel(job.id)}
+                            >
+                              Cancel
+                            </Button>
+                          </>
                         ) : null}
                       </div>
                     </TableCell>
@@ -328,6 +368,14 @@ export default function OCRImportPage() {
           )}
         </CardContent>
       </Card>
+
+      {/* Skipped Pages Dialog */}
+      <SkippedPagesDialog
+        isOpen={skippedDialogJobId !== null}
+        onClose={() => setSkippedDialogJobId(null)}
+        jobId={skippedDialogJobId ?? 0}
+        onProcessComplete={fetchJobs}
+      />
     </div>
   );
 }

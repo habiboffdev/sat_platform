@@ -58,7 +58,7 @@ def get_task_session_maker():
 
 
 @celery_app.task(bind=True, max_retries=3)
-def process_pdf_job(self, job_id: int):
+def process_pdf_job(self, job_id: int, quality: str = "fast"):
     """
     Main orchestrator task for PDF processing.
 
@@ -71,11 +71,12 @@ def process_pdf_job(self, job_id: int):
 
     Args:
         job_id: OCRJob database ID
+        quality: "fast" (32B) or "quality" (72B) for OpenRouter vision model
     """
-    return run_async(_process_pdf_job_async(self, job_id))
+    return run_async(_process_pdf_job_async(self, job_id, quality))
 
 
-async def _process_pdf_job_async(task, job_id: int):
+async def _process_pdf_job_async(task, job_id: int, quality: str = "fast"):
     """Async implementation of process_pdf_job."""
     import fitz  # PyMuPDF
 
@@ -133,13 +134,22 @@ async def _process_pdf_job_async(task, job_id: int):
                     if page_num in processed_page_nums:
                         continue
 
-                    # Convert page to image
                     page = doc.load_page(page_idx)
-                    pix = page.get_pixmap(matrix=fitz.Matrix(3, 3))
-                    img_bytes = pix.tobytes("jpeg")
-                    img_b64 = base64.b64encode(img_bytes).decode("utf-8")
 
-                    batch_pages.append((page_num, img_b64))
+                    # Smart detection: try to extract text directly first
+                    extracted_text = page.get_text("text").strip()
+
+                    # If page has substantial text (>200 chars), skip vision
+                    # This handles text-based PDFs much faster and cheaper
+                    if len(extracted_text) > 200:
+                        # Text-based page - no need for vision OCR
+                        batch_pages.append((page_num, None, extracted_text))
+                    else:
+                        # Scanned/image page - need vision OCR
+                        pix = page.get_pixmap(matrix=fitz.Matrix(3, 3))
+                        img_bytes = pix.tobytes("jpeg")
+                        img_b64 = base64.b64encode(img_bytes).decode("utf-8")
+                        batch_pages.append((page_num, img_b64, None))
 
                 if not batch_pages:
                     continue
@@ -160,11 +170,12 @@ async def _process_pdf_job_async(task, job_id: int):
                     ocr_provider = "deepinfra"
                     struct_provider = "deepinfra"
 
-                # Process batch
+                # Process batch with quality setting
                 results = await ocr_client.process_page_batch(
                     batch_pages,
                     ocr_provider=ocr_provider,
                     structuring_provider=struct_provider,
+                    quality=quality,
                 )
 
                 # Save results to database
@@ -214,6 +225,12 @@ async def _process_pdf_job_async(task, job_id: int):
                             domain=_map_domain(q_data.get("domain")),
                             needs_image=q_data.get("needs_image", False),
                         )
+
+                        # Validate question and add any errors
+                        validation_errors = _validate_question(question)
+                        if validation_errors:
+                            question.validation_errors = validation_errors
+
                         db.add(question)
                         all_questions.append(question)
 
@@ -348,6 +365,42 @@ def _map_domain(domain_str: str | None):
     return mapping.get(domain_lower)
 
 
+def _validate_question(question) -> list[str]:
+    """
+    Validate an ExtractedQuestion and return list of validation errors.
+
+    Checks:
+    - R&W questions should have a passage (SAT R&W always includes passages)
+    """
+    from app.models.enums import QuestionDomain
+
+    # Reading & Writing domains that require a passage
+    rw_domains = {
+        QuestionDomain.CRAFT_AND_STRUCTURE,
+        QuestionDomain.INFORMATION_AND_IDEAS,
+        QuestionDomain.EXPRESSION_OF_IDEAS,
+        QuestionDomain.STANDARD_ENGLISH_CONVENTIONS,
+    }
+
+    errors = []
+
+    # Check if R&W question is missing passage
+    if question.domain in rw_domains and not question.passage_text:
+        errors.append("Reading & Writing question missing passage text")
+
+    # Check if domain looks like R&W based on keywords but is missing passage
+    if not question.domain and question.question_text:
+        text_lower = question.question_text.lower()
+        rw_indicators = [
+            "underlined", "sentence", "paragraph", "author", "passage",
+            "which choice", "best completes", "text", "punctuation",
+        ]
+        if any(indicator in text_lower for indicator in rw_indicators) and not question.passage_text:
+            errors.append("Question appears to be Reading & Writing but is missing passage")
+
+    return errors
+
+
 @celery_app.task(bind=True)
 def cancel_ocr_job(self, job_id: int):
     """Cancel a running OCR job."""
@@ -376,6 +429,193 @@ async def _cancel_ocr_job_async(job_id: int):
         await db.commit()
 
         return {"status": "cancelled", "job_id": job_id}
+
+
+@celery_app.task(bind=True)
+def structure_skipped_pages(self, job_id: int, page_numbers: list[int]):
+    """
+    Run structuring on skipped pages that already have OCR text.
+
+    This is for pages that were incorrectly detected as non-question pages.
+    We have the text, we just need to run the LLM structuring step.
+
+    Args:
+        job_id: The job ID
+        page_numbers: List of page numbers to structure
+    """
+    return run_async(_structure_skipped_pages_async(self, job_id, page_numbers))
+
+
+async def _structure_skipped_pages_async(task, job_id: int, page_numbers: list[int]):
+    """Async implementation of structure_skipped_pages."""
+    import fitz  # PyMuPDF
+
+    async with get_task_session_maker()() as db:
+        result = await db.execute(
+            select(OCRJob)
+            .where(OCRJob.id == job_id)
+            .options(selectinload(OCRJob.pages))
+        )
+        job = result.scalar_one_or_none()
+
+        if not job:
+            return {"error": f"Job {job_id} not found"}
+
+        # Find the specific pages
+        pages_to_process = [p for p in job.pages if p.page_number in page_numbers]
+
+        if not pages_to_process:
+            return {"message": "No pages found", "job_id": job_id}
+
+        # Update job status
+        job.status = OCRJobStatus.PROCESSING
+        await db.commit()
+
+        # Determine providers
+        provider_value = job.ocr_provider.value
+        if provider_value == "openrouter":
+            ocr_provider = "openrouter"
+            struct_provider = "openrouter"
+            max_concurrent = 50  # OpenRouter handles high concurrency
+        elif provider_value == "hybrid":
+            ocr_provider = "openai"
+            struct_provider = "deepinfra"
+            max_concurrent = 10
+        elif provider_value == "openai":
+            ocr_provider = "openai"
+            struct_provider = "openai"
+            max_concurrent = 5
+        else:
+            ocr_provider = provider_value
+            struct_provider = "deepinfra"
+            max_concurrent = 10
+
+        extracted_count = 0
+
+        # Download PDF from S3
+        pdf_path = await _download_pdf(job.pdf_s3_key)
+        doc = None
+        if pdf_path:
+            doc = fitz.open(pdf_path)
+
+        # Prepare pages that need OCR (extract images)
+        pages_needing_ocr = []
+        for page in pages_to_process:
+            if not page.ocr_markdown and doc:
+                page_idx = page.page_number - 1
+                pdf_page = doc.load_page(page_idx)
+                pix = pdf_page.get_pixmap(matrix=fitz.Matrix(3, 3))
+                img_bytes = pix.tobytes("jpeg")
+                img_b64 = base64.b64encode(img_bytes).decode("utf-8")
+                pages_needing_ocr.append((page, img_b64))
+
+        # Run OCR in parallel
+        if pages_needing_ocr:
+            semaphore = asyncio.Semaphore(max_concurrent)
+
+            async def run_ocr(page, img_b64):
+                async with semaphore:
+                    try:
+                        ocr_result = await ocr_client.extract_text(img_b64, provider=ocr_provider)
+                        return (page, ocr_result.markdown, None)
+                    except Exception as e:
+                        return (page, None, str(e))
+
+            ocr_tasks = [run_ocr(page, img_b64) for page, img_b64 in pages_needing_ocr]
+            ocr_results = await asyncio.gather(*ocr_tasks)
+
+            # Save OCR results
+            for page, markdown, error in ocr_results:
+                if markdown:
+                    page.ocr_markdown = markdown
+                elif error:
+                    page.error_message = f"OCR failed: {error}"
+            await db.commit()
+
+        # Now process all pages that have text (structuring) - IN PARALLEL
+        pages_with_text = [p for p in pages_to_process if p.ocr_markdown]
+
+        if pages_with_text:
+            struct_semaphore = asyncio.Semaphore(max_concurrent)
+
+            async def run_structuring(page):
+                async with struct_semaphore:
+                    try:
+                        questions = await ocr_client.structure_to_json(
+                            page.ocr_markdown,
+                            provider=struct_provider,
+                        )
+                        return (page, questions, None)
+                    except Exception as e:
+                        return (page, None, str(e))
+
+            struct_tasks = [run_structuring(p) for p in pages_with_text]
+            struct_results = await asyncio.gather(*struct_tasks)
+
+            # Save all results
+            for page, questions, error in struct_results:
+                if error:
+                    page.error_message = error
+                    continue
+
+                if questions:
+                    for q_data in questions:
+                        needs_answer = (
+                            not q_data.correct_answer
+                            or q_data.correct_answer == ["[NEED_ANSWER]"]
+                        )
+
+                        question = ExtractedQuestion(
+                            job_id=job.id,
+                            source_page_id=page.id,
+                            review_status=QuestionReviewStatus.PENDING,
+                            extraction_confidence=q_data.confidence,
+                            answer_confidence=0.0 if needs_answer else q_data.confidence,
+                            question_text=q_data.question_text,
+                            question_type=_map_question_type(q_data.question_type),
+                            passage_text=q_data.passage_text,
+                            chart_title=q_data.chart_title,
+                            chart_data=q_data.chart_data,
+                            table_data=q_data.table_data,
+                            options=q_data.options,
+                            correct_answer=q_data.correct_answer if not needs_answer else None,
+                            needs_answer=needs_answer,
+                            explanation=q_data.explanation,
+                            difficulty=_map_difficulty(q_data.difficulty),
+                            domain=_map_domain(q_data.domain),
+                            needs_image=q_data.needs_image,
+                        )
+
+                        # Validate question and add any errors
+                        validation_errors = _validate_question(question)
+                        if validation_errors:
+                            question.validation_errors = validation_errors
+
+                        db.add(question)
+                        extracted_count += 1
+
+                    page.is_question_page = True
+                    page.structuring_completed = True
+
+            await db.commit()
+
+        # Close PDF
+        if doc:
+            doc.close()
+
+        # Update job counts
+        job.extracted_questions += extracted_count
+        job.question_pages = len([p for p in job.pages if p.is_question_page])
+        job.skipped_pages = len([p for p in job.pages if not p.is_question_page])
+        job.status = OCRJobStatus.REVIEW
+        await db.commit()
+
+        return {
+            "status": "completed",
+            "job_id": job_id,
+            "pages_processed": len(pages_to_process),
+            "questions_extracted": extracted_count,
+        }
 
 
 @celery_app.task(bind=True)

@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Query, Response, UploadFile, WebSocket, WebSocketDisconnect
+from pydantic import BaseModel
 from sqlalchemy import func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
@@ -38,7 +39,7 @@ from app.models.enums import (
 from app.models.ocr import ExtractedPassage, ExtractedQuestion, OCRJob, OCRJobPage
 from app.models.test import Question, TestModule
 from app.schemas.base import BaseSchema, PaginatedResponse
-from app.tasks.ocr_tasks import cancel_ocr_job, process_pdf_job, retry_failed_pages
+from app.tasks.ocr_tasks import cancel_ocr_job, process_pdf_job, retry_failed_pages, structure_skipped_pages
 
 router = APIRouter(prefix="/ocr", tags=["OCR Processing"])
 
@@ -269,7 +270,8 @@ async def upload_pdf(
     db: Annotated[AsyncSession, Depends(get_db)],
     file: UploadFile = File(...),
     target_module_id: int | None = Form(None),
-    provider: str = Form("hybrid"),
+    provider: str = Form("openrouter"),
+    quality: str = Form("fast"),
 ):
     """
     Upload a PDF for OCR processing.
@@ -355,8 +357,8 @@ async def upload_pdf(
     db.add(job)
     await db.flush()
 
-    # Start Celery task
-    task = process_pdf_job.delay(job.id)
+    # Start Celery task with quality parameter
+    task = process_pdf_job.delay(job.id, quality=quality)
     job.celery_task_id = task.id
     await db.commit()
 
@@ -507,6 +509,150 @@ async def cancel_job(
     cancel_ocr_job.delay(job_id)
 
     return {"message": "Cancellation requested", "job_id": job_id}
+
+
+@router.post("/jobs/{job_id}/resume")
+async def resume_job(
+    job_id: int,
+    user: TeacherOrAdmin,
+    db: Annotated[AsyncSession, Depends(get_db)],
+):
+    """
+    Resume a stuck processing job.
+
+    Use this when a job is stuck in PROCESSING state (e.g., after server restart).
+    The job will continue from where it left off, skipping already processed pages.
+    """
+    result = await db.execute(
+        select(OCRJob)
+        .where(OCRJob.id == job_id)
+        .where(OCRJob.user_id == user.id)
+    )
+    job = result.scalar_one_or_none()
+
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+
+    if job.status not in [OCRJobStatus.PENDING, OCRJobStatus.PROCESSING]:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Cannot resume job with status: {job.status.value}. Only PENDING or PROCESSING jobs can be resumed."
+        )
+
+    # Re-trigger processing task - it will skip already completed pages
+    task = process_pdf_job.delay(job_id)
+    job.celery_task_id = task.id
+    await db.commit()
+
+    return {
+        "message": "Job resumed",
+        "job_id": job_id,
+        "processed_pages": job.processed_pages,
+        "total_pages": job.total_pages,
+        "celery_task_id": task.id,
+    }
+
+
+@router.get("/jobs/{job_id}/skipped-pages")
+async def list_skipped_pages(
+    job_id: int,
+    user: TeacherOrAdmin,
+    db: Annotated[AsyncSession, Depends(get_db)],
+):
+    """
+    List pages that were skipped (not detected as question pages).
+
+    Returns page numbers and a preview of the extracted text so users
+    can decide if they want to force re-process them.
+    """
+    result = await db.execute(
+        select(OCRJob)
+        .where(OCRJob.id == job_id)
+        .where(OCRJob.user_id == user.id)
+    )
+    job = result.scalar_one_or_none()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+
+    # Get skipped pages (is_question_page = False)
+    pages_result = await db.execute(
+        select(OCRJobPage)
+        .where(OCRJobPage.job_id == job_id)
+        .where(OCRJobPage.is_question_page == False)
+        .order_by(OCRJobPage.page_number)
+    )
+    skipped_pages = pages_result.scalars().all()
+
+    return {
+        "job_id": job_id,
+        "skipped_count": len(skipped_pages),
+        "pages": [
+            {
+                "page_number": p.page_number,
+                "text_preview": (p.ocr_markdown[:500] + "...") if p.ocr_markdown and len(p.ocr_markdown) > 500 else p.ocr_markdown,
+                "text_length": len(p.ocr_markdown) if p.ocr_markdown else 0,
+            }
+            for p in skipped_pages
+        ],
+    }
+
+
+class ProcessSkippedRequest(BaseModel):
+    page_numbers: list[int] | None = None
+
+
+@router.post("/jobs/{job_id}/process-skipped")
+async def process_skipped_pages(
+    job_id: int,
+    user: TeacherOrAdmin,
+    db: Annotated[AsyncSession, Depends(get_db)],
+    request: ProcessSkippedRequest = ProcessSkippedRequest(),
+):
+    """
+    Force re-process skipped pages as question pages.
+
+    Args:
+        page_numbers: Specific pages to re-process. If None, processes all skipped pages.
+
+    This will run the structuring step on these pages to extract questions,
+    even though they were originally detected as non-question pages.
+    """
+    result = await db.execute(
+        select(OCRJob)
+        .where(OCRJob.id == job_id)
+        .where(OCRJob.user_id == user.id)
+    )
+    job = result.scalar_one_or_none()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+
+    # Get skipped pages to process
+    query = (
+        select(OCRJobPage)
+        .where(OCRJobPage.job_id == job_id)
+        .where(OCRJobPage.is_question_page == False)
+    )
+    if request.page_numbers:
+        query = query.where(OCRJobPage.page_number.in_(request.page_numbers))
+
+    pages_result = await db.execute(query)
+    pages_to_process = pages_result.scalars().all()
+
+    if not pages_to_process:
+        return {"message": "No skipped pages to process", "processed": 0}
+
+    # Get page numbers
+    page_nums = [p.page_number for p in pages_to_process]
+
+    # Trigger structuring task (no need to re-do OCR, we have the text)
+    task = structure_skipped_pages.delay(job_id, page_nums)
+
+    return {
+        "message": f"Processing {len(pages_to_process)} skipped pages",
+        "job_id": job_id,
+        "page_numbers": page_nums,
+        "celery_task_id": task.id,
+    }
 
 
 @router.get("/jobs/{job_id}/questions", response_model=ExtractedQuestionListResponse)
@@ -787,11 +933,15 @@ async def import_questions(
         raise HTTPException(status_code=404, detail="Target module not found")
 
     # Get questions to import
+    # Order by page number to ensure correct sequencing even when
+    # skipped pages are processed later with higher IDs
     query = (
         select(ExtractedQuestion)
+        .join(OCRJobPage, ExtractedQuestion.source_page_id == OCRJobPage.id)
         .where(ExtractedQuestion.job_id == job_id)
         .where(ExtractedQuestion.review_status == QuestionReviewStatus.APPROVED)
         .where(ExtractedQuestion.imported_question_id.is_(None))
+        .order_by(OCRJobPage.page_number, ExtractedQuestion.id)
     )
 
     if data.question_ids:
@@ -878,18 +1028,22 @@ async def import_with_test(
         raise HTTPException(status_code=404, detail="Job not found")
 
     # Get approved questions to import
+    # IMPORTANT: Order by page number, then by id within the page
+    # This ensures questions from skipped pages (processed later with higher IDs)
+    # are still placed in the correct position based on their page in the PDF
     query = (
         select(ExtractedQuestion)
+        .join(OCRJobPage, ExtractedQuestion.source_page_id == OCRJobPage.id)
         .where(ExtractedQuestion.job_id == job_id)
         .where(ExtractedQuestion.review_status == QuestionReviewStatus.APPROVED)
         .where(ExtractedQuestion.imported_question_id.is_(None))
-        .order_by(ExtractedQuestion.id)
+        .order_by(OCRJobPage.page_number, ExtractedQuestion.id)
     )
 
     if data.question_ids:
         query = query.where(ExtractedQuestion.id.in_(data.question_ids))
 
-    result = await db.execute(query)
+    result = await db.execute(query.options(selectinload(ExtractedQuestion.source_page)))
     extracted_questions = list(result.scalars().all())
 
     if not extracted_questions:
@@ -1696,8 +1850,9 @@ async def reextract_page_endpoint(
     job.status = OCRJobStatus.PROCESSING
     await db.commit()
 
-    # Dispatch retry task with quality provider
-    provider = "deepinfra" if data.use_quality_provider else "openai"
+    # Always use DeepInfra olmOCR for re-extraction (best for math/formulas)
+    # olmOCR is specifically trained for document OCR and handles math better
+    provider = "deepinfra"
     task = retry_failed_pages.delay(job_id, [data.page_number], provider)
 
     return ReextractPageResponse(

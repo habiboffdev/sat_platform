@@ -26,6 +26,9 @@ export type OCRJobStatus =
 
 export type OCRProvider = 'deepinfra' | 'openai' | 'hybrid' | 'replicate' | 'openrouter';
 
+/** OCR quality setting - only affects OpenRouter vision model */
+export type OCRQuality = 'fast' | 'quality';
+
 export type QuestionReviewStatus =
   | 'pending'
   | 'approved'
@@ -276,18 +279,24 @@ export interface ReextractPageResponse {
 export const ocrService = {
   /**
    * Upload a PDF file for OCR processing.
+   *
+   * @param file - PDF file to upload
+   * @param targetModuleId - Optional target module ID
+   * @param quality - "fast" (Qwen 32B) or "quality" (Qwen 72B)
    */
   uploadPdf: async (
     file: File,
     targetModuleId?: number,
-    provider: OCRProvider = 'hybrid'
+    quality: OCRQuality = 'fast'
   ): Promise<OCRJob> => {
     const formData = new FormData();
     formData.append('file', file);
     if (targetModuleId) {
       formData.append('target_module_id', targetModuleId.toString());
     }
-    formData.append('provider', provider);
+    // Always use OpenRouter as the primary provider
+    formData.append('provider', 'openrouter');
+    formData.append('quality', quality);
 
     const response = await api.post<OCRJob>('/ocr/upload', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
@@ -329,6 +338,27 @@ export const ocrService = {
     const response = await api.post<{ message: string; job_id: number }>(
       `/ocr/jobs/${jobId}/cancel`
     );
+    return response.data;
+  },
+
+  /**
+   * Resume a stuck processing job (e.g., after server restart).
+   * Continues from where it left off, skipping already processed pages.
+   */
+  resumeJob: async (jobId: number): Promise<{
+    message: string;
+    job_id: number;
+    processed_pages: number;
+    total_pages: number;
+    celery_task_id: string;
+  }> => {
+    const response = await api.post<{
+      message: string;
+      job_id: number;
+      processed_pages: number;
+      total_pages: number;
+      celery_task_id: string;
+    }>(`/ocr/jobs/${jobId}/resume`);
     return response.data;
   },
 
@@ -516,18 +546,17 @@ export const ocrService = {
   },
 
   /**
-   * Get job cost estimate.
+   * Get job cost estimate based on quality setting.
    */
-  estimateCost: (totalPages: number, provider: OCRProvider = 'hybrid'): number => {
-    // Rough estimates in cents per page
-    const costPerPage: Record<OCRProvider, number> = {
-      hybrid: 0.25,
-      openai: 0.50,
-      deepinfra: 0.15,
-      replicate: 0.20,
-      openrouter: 0.10,  // Qwen 2.5 VL + DeepSeek (best price/performance)
+  estimateCost: (totalPages: number, quality: OCRQuality = 'fast'): number => {
+    // Rough estimates in cents per page (OpenRouter pricing)
+    // Fast: Qwen 32B ($0.005 input / $0.022 output per 1K tokens)
+    // Quality: Qwen 72B ($0.040 per 1K tokens)
+    const costPerPage: Record<OCRQuality, number> = {
+      fast: 0.10,     // Qwen 32B - cheapest, good accuracy
+      quality: 0.25,  // Qwen 72B - better accuracy for complex math
     };
-    return Math.round(totalPages * costPerPage[provider]);
+    return Math.round(totalPages * costPerPage[quality]);
   },
 
   /**
@@ -673,6 +702,41 @@ export const ocrService = {
         use_quality_provider: useQualityProvider,
       }
     );
+    return response.data;
+  },
+
+  /**
+   * List pages that were skipped (not detected as question pages).
+   */
+  listSkippedPages: async (jobId: number): Promise<{
+    job_id: number;
+    skipped_count: number;
+    pages: Array<{
+      page_number: number;
+      text_preview: string | null;
+      text_length: number;
+    }>;
+  }> => {
+    const response = await api.get(`/ocr/jobs/${jobId}/skipped-pages`);
+    return response.data;
+  },
+
+  /**
+   * Force re-process skipped pages to extract questions.
+   * This runs the structuring step on pages that already have OCR text.
+   */
+  processSkippedPages: async (
+    jobId: number,
+    pageNumbers?: number[]
+  ): Promise<{
+    message: string;
+    job_id: number;
+    page_numbers: number[];
+    celery_task_id: string;
+  }> => {
+    const response = await api.post(`/ocr/jobs/${jobId}/process-skipped`, {
+      page_numbers: pageNumbers,
+    });
     return response.data;
   },
 };

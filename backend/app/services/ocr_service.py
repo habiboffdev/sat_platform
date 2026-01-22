@@ -90,7 +90,7 @@ class OCRClient:
         "deepinfra": {
             "url": "https://api.deepinfra.com/v1/openai/chat/completions",
             "models": {
-                "vision": "allenai/olmOCR-2-7B-1025",  # OCR extraction
+                "vision": "allenai/olmOCR-2-7B-1025",  # OCR extraction (best for math/formulas)
                 "llm": "deepseek-ai/DeepSeek-V3.1",    # JSON structuring
             },
         },
@@ -104,8 +104,9 @@ class OCRClient:
         "openrouter": {
             "url": "https://openrouter.ai/api/v1/chat/completions",
             "models": {
-                "vision": "qwen/qwen2.5-vl-32b-instruct",  # OCR extraction (cheap, good accuracy)
-                "llm": "deepseek/deepseek-v3.2",           # JSON structuring (supports structured output)
+                "vision": "qwen/qwen2.5-vl-32b-instruct",       # Fast mode (default)
+                "vision_quality": "qwen/qwen2.5-vl-72b-instruct",  # Quality mode (better accuracy)
+                "llm": "deepseek/deepseek-v3.2",                # JSON structuring
             },
         },
     }
@@ -236,30 +237,56 @@ class OCRClient:
         self,
         image_base64: str,
         provider: str = "openai",
+        quality: str = "fast",
     ) -> OCRResult:
         """
         Extract text from image using OCR.
 
         Args:
             image_base64: Base64 encoded image
-            provider: API provider (openai, deepinfra)
+            provider: API provider (openai, deepinfra, openrouter)
+            quality: "fast" (32B) or "quality" (72B) - only applies to openrouter
 
         Returns:
             OCRResult with markdown text
         """
         config = self.PROVIDERS.get(provider, self.PROVIDERS["openai"])
-        model = config["models"]["vision"]
 
-        system_prompt = """SAT exam OCR extractor. Output clean Markdown.
-Rules:
-1) Extract ALL text including question numbers and options A-D
-2) CRITICAL - Math formatting: ALWAYS wrap ALL mathematical expressions in LaTeX delimiters:
-   - Use $...$ for inline math (equations, variables, functions like $f(x) = 2x + 1$, $x^2$, $\\frac{1}{2}$)
-   - Use $$...$$ for display/block math (standalone equations)
-   - This includes: variables (x, y), functions f(x), equations, fractions, exponents, etc.
-3) Tables: output as HTML <table> tags
-4) Graphs/Charts: describe briefly, note "needs_image: true" if visual is required
-5) Ignore watermarks and page numbers"""
+        # Select vision model based on quality setting (OpenRouter only)
+        if provider == "openrouter" and quality == "quality":
+            model = config["models"].get("vision_quality", config["models"]["vision"])
+        else:
+            model = config["models"]["vision"]
+
+        system_prompt = """You are an expert SAT exam OCR system. Extract ALL text with perfect LaTeX math formatting.
+
+CRITICAL MATH RULES:
+1. FRACTIONS: Always use \\frac{numerator}{denominator}
+   - "y/7" or stacked fractions → $\\frac{y}{7}$
+   - "1/2" → $\\frac{1}{2}$
+   - "x+1/3" → $\\frac{x+1}{3}$
+   - NEVER output "racy" - this is a misread fraction!
+
+2. ALL math expressions MUST be wrapped in $...$ or $$...$$:
+   - Variables: $x$, $y$, $n$
+   - Equations: $y < 42 - 7x$
+   - Inequalities: $\\frac{y}{7} > 10$
+   - Exponents: $x^2$, $2^{10}$
+   - Functions: $f(x) = 2x + 1$
+
+3. COMMON OCR ERRORS TO AVOID:
+   - "racy" is likely "$\\frac{y}{...}$" (misread stacked fraction)
+   - "racx" is likely "$\\frac{x}{...}$"
+   - "x2" is likely "$x^2$" or "$x_2$"
+   - "√" → "$\\sqrt{...}$"
+   - Subscripts like "x1" → "$x_1$"
+
+4. Tables: Use HTML <table> tags with proper structure
+5. Images/Graphs: Note "needs_image: true" if visual is required to answer
+6. Extract ALL text including question numbers and options A-D
+7. Ignore watermarks and page numbers
+
+Output clean Markdown with proper LaTeX math."""
 
         messages = [
             {"role": "system", "content": system_prompt},
@@ -789,22 +816,26 @@ Return valid JSON only."""
 
     async def process_page_batch(
         self,
-        pages: list[tuple[int, str]],  # [(page_num, image_base64), ...]
+        pages: list[tuple[int, str | None, str | None]],  # [(page_num, image_base64, extracted_text), ...]
         ocr_provider: str = "openai",
         structuring_provider: str = "deepinfra",
+        quality: str = "fast",
     ) -> list[dict]:
         """
         Process a batch of pages in parallel.
 
         Args:
-            pages: List of (page_number, base64_image) tuples
+            pages: List of (page_number, base64_image, extracted_text) tuples
+                   - If extracted_text is provided, skip vision OCR (text-based PDF)
+                   - If image_base64 is provided, use vision OCR (scanned PDF)
             ocr_provider: Provider for OCR
             structuring_provider: Provider for JSON structuring
+            quality: "fast" (32B) or "quality" (72B) for OpenRouter vision model
 
         Returns:
             List of page results
         """
-        async def process_single_page(page_num: int, image_b64: str) -> dict:
+        async def process_single_page(page_num: int, image_b64: str | None, extracted_text: str | None) -> dict:
             """Process a single page."""
             result = {
                 "page_number": page_num,
@@ -815,22 +846,31 @@ Return valid JSON only."""
                 "ocr_cost_cents": 0,
                 "structuring_cost_cents": 0,
                 "error": None,
+                "skipped_vision": False,  # Track if we skipped vision OCR
             }
 
             try:
-                # 1. OCR extraction
-                ocr_result = await self.extract_text(image_b64, provider=ocr_provider)
-                result["ocr_markdown"] = ocr_result.markdown
-                result["is_question_page"] = ocr_result.is_question_page
-                result["ocr_cost_cents"] = ocr_result.cost_cents
+                # Smart path: if we have extracted text, skip expensive vision OCR
+                if extracted_text:
+                    result["ocr_markdown"] = extracted_text
+                    result["is_question_page"] = self._is_question_page(extracted_text)
+                    result["skipped_vision"] = True
+                    # No OCR cost since we used direct text extraction
+                    result["ocr_cost_cents"] = 0
+                else:
+                    # Scanned page: need vision OCR
+                    ocr_result = await self.extract_text(image_b64, provider=ocr_provider, quality=quality)
+                    result["ocr_markdown"] = ocr_result.markdown
+                    result["is_question_page"] = ocr_result.is_question_page
+                    result["ocr_cost_cents"] = ocr_result.cost_cents
 
-                # 2. Skip if not a question page
-                if not ocr_result.is_question_page:
+                # Skip if not a question page
+                if not result["is_question_page"]:
                     return result
 
-                # 3. Structure into JSON
+                # Structure into JSON (always needed for question pages)
                 questions = await self.structure_to_json(
-                    ocr_result.markdown,
+                    result["ocr_markdown"],
                     provider=structuring_provider,
                 )
                 result["questions"] = [
@@ -858,22 +898,23 @@ Return valid JSON only."""
 
             return result
 
-        # Process pages sequentially to avoid rate limits
-        # (parallel processing with semaphore causes thundering herd)
-        processed_results = []
-        for num, img in pages:
-            try:
-                result = await process_single_page(num, img)
-                processed_results.append(result)
-            except Exception as e:
-                processed_results.append({
-                    "page_number": num,
-                    "error": str(e),
-                })
-            # Small delay between pages to avoid rate limits
-            await asyncio.sleep(0.5)
+        # Process pages in parallel with semaphore controlling concurrency
+        # The semaphore (ocr_max_concurrent_pages) limits parallel API calls
+        tasks = [process_single_page(num, img, txt) for num, img, txt in pages]
+        processed_results = await asyncio.gather(*tasks, return_exceptions=True)
 
-        return processed_results
+        # Convert exceptions to error dicts
+        final_results = []
+        for i, result in enumerate(processed_results):
+            if isinstance(result, Exception):
+                final_results.append({
+                    "page_number": pages[i][0],
+                    "error": str(result),
+                })
+            else:
+                final_results.append(result)
+
+        return final_results
 
 
 # Singleton instance
