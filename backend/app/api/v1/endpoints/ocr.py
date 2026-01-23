@@ -1246,10 +1246,11 @@ async def get_page_image(
     scale: float = Query(2.0, ge=0.5, le=4.0),
 ):
     """
-    Render a PDF page as a JPEG image for cropping.
+    Get a page image for cropping.
 
-    Returns high-resolution page image for the crop tool.
-    Scale 2.0 provides good quality for cropping graphs/charts.
+    First tries to serve from pre-rendered images stored in the database
+    (persists across dyno restarts). Falls back to rendering from PDF
+    if database image is not available.
     """
     # Verify job ownership
     job_result = await db.execute(
@@ -1261,16 +1262,38 @@ async def get_page_image(
     if not job:
         raise HTTPException(status_code=404, detail="Job not found")
 
-    # Get PDF path
-    pdf_path = Path(job.pdf_s3_key)
-    if not pdf_path.exists():
-        raise HTTPException(status_code=404, detail="PDF file not found")
-
     # Validate page number
     if page_number < 1 or page_number > job.total_pages:
         raise HTTPException(
             status_code=400,
             detail=f"Page number must be between 1 and {job.total_pages}"
+        )
+
+    # Try to get pre-rendered image from database first
+    page_result = await db.execute(
+        select(OCRJobPage)
+        .where(OCRJobPage.job_id == job_id)
+        .where(OCRJobPage.page_number == page_number)
+    )
+    page_record = page_result.scalar_one_or_none()
+
+    if page_record and page_record.page_image_data:
+        # Serve from database (pre-rendered at scale 2.0)
+        return Response(
+            content=page_record.page_image_data,
+            media_type="image/jpeg",
+            headers={
+                "Cache-Control": "private, max-age=3600",
+            }
+        )
+
+    # Fallback: try to render from PDF file (works during initial processing
+    # or if image wasn't stored for some reason)
+    pdf_path = Path(job.pdf_s3_key)
+    if not pdf_path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail="Page image not available. PDF file was cleaned up after processing."
         )
 
     try:
@@ -1286,6 +1309,11 @@ async def get_page_image(
         # Convert to JPEG
         img_bytes = pix.tobytes("jpeg")
         doc.close()
+
+        # Optionally save to database for future requests
+        if page_record:
+            page_record.page_image_data = img_bytes
+            await db.commit()
 
         return Response(
             content=img_bytes,

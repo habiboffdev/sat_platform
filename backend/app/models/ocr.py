@@ -11,6 +11,7 @@ from sqlalchemy import (
     ForeignKey,
     Integer,
     JSON,
+    LargeBinary,
     String,
     Text,
 )
@@ -170,6 +171,9 @@ class OCRJobPage(Base, TimestampMixin):
 
     # Page image S3 key (high-res for figure cropping)
     page_image_s3_key: Mapped[str | None] = mapped_column(String(500))
+
+    # Page image data (JPEG bytes stored directly in database)
+    page_image_data: Mapped[bytes | None] = mapped_column(LargeBinary)
 
     # Processing status
     ocr_completed: Mapped[bool] = mapped_column(Boolean, default=False)

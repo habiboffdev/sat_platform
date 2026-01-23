@@ -127,6 +127,9 @@ async def _process_pdf_job_async(task, job_id: int, quality: str = "fast"):
                 batch_end = min(batch_start + batch_size, total_pages)
                 batch_pages = []
 
+                # Store rendered page images for later cropping (keyed by page_num)
+                page_images: dict[int, bytes] = {}
+
                 for page_idx in range(batch_start, batch_end):
                     page_num = page_idx + 1
 
@@ -135,6 +138,10 @@ async def _process_pdf_job_async(task, job_id: int, quality: str = "fast"):
                         continue
 
                     page = doc.load_page(page_idx)
+
+                    # Always render page image for cropping feature (scale 2.0)
+                    crop_pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))
+                    page_images[page_num] = crop_pix.tobytes("jpeg")
 
                     # Smart detection: try to extract text directly first
                     extracted_text = page.get_text("text").strip()
@@ -194,6 +201,8 @@ async def _process_pdf_job_async(task, job_id: int, quality: str = "fast"):
                         ocr_cost_cents=int(page_result.get("ocr_cost_cents", 0)),
                         structuring_cost_cents=int(page_result.get("structuring_cost_cents", 0)),
                         error_message=page_result.get("error"),
+                        # Store pre-rendered page image for cropping feature
+                        page_image_data=page_images.get(page_num),
                     )
                     db.add(page_record)
                     await db.flush()
@@ -504,9 +513,17 @@ async def _structure_skipped_pages_async(task, job_id: int, page_numbers: list[i
             if not page.ocr_markdown and doc:
                 page_idx = page.page_number - 1
                 pdf_page = doc.load_page(page_idx)
+
+                # Render for OCR (high res)
                 pix = pdf_page.get_pixmap(matrix=fitz.Matrix(3, 3))
                 img_bytes = pix.tobytes("jpeg")
                 img_b64 = base64.b64encode(img_bytes).decode("utf-8")
+
+                # Also store page image for cropping if not already stored
+                if not page.page_image_data:
+                    crop_pix = pdf_page.get_pixmap(matrix=fitz.Matrix(2, 2))
+                    page.page_image_data = crop_pix.tobytes("jpeg")
+
                 pages_needing_ocr.append((page, img_b64))
 
         # Run OCR in parallel
