@@ -1,17 +1,35 @@
 """Celery configuration for background task processing."""
 
+import ssl
+
 from celery import Celery
 
 from app.core.config import settings
 
+# Configure Redis URL with SSL if using rediss://
+redis_url = settings.redis_url
+broker_use_ssl = None
+backend_use_ssl = None
+
+if redis_url and redis_url.startswith("rediss://"):
+    # Heroku Redis requires SSL with CERT_NONE
+    broker_use_ssl = {
+        "ssl_cert_reqs": ssl.CERT_NONE,
+    }
+    backend_use_ssl = {
+        "ssl_cert_reqs": ssl.CERT_NONE,
+    }
+
 # Create Celery app
 celery_app = Celery(
     "sat_platform",
-    broker=settings.redis_url,
-    backend=settings.redis_url,
+    broker=redis_url,
+    backend=redis_url,
     include=[
         "app.tasks.ocr_tasks",
     ],
+    broker_use_ssl=broker_use_ssl,
+    redis_backend_use_ssl=backend_use_ssl,
 )
 
 # Celery configuration
