@@ -477,7 +477,7 @@ export const ocrService = {
    * Returns authenticated URL for the page image endpoint.
    */
   getPageImageUrl: (jobId: number, pageNumber: number, scale: number = 2.0): string => {
-    const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+    const baseUrl = (import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1').replace(/\/$/, '');
     return `${baseUrl}/ocr/jobs/${jobId}/pages/${pageNumber}/image?scale=${scale}`;
   },
 
@@ -516,7 +516,7 @@ export const ocrService = {
     onMessage: (event: JobProgressEvent) => void,
     onError?: (error: Event) => void
   ): (() => void) => {
-    const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+    const baseUrl = (import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1').replace(/\/$/, '');
     const wsUrl = baseUrl.replace(/^http/, 'ws') + `/ocr/jobs/${jobId}/ws`;
 
     const token = localStorage.getItem('token');
