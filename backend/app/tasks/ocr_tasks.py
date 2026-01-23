@@ -99,16 +99,12 @@ async def _process_pdf_job_async(task, job_id: int, quality: str = "fast"):
         await db.commit()
 
         try:
-            # Download PDF to temp file
-            # For now, assume PDF is stored locally or we have S3 access
-            # TODO: Implement S3 download when storage is configured
+            # Open PDF from database binary data (works across dynos)
+            if not job.pdf_data:
+                raise ValueError(f"PDF data not found in database for job {job_id}")
 
-            pdf_path = await _download_pdf(job.pdf_s3_key)
-            if not pdf_path:
-                raise ValueError(f"Could not download PDF: {job.pdf_s3_key}")
-
-            # Open PDF
-            doc = fitz.open(pdf_path)
+            # Open PDF from bytes (PyMuPDF supports stream input)
+            doc = fitz.open(stream=job.pdf_data, filetype="pdf")
             total_pages = len(doc)
             job.total_pages = total_pages
             await db.commit()
@@ -268,8 +264,9 @@ async def _process_pdf_job_async(task, job_id: int, quality: str = "fast"):
 
             doc.close()
 
-            # NOTE: Keep PDF file for image cropping feature
-            # The file will be cleaned up when the job is deleted
+            # Clear PDF data from database to save space
+            # Page images are already stored in page_image_data for cropping
+            job.pdf_data = None
 
             # Update final status
             job.status = OCRJobStatus.REVIEW
@@ -501,11 +498,10 @@ async def _structure_skipped_pages_async(task, job_id: int, page_numbers: list[i
 
         extracted_count = 0
 
-        # Download PDF from S3
-        pdf_path = await _download_pdf(job.pdf_s3_key)
+        # Load PDF from database (if still available)
         doc = None
-        if pdf_path:
-            doc = fitz.open(pdf_path)
+        if job.pdf_data:
+            doc = fitz.open(stream=job.pdf_data, filetype="pdf")
 
         # Prepare pages that need OCR (extract images)
         pages_needing_ocr = []

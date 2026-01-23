@@ -309,24 +309,18 @@ async def upload_pdf(
             detail=f"PDF already being processed. Job ID: {existing_job.id}"
         )
 
-    # Save PDF locally (or to S3)
-    upload_dir = Path(settings.ocr_upload_dir)
-    upload_dir.mkdir(parents=True, exist_ok=True)
-
-    safe_filename = f"{pdf_hash[:16]}_{file.filename}"
-    pdf_path = upload_dir / safe_filename
-
-    with open(pdf_path, "wb") as f:
-        f.write(content)
-
-    # Count pages (quick check with PyMuPDF)
+    # Count pages using in-memory PDF (PyMuPDF supports bytes)
     try:
         import fitz
-        doc = fitz.open(str(pdf_path))
+        doc = fitz.open(stream=content, filetype="pdf")
         total_pages = len(doc)
         doc.close()
     except Exception:
         total_pages = 0
+
+    # Generate a reference path (for backwards compatibility)
+    safe_filename = f"{pdf_hash[:16]}_{file.filename}"
+    pdf_path = f"ocr_uploads/{safe_filename}"
 
     # Map provider string to enum
     provider_lower = provider.lower()
@@ -342,17 +336,18 @@ async def upload_pdf(
     # Estimate cost (rough: $0.003 per page for hybrid)
     estimated_cost = int(total_pages * 0.3)  # 0.3 cents per page
 
-    # Create job
+    # Create job with PDF stored in database for cross-dyno access
     job = OCRJob(
         user_id=user.id,
         target_module_id=target_module_id,
         status=OCRJobStatus.PENDING,
         pdf_filename=file.filename,
-        pdf_s3_key=str(pdf_path),
+        pdf_s3_key=pdf_path,
         pdf_hash=pdf_hash,
         total_pages=total_pages,
         ocr_provider=ocr_provider,
         estimated_cost_cents=estimated_cost,
+        pdf_data=content,  # Store PDF binary in database
     )
     db.add(job)
     await db.flush()

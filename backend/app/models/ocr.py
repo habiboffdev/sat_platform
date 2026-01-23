@@ -66,6 +66,10 @@ class OCRJob(Base, TimestampMixin):
     pdf_hash: Mapped[str] = mapped_column(String(64), index=True)  # MD5 for dedup
     total_pages: Mapped[int] = mapped_column(Integer, nullable=False)
 
+    # PDF binary data (stored in DB for cross-dyno access on Heroku)
+    # Cleared after processing to save space
+    pdf_data: Mapped[bytes | None] = mapped_column(LargeBinary)
+
     # Processing progress
     processed_pages: Mapped[int] = mapped_column(Integer, default=0)
     question_pages: Mapped[int] = mapped_column(Integer, default=0)  # Pages with questions
