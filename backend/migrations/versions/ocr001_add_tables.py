@@ -36,7 +36,7 @@ def upgrade() -> None:
         BEGIN
             IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'ocrprovider') THEN
                 CREATE TYPE ocrprovider AS ENUM (
-                    'deepinfra', 'openai', 'hybrid', 'replicate'
+                    'deepinfra', 'openai', 'hybrid', 'replicate', 'openrouter'
                 );
             END IF;
         END$$
