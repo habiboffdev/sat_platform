@@ -1,5 +1,5 @@
 import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
-import { LogOut, BookOpen, LayoutDashboard, Trophy, Menu, X } from 'lucide-react';
+import { LogOut, BookOpen, LayoutDashboard, Trophy, Menu, X, Send, Instagram, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -13,6 +13,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useAuthStore } from '@/store/auth';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+
+const SOCIAL_LINKS = {
+  telegram: 'https://t.me/satislomxon',
+  instagram: 'https://instagram.com/satplatform_uz',
+  youtube: 'https://youtube.com/@satplatform_uz',
+};
 
 export default function StudentLayout() {
   const navigate = useNavigate();
@@ -80,6 +86,19 @@ export default function StudentLayout() {
             <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-lg">
               <Trophy className="h-4 w-4 text-amber-600" />
               <span className="text-sm font-semibold text-amber-700">1400+</span>
+            </div>
+
+            {/* Social Links */}
+            <div className="hidden md:flex items-center gap-3 text-muted-foreground">
+              <a href={SOCIAL_LINKS.telegram} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <Send className="h-4 w-4" />
+              </a>
+              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <Youtube className="h-4 w-4" />
+              </a>
             </div>
 
             {/* User Info */}
@@ -177,6 +196,15 @@ export default function StudentLayout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Islomxon Saidov | SAT. All rights reserved.</p>
           <div className="flex items-center gap-6">
+            <a href={SOCIAL_LINKS.telegram} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              <Send className="h-4 w-4" />
+            </a>
+            <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              <Youtube className="h-4 w-4" />
+            </a>
             <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
             <a href="#" className="hover:text-foreground transition-colors">Terms</a>
             <a href="#" className="hover:text-foreground transition-colors">Help</a>

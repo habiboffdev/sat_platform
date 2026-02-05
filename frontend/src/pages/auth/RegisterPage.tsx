@@ -29,6 +29,7 @@ export default function RegisterPage() {
     defaultValues: {
       email: '',
       full_name: '',
+      phone: '',
       password: '',
       confirmPassword: '',
     },
@@ -62,7 +63,8 @@ export default function RegisterPage() {
   });
 
   const onSubmit = (data: RegisterSchemaType) => {
-    registerMutation.mutate(data);
+    const { phone, ...rest } = data;
+    registerMutation.mutate({ ...rest, ...(phone ? { phone } : {}) });
   };
 
   return (
@@ -85,6 +87,19 @@ export default function RegisterPage() {
                     <FormLabel>Full Name</FormLabel>
                     <FormControl>
                       <Input placeholder="John Doe" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Telefon raqam (ixtiyoriy)</FormLabel>
+                    <FormControl>
+                      <Input type="tel" placeholder="+998 90 123 45 67" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

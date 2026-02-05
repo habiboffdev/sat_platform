@@ -28,6 +28,38 @@ from app.services.analytics_service import AnalyticsService
 router = APIRouter(prefix="/analytics", tags=["Analytics"])
 
 
+# === Public Stats ===
+
+
+@router.get("/public/stats")
+async def get_public_stats(
+    db: Annotated[AsyncSession, Depends(get_db)],
+):
+    """Get public platform stats (no auth required)."""
+    total_users = (await db.execute(
+        select(func.count()).select_from(User)
+    )).scalar() or 0
+
+    tests_completed = (await db.execute(
+        select(func.count()).select_from(TestAttempt)
+        .where(TestAttempt.status == AttemptStatus.COMPLETED)
+    )).scalar() or 0
+
+    avg_score_result = (await db.execute(
+        select(func.avg(TestAttempt.total_score))
+        .where(
+            TestAttempt.status == AttemptStatus.COMPLETED,
+            TestAttempt.total_score.isnot(None),
+        )
+    )).scalar()
+
+    return {
+        "total_users": total_users,
+        "tests_completed": tests_completed,
+        "avg_score": round(avg_score_result, 0) if avg_score_result else None,
+    }
+
+
 # === Student Analytics ===
 
 
@@ -814,4 +846,176 @@ async def get_admin_trends(
     return {
         "daily": daily_data,
         "period_days": days,
+    }
+
+
+@router.get("/admin/score-analytics")
+async def get_score_analytics(
+    admin: AdminUser,
+    db: Annotated[AsyncSession, Depends(get_db)],
+    start_date: str | None = None,
+    end_date: str | None = None,
+    start_time: str | None = None,
+    end_time: str | None = None,
+    min_score: int | None = None,
+    max_score: int | None = None,
+    test_id: int | None = None,
+    user_id: int | None = None,
+    user_search: str | None = None,
+    sort_by: str = Query("completed_at", regex="^(completed_at|total_score|user_name)$"),
+    sort_order: str = Query("desc", regex="^(asc|desc)$"),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(20, ge=1, le=100),
+):
+    """Get detailed score analytics with filtering and pagination."""
+    from app.models import Test
+
+    # Build base query
+    query = (
+        select(TestAttempt, User, Test)
+        .join(User, User.id == TestAttempt.user_id)
+        .join(Test, Test.id == TestAttempt.test_id)
+        .where(TestAttempt.status == AttemptStatus.COMPLETED)
+    )
+
+    # Apply date range filters (YYYY-MM-DD format)
+    if start_date:
+        try:
+            start_dt = datetime.strptime(start_date, "%Y-%m-%d").replace(tzinfo=UTC)
+            query = query.where(TestAttempt.completed_at >= start_dt)
+        except ValueError:
+            pass
+
+    if end_date:
+        try:
+            # End of day for end_date
+            end_dt = datetime.strptime(end_date, "%Y-%m-%d").replace(
+                hour=23, minute=59, second=59, tzinfo=UTC
+            )
+            query = query.where(TestAttempt.completed_at <= end_dt)
+        except ValueError:
+            pass
+
+    # Apply time-of-day filters (HH:mm format) - filters by hour of completion
+    if start_time:
+        try:
+            start_hour, start_minute = map(int, start_time.split(":"))
+            # Filter where the hour of completed_at >= start_hour
+            query = query.where(
+                func.extract("hour", TestAttempt.completed_at) * 60
+                + func.extract("minute", TestAttempt.completed_at)
+                >= start_hour * 60 + start_minute
+            )
+        except (ValueError, AttributeError):
+            pass
+
+    if end_time:
+        try:
+            end_hour, end_minute = map(int, end_time.split(":"))
+            # Filter where the hour of completed_at <= end_hour
+            query = query.where(
+                func.extract("hour", TestAttempt.completed_at) * 60
+                + func.extract("minute", TestAttempt.completed_at)
+                <= end_hour * 60 + end_minute
+            )
+        except (ValueError, AttributeError):
+            pass
+
+    if min_score is not None:
+        query = query.where(TestAttempt.total_score >= min_score)
+
+    if max_score is not None:
+        query = query.where(TestAttempt.total_score <= max_score)
+
+    if test_id:
+        query = query.where(TestAttempt.test_id == test_id)
+
+    if user_id:
+        query = query.where(TestAttempt.user_id == user_id)
+
+    if user_search:
+        search_pattern = f"%{user_search}%"
+        query = query.where(
+            (User.full_name.ilike(search_pattern)) | (User.email.ilike(search_pattern))
+        )
+
+    # Get total count for pagination
+    count_query = select(func.count()).select_from(query.subquery())
+    total = (await db.execute(count_query)).scalar() or 0
+
+    # Apply sorting
+    if sort_by == "completed_at":
+        order_col = TestAttempt.completed_at
+    elif sort_by == "total_score":
+        order_col = TestAttempt.total_score
+    else:  # user_name
+        order_col = User.full_name
+
+    if sort_order == "desc":
+        query = query.order_by(order_col.desc().nulls_last())
+    else:
+        query = query.order_by(order_col.asc().nulls_last())
+
+    # Apply pagination
+    offset = (page - 1) * page_size
+    query = query.offset(offset).limit(page_size)
+
+    result = await db.execute(query)
+    rows = result.all()
+
+    # Build items
+    items = []
+    for row in rows:
+        attempt = row.TestAttempt
+        user = row.User
+        test = row.Test
+
+        time_taken = None
+        if attempt.started_at and attempt.completed_at:
+            delta = attempt.completed_at - attempt.started_at
+            time_taken = int(delta.total_seconds() / 60)
+
+        items.append({
+            "user_id": user.id,
+            "user_name": user.full_name or user.email,
+            "user_email": user.email,
+            "test_id": test.id,
+            "test_title": test.title,
+            "total_score": attempt.total_score,
+            "reading_writing_score": attempt.reading_writing_scaled_score,
+            "math_score": attempt.math_scaled_score,
+            "started_at": attempt.started_at.isoformat() if attempt.started_at else None,
+            "completed_at": attempt.completed_at.isoformat() if attempt.completed_at else None,
+            "time_taken_minutes": time_taken,
+        })
+
+    # Calculate summary statistics
+    summary_query = (
+        select(
+            func.count(TestAttempt.id).label("total"),
+            func.avg(TestAttempt.total_score).label("avg"),
+            func.max(TestAttempt.total_score).label("max"),
+            func.min(TestAttempt.total_score).label("min"),
+            func.count(func.distinct(TestAttempt.user_id)).label("unique_users"),
+        )
+        .where(TestAttempt.status == AttemptStatus.COMPLETED)
+    )
+    summary_result = await db.execute(summary_query)
+    summary_row = summary_result.one()
+
+    total_pages = (total + page_size - 1) // page_size
+
+    return {
+        "items": items,
+        "total": total,
+        "page": page,
+        "page_size": page_size,
+        "total_pages": total_pages,
+        "summary": {
+            "total_attempts": summary_row.total or 0,
+            "average_score": round(summary_row.avg, 0) if summary_row.avg else None,
+            "highest_score": summary_row.max,
+            "lowest_score": summary_row.min,
+            "unique_users": summary_row.unique_users or 0,
+        },
     }

@@ -1,12 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 import styles from './LandingPage.module.css';
-import { CheckCircle2, ChevronRight, Globe, MapPin, ArrowUpRight } from 'lucide-react';
+import { CheckCircle2, ChevronRight, Globe, MapPin, ArrowUpRight, Send, Instagram, Youtube } from 'lucide-react';
+import api from '@/lib/axios';
+
+const SOCIAL_LINKS = {
+    telegram: 'https://t.me/satislomxon',
+    instagram: 'https://instagram.com/satplatform_uz',
+    youtube: 'https://youtube.com/@satplatform_uz',
+};
+
+const SocialIcons = ({ className = '' }: { className?: string }) => (
+    <div className={className} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <a href={SOCIAL_LINKS.telegram} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', transition: 'color 0.2s' }}>
+            <Send size={20} />
+        </a>
+        <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', transition: 'color 0.2s' }}>
+            <Instagram size={20} />
+        </a>
+        <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', transition: 'color 0.2s' }}>
+            <Youtube size={20} />
+        </a>
+    </div>
+);
 
 const LandingPage = () => {
-
-    // Smooth scroll handling could go here if using Lenis, 
-    // for now we rely on native smooth scroll via CSS.
+    const { data: stats } = useQuery({
+        queryKey: ['public-stats'],
+        queryFn: async () => {
+            const res = await api.get('/analytics/public/stats');
+            return res.data;
+        },
+        staleTime: 5 * 60 * 1000,
+    });
 
     return (
         <div className={styles.container}>
@@ -20,6 +47,7 @@ const LandingPage = () => {
                     <a href="#about">Biz haqimizda</a>
                     <a href="#results">Natijalar</a>
                     <a href="#courses">Kurslar</a>
+                    <SocialIcons />
                     <Link to="/login">Kirish</Link>
                     <Link to="/register" className={styles.button}>
                         Ro'yxatdan o'tish
@@ -52,11 +80,23 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* Infinite Stats Ticker - Data from uploaded_image_2 */}
+            {/* Infinite Stats Ticker */}
             <div className={styles.tickerWrap}>
                 <div className={styles.ticker}>
                     {[1, 2].map((i) => (
                         <React.Fragment key={i}>
+                            <div className={styles.tickerItem}>
+                                <span className={styles.tickerValue}>{stats?.total_users ?? '500+'}</span>
+                                <span className={styles.tickerLabel}>Foydalanuvchilar</span>
+                            </div>
+                            <div className={styles.tickerItem}>
+                                <span className={styles.tickerValue}>{stats?.tests_completed ?? '1000+'}</span>
+                                <span className={styles.tickerLabel}>Testlar Yakunlangan</span>
+                            </div>
+                            <div className={styles.tickerItem}>
+                                <span className={styles.tickerValue}>{stats?.avg_score ? Math.round(stats.avg_score) : '1400+'}</span>
+                                <span className={styles.tickerLabel}>O'rtacha Ball</span>
+                            </div>
                             <div className={styles.tickerItem}>
                                 <span className={styles.tickerValue}>53</span>
                                 <span className={styles.tickerLabel}>SAT 1400+ / 1600</span>
@@ -68,10 +108,6 @@ const LandingPage = () => {
                             <div className={styles.tickerItem}>
                                 <span className={styles.tickerValue}>156</span>
                                 <span className={styles.tickerLabel}>SAT Math 750+ / 800</span>
-                            </div>
-                            <div className={styles.tickerItem}>
-                                <span className={styles.tickerValue}>500+</span>
-                                <span className={styles.tickerLabel}>SAT Math 700 / 800</span>
                             </div>
                         </React.Fragment>
                     ))}
@@ -158,8 +194,7 @@ const LandingPage = () => {
                                 O'zbekistonning eng ishonchli SAT tayyorlov markazi.
                             </p>
                             <div style={{ marginTop: '2rem' }}>
-                                {/* Placeholder for social icons/contact person image */}
-                                <div className={styles.imagePlaceholder} style={{ width: '60px', height: '60px', borderRadius: '50%', aspectRatio: '1/1' }}>Img</div>
+                                <SocialIcons />
                             </div>
                         </div>
                         <div>
