@@ -1,4 +1,5 @@
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
@@ -25,22 +26,25 @@ def create_application() -> FastAPI:
         lifespan=lifespan,
     )
 
-    # CORS middleware - allow all origins in development
+    # CORS middleware
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=False,  # Must be False when using ["*"]
+        allow_origins=[
+            "https://satplatform-pi.vercel.app",
+            "http://localhost:5173",
+            "http://localhost:3000",
+        ],
+        allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
     )
 
     # Mount OCR uploads for serving cropped images (must be before /static for correct routing)
-    from pathlib import Path
     ocr_upload_path = Path(settings.ocr_upload_dir).resolve()
     ocr_upload_path.mkdir(parents=True, exist_ok=True)
     app.mount("/static/ocr", StaticFiles(directory=str(ocr_upload_path)), name="ocr_static")
 
-    # Mount static files
+    # Mount static files for uploads
     app.mount("/static", StaticFiles(directory="static"), name="static")
 
     # Include API router
